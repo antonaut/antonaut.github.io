@@ -20,7 +20,9 @@
 
       setTimeout(function() {
         var disqusToggle = document.querySelector("#disqus-toggle");
-        disqusToggle.style.display = 'block';
+        if (window.innerWidth >= 768) { // Responsive eh?
+          disqusToggle.style.display = 'block';
+        }
       }, 3000);
     };
 

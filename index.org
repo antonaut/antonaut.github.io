@@ -10,6 +10,7 @@
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
 #+HTML_HEAD_EXTRA: <meta name="google-site-verification" content="r46C_vADEGgAsPCGIHLhwLfjNA13-s80aOWX9mW_mxg" />
+#+HTML_HEAD_EXTRA: <meta name="viewport" content="width=device-width, initial-scale=1">
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'>
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="style.css" />
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="favicon.png" />
