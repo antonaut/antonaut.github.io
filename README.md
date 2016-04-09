@@ -1,4 +1,4 @@
-antonaut.github.io
-==================
+ctrlaltdelete.nu
+================
 
-antonaut.github.io
+This is @antonauts blog repository for [ctrlaltdelete.nu](http://ctrlaltdelete.nu).
