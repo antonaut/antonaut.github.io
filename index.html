@@ -1,7 +1,1873 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <script src="main.js"></script>
+<title>CtrlAltDelete.nu</title>
+<!-- 2016-04-09 lör 23:42 -->
+<meta  charset="utf-8">
+<meta  name="generator" content="Org-mode">
+<meta  name="author" content="Anton Erholt">
+<meta  name="description" content="It's all about 42, (defn foobarbaz []) and cheeseburgers."
+>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<meta name="google-site-verification" content="r46C_vADEGgAsPCGIHLhwLfjNA13-s80aOWX9mW_mxg" />
+<link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<div id="disqus_thread_container"><div id="disqus_thread"></div></div>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
-  <a href="http://ctrlaltdelete.nu">http://ctrlaltdelete.nu</a>
+<div id="content">
+<h1 class="title">CtrlAltDelete.nu</h1>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40231225-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+  /**
+   * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+   * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+   */
+
+var disqus_config = function () {
+this.page.url = "http://ctrlaltdelete.nu"; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "main"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//ctrlaltd3l3t3nu.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<script src="main.js"></script>
+<button id="disqus-toggle">Toggle comments</button>
+
+<h2 class="logo">It's all about 42, (defn foobarbaz []) and cheeseburgers.</h1>
+<h3>What is this?</h3>
+
+<p>
+This started out as some kind of blog written as answers to
+assignments from a course in Computer Game Design <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> at the Royal
+Institute of Technology (KTH) in Sweden. It was made to serve as a
+diary of sorts for answering questions about subjects brought up
+around Computer Science and my life. Right now, it's a place where I
+jot down ideas, thoughts and reflections about mostly computer related
+things.
+</p>
+
+<p>
+It is solemnly written by me, Anton Erholt (twitter: <a href="http://twitter.com/aerholt">@aerholt</a>, github:
+<a href="https://github.com/antonaut/">@antonaut</a>). I am 26 years old and live in Oslo, Norway. I am
+originally from Sweden, but moved here pretty recently. Currently I am
+writing my master's thesis at <a href="https://ardoq.com">Ardoq</a> about automatic visualization of
+open source projects.
+</p>
+
+<p>
+I have since the course finished, started to make a game with a couple
+of friends. I <strike>just might post</strike> have
+posted some updates here, and will probably continue to do so as the
+game design progresses.
+</p>
+
+<p>
+This blog is in chronological order, with the oldest post at
+bottom. Yes if you want to read it, you have to scroll. This may seem
+a bit old-fashioned, but it is just the way I like it. I have started
+using proper links as well and omitted the footnote style for the
+newer posts.
+</p>
+
+<p>
+Dear reader, hopefully it will be to your liking.
+</p>
+
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">End of my game dev story? Apr 09&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We worked on this for a while, but it just ran out in the sand when I
+went to France for exchange studies. Nevertheless, it was a great
+learning experience for me. I think I mostly learned a bunch of
+javascript. We built the client side of a somewhat advanced game. The
+coolest part was a small window system built mostly by my friends in
+WebGL.
+</p>
+
+<p>
+Hopefully we can publish the code with some small examples.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Sphere packing on a sphere? Circle packing papers, Mar 08&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span>&#xa0;<span class="topology">topology</span></span></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The idea of a tool giving you access to finding relevant papers in a
+certain field of research is pretty interesting. Let's imagine all the
+papers as a <a href="https://en.wikipedia.org/wiki/Planar_graph">planar graph</a> depicted on a sphere. The edges
+(arrows/links) of the graphs are keywords or subjects. A certain
+'theme' (a set of papers) would then be a 'continent' on the sphere.
+</p>
+
+
+<figure>
+<p><img src="http://jeffe.cs.illinois.edu/teaching/comptop/2009/Fig/circlepack.png" alt="circlepack.png">
+</p>
+<figcaption><span class="figure-number">Figure 1:</span> Found on a course web page for computational topology, originally from <a href="http://www.math.utk.edu/~kens/BookInfo.html">http://www.math.utk.edu/~kens/BookInfo.html</a>. I should totally read that book.</figcaption>
+</figure>
+
+<p>
+Imagine this thing spinning and showing you the papers you've found,
+then expanding those with related papers - pushing the old papers
+aside. Found an example done in 2D with d3.js for dependencies
+<a href="https://bl.ocks.org/mbostock/7607535">https://bl.ocks.org/mbostock/7607535</a>. Would it be interesting to see
+this in 3D? Maybe in an AR setting. The zooming effect would probably
+come naturally if the spheres grow to big. I sort of like the concept
+of several virtual globes for organizing stuff. Not so sure of how I
+would feel about them in reality though.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Tools for completing a master's thesis, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="thesis">thesis</span>&#xa0;<span class="tools">tools</span>&#xa0;<span class="emacs">emacs</span></span></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+A master's thesis is an intense 18 weeks of total focus and devotion
+to a research question. So far, I've only been able to invest about
+one weeks worth of studies during a four week period. My personal life
+is taking its toll on my work at the moment. I don't feel like it's
+that frustrating, but I'd really like to get more stuff done.
+</p>
+
+<p>
+In order to increase my productivity I've come up with a plan.
+</p>
+
+<ol class="org-ol">
+<li>Devote more time to planning in the morning
+</li>
+<li>Use a pomodoro (from <i>Italian:</i> means tomato) timer when working to
+minimize distractions
+</li>
+</ol>
+
+<p>
+To keep track of my pomodoros, I use a simple app called <a href="https://play.google.com/store/apps/details?id=com.wlxd.pomochallenge">Productivity
+Challenge Timer</a>.
+</p>
+
+<p>
+These two simple things should allow me to plan the process more
+smoothly.
+</p>
+
+<p>
+Step one in the process of the thesis is to write a specification
+document. The document should provide detailed information of the
+following things:
+</p>
+
+<ul class="org-ul">
+<li>The goals of the thesis, what I hope to achieve
+<ul class="org-ul">
+<li>Why it is important
+</li>
+<li>To whom is it important
+</li>
+</ul>
+</li>
+<li>My own background and why I'm eligible to write it
+</li>
+<li>The research question this thesis will try to explore and answer
+</li>
+<li>A detailed timeplan for when everything should be done
+</li>
+</ul>
+
+<p>
+Just like this blog, I'll largely write my thesis in <a href="https://www.gnu.org/software/emacs/">emacs</a> with
+<a href="http://orgmode.org/">org-mode</a>. I've started to organize some of the references I've found
+in <a href="https://www.mendeley.com/">Mendeley Desktop</a> and in an org-mode file. I also found a nice
+latex-package for doing gantt-charts called <i>pgfgantt</i>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Concerning idea debt and investment, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="documentation">documentation</span>&#xa0;<span class="ideas">ideas</span></span></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+I read <a href="http://jessicaabel.com/2016/01/27/idea-debt/">this</a> article about idea debt. Not sure which affected me the
+most. What she stated about idea investment, or the fact that she too
+doesn't know how to use the french subjunctive correctly. Nonetheless,
+I'm truly inspired to put my old ideas to the side and work with what
+I've got at the moment. I want to start documenting stuff
+properly. This is my blog. My life.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">2016&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<h1>Happy new year 2016!</h1>
+</p>
+
+<p>
+2015 was not a very bloggy year. Who knows? Maybe 2016 will bear more
+blog fruit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Regarding problems which can be solved by dynamic programming techniques, Jan 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dynamic">dynamic</span>&#xa0;<span class="programming">programming</span>&#xa0;<span class="recursion">recursion</span>&#xa0;<span class="bfs">bfs</span></span></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+I have recently watched quite a few videos on dynamic
+programming. What is dynamic programming? It's a method for
+constructing efficient solutions to some specific problems. In order
+to apply the method, there are some criteria needed to be met.
+</p>
+
+<ul class="org-ul">
+<li>The problem should have a brute-force solution/exhaustive search
+solution.
+</li>
+<li>The problem should be dividable into sub-problems with optimal solutions
+(explained further down)
+</li>
+<li>The problem should have a recursive definition.
+</li>
+</ul>
+
+<p>
+<span class="underline">NOTE:</span> I'm not doing this in a formal manner, I simply think out
+loud in order to understand the subject better.
+</p>
+
+<p>
+Let's use these criteria to make up a problem which we could solve.
+</p>
+
+<p>
+<b>Definition of optimal</b>
+</p>
+
+<p>
+I'm thinking of the second criteria, that the problem should be
+dividable into sub-problems with <b>optimal</b> solutions. What do I mean
+by that? Well, being optimal means that if the original problem is
+split into parts, and you find a solution for a part, you know that
+the solution is the best possible solution for that part. Simple as
+that.
+</p>
+
+<p>
+<b>A recursive thought</b>
+</p>
+
+<p>
+You can use these "smaller" solutions to construct a "bigger"
+solution for the original problem. This is obviously a recursive
+thought.
+</p>
+
+<ul class="org-ul">
+<li>"I start with a lot of small simple problems, and I use
+them to construct a bigger solution."
+</li>
+</ul>
+
+<p>
+It is however a lot more common to state (or think about) recursion
+the other way around.
+</p>
+
+<ul class="org-ul">
+<li>"In order to find a solution to this problem, I need to build it
+up from smaller solutions by dividing the problem into
+sub-problems. When the sub-problems become small enough, the
+solutions will be trivial."
+</li>
+</ul>
+
+<p>
+The second statement is a lot longer when expressed in text, but
+when expressed with math, it becomes a lot more concise as well as
+more beautiful.
+</p>
+
+<p>
+<b>Brute force?</b>
+</p>
+
+<p>
+Well, this part I am not so sure about. Something in the back of my
+mind tells me that the problems in question should be solvable by
+performing some kind of exhaustive search (trying all variants of
+solutions which could possibly be generated) in a (what computer
+scientists would call a) non-efficient manner (referring to that it
+would take A LOT of time if the problem is big - usually exponential
+compared to the size of input).
+</p>
+
+<p>
+<b>Do you have a problem?</b>
+</p>
+
+<p>
+I think before I dwell any further into what the dynamic programming
+method is all about, I'd like to try and see if I can come up with a
+good problem. I've recently come to realize that constructing
+problems can be just as efficient as a learning tool as actually
+solving them. Conversation with myself follows:
+</p>
+
+<ul class="org-ul">
+<li>A1: Let's pick a subject!
+</li>
+<li>A2: Sports!
+</li>
+<li>A1: Okay, what now&#x2026; Where's the recursion?
+</li>
+<li>A2: I'm thinking a football league&#x2026; NO! Ice-hockey!
+</li>
+<li>A1: Okay, keep going.
+</li>
+<li>A2: Well, let's say there are 12 teams like in the <a href="http://www.shl.se/statistics/standings/summary/2014/All">Swedish Hockey
+League</a>. They will all play against each other twice per season.
+</li>
+</ul>
+
+<p>
+\(\mathbf{I}\): This would result in \(nPr(12,2) = 132\, matches\).
+</p>
+
+<p>
+\(\mathbf{II}\): It could probably also be expressed like \(nCr(12,2)*2
+  = 132\).
+</p>
+
+<p>
+In fact, \(\mathbf{I}\) is a special case of permutations when we only have two
+matches per season. It makes more sense to use \(\mathbf{II}\) if we
+for any reason would like to increase the number of matches per
+season. Hmm&#x2026; Interesting!
+</p>
+
+<ul class="org-ul">
+<li>A1: Enough with the combinatorics, go on!
+</li>
+<li>A2: Okay, let's think of a property of the matches we can use. The
+first one I can think of is the total number of goals made per
+match.
+</li>
+</ul>
+
+<p>
+<span class="underline">That's enough. I'll continue this some other time&#x2026;</span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">2015&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+<h1>Happy new year 2015!</h1>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">A flawed idea of the halting problem, Mar 16&#xa0;&#xa0;&#xa0;<span class="tag"><span class="programming">programming</span>&#xa0;<span class="computer">computer</span>&#xa0;<span class="science">science</span></span></h2>
+<div class="outline-text-2" id="text-8">
+<p>
+The halting problem is fairly interesting even though someone (Alan
+Turing) some time ago (1936) has proved that it can not be solved by a
+general algorithm. It is undecidable. Despite the fact, today when I woke
+up I had an idea.
+</p>
+
+<p>
+Let us use a FSM to describe the program. Think of it as a FSM with A
+LOT OF STATES. Almost as if it is an Infinite State Machine (which
+would not be of much use), but rather a very large FSM.
+</p>
+
+<p>
+<b>Program A</b>
+</p>
+<div class="org-src-container">
+
+<pre class="src src-c">int main()
+{
+  int a;
+  a = function(0, 0);
+  return a;
+}
+
+int function(a, b)
+        int a,b;
+{
+  a = 1;
+  b = 2;
+
+  return a == b ? 0 : function(a, b);
+}
+</pre>
+</div>
+
+<p>
+Consider this Program A. It is written in a very small subset of C
+which only handles:
+</p>
+<ul class="org-ul">
+<li>integer assignment
+</li>
+<li>ternary if statement based only on integer equality comparison
+</li>
+<li>function call
+</li>
+<li>function return
+</li>
+<li>probably something else which I've forgotten
+</li>
+</ul>
+
+<p>
+The idea is to convert these statements into a set of transitions
+\(\mathbf{T}\) between the set of states \(\mathbf{S}\).
+</p>
+
+<p>
+For example, we take the integer assignment and turn it into
+corresponding 2<sup>32</sup> - 1 possible transitions from the current state
+(and one more for assigning the same value again).
+</p>
+
+<p>
+The function call flattens out to whatever the function is supposed to
+do and turns into an assignment.
+</p>
+
+<p>
+The equality check performs either a transition to the 'then'
+state or a transition to the 'false' state.
+</p>
+
+<p>
+Et voilà! With a bit more convincing, we can build ourselves a FSM of
+the program. When looking at the State-Transition graph (STG) we
+simply need to perform a Breadth-First-Search of the graph in order to
+tell if the program can halt or not. Right?!?
+</p>
+
+<p>
+<b>WHAT ABOUT INFINITE RECURSION?</b> Well, if we perform some kind of lazy
+check if we have already entered the function a lot of times with the
+same parameters, we should have already visited the states before the
+function call. Or I mean we should somehow flatten out the
+func&#x2026; <b>HANG ON! IS YOUR 'SUBSET OF C' UNIVERSALLY COMPUTABLE?</b> Meh,
+universally computable? I havn't really thought about it `[insert
+ellipsis here]`
+</p>
+
+<p>
+<b>OH MY GOD, AND YOU MUST KNOW THAT YOUR INTEGERS HAVE LIMITED
+PRECISION AND PRECISELY WHAT IMPLICATIONS THAT HAVE ON YOUR IDEA!</b>
+</p>
+
+<p>
+Well yes, I kind of do. I mean, the STG will be a lot smaller if you
+use uint8's instead. There might actually be something of use here,
+since a lot of programs don't use unlimited precision for absolutely
+everything. Perhaps there's a lot to gain if we use other types than
+simply a 32-bit integer (since that what the ints precision is on my
+machine).
+</p>
+
+<p>
+<b>SO WHAT YOU ARE SAYING IS THAT IF YOU LIMIT YOUR PROGRAM SO IT ONLY
+USES VERY FEW INSTRUCTIONS IT MEANS WHAT?</b>&#x2026; * <i>catching breath</i> *
+<b>&#x2026;AAAND YOU CAN ONLY</b> <b>EXPRESS A <span class="underline">VERY</span> GENERAL IDEA ABOUT HOW THAT
+MIGHT BE USEFUL? YOU ARE TOO VAGUE!</b> <b>REALLY GOOD IDEAS<sup>TM</sup> SHOULD BE
+MORE EXPLICIT, AND YOU KNOW IT!</b>
+</p>
+
+<p>
+I'm not listening to you&#x2026; What if we remove infinite recursion
+and/or infinite loops. I mean the stack isn't infinitely large and we
+can always keep track of how much we have looped. Let's remove this
+annoying feature of the language instead and see what that does!
+</p>
+
+
+<p>
+Sigh&#x2026; Computer science can be tough. But this is what I love about
+it. The science part. Even though my idea is filled with flaws it
+might inspire other me and other people to look into new
+things. Someone reading this not knowing that much C may discover that
+you can list your arguments like I have done for 'function'. It might
+not be the 'Next Big Thing' but this way I feel that I may somehow
+contribute with a bit of knowledge, simply by letting my thoughts flow
+freely.
+</p>
+
+<p>
+Even though I get turned down a lot by both my own and others
+<b>CRITICISM</b>, I really love how it may lead me somewhere else and take
+me into new orbits of reasoning. The criticism is the fuel of my
+science engine. For instance, now I do wonder if the 'small subset of
+C' I chose is universally computable (or at least if I could write a
+Fibonacci generator in it?). I think that science being tough is not a
+bad thing. It is exactly how it should be. The interesting thing here
+is how you choose to percieve it. I choose to see it as way of
+generating new insights.
+</p>
+
+<p>
+<b>OH YEA? WELL I DON'T!</b>
+</p>
+
+<p>
+<i>UPDATE (2014-09-28): Realised it won't compile. Function definitions
+are supposed to be declared before they're used.</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9">HACKATHON!&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-9">
+<p>
+A lot has happened since we started developing the game.
+Our initial goal was to do these tasks during the hackathon:
+</p>
+
+<ul class="org-ul">
+<li>WebSockets and API
+</li>
+<li>TouchEvents
+</li>
+<li>GameLoop and GameStates
+</li>
+</ul>
+
+<p>
+Afterwards, we now have a somewhat working APICallSystem with Secure
+WebSockets. Unfortunately havn't our exportation framework for Android
+and iOS supported the wss protocol yet, but it'll hopefully be up and
+running soon. During the hackathon I had a great time. We put up a
+stream at Twitch.tv to stream everything while making tacos and
+listening to jazz from a jar (using something similar to
+<a href="http://www.origaudio.com/shop/index.php?dispatch=products.view&product_id=29778">this</a>).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10">To use DDD or not (| !) to use DDD&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-10">
+<p>
+My initial thoughts on Data Driven Development was that it to some
+extent might have been unneccessary (mainly due to the fact that I
+didn't understand it fully). I thought that when making a smaller
+game, you probably wouldn't benefit from using a DDD code style at
+all. However, after reading
+<a href="http://www.richardlord.net/blog/why-use-an-entity-framework">this</a>
+post on why one should use an entity-component-system composition of a
+game/gameengine, I have changed my mind.
+</p>
+
+<p>
+Our initial approach to writing the game was with OOP (Object-Oriented
+Principles) which gave us a massive Character class, which as of right
+now only seems unneccessary. At the moment, the entity-relation
+software model seems like a great way for us to develop, since it will
+give us the benefit of partitioning almost everything into tiny
+beautiful pieces which almost magically works together.
+</p>
+
+<p>
+As of right now we have a lot of coding to do in order to get our game
+playable (which of course is our current goal). Hopefully we'll be
+able to show off something soon.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11">The beginning of Anton's Game Dev Story, Jan 7&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-11">
+<p>
+About a year ago, me and two classmates (<a href="http://www.nada.kth.se/~johntu">johntu</a> &amp; <a href="http://www.nada.kth.se/~dmol">dmol</a>)
+participated in a programming competition called <a href="http://swdc.se/devnull/">Escape from
+/dev/null</a>. The competition is based around having to program something
+that assembles a client to a web-based API revolving different
+things. The API gets further uncovered as you get further into the
+competition. It's a game in a game. Very meta and
+Oh-So-Lovely&trade; if you are into these kinds of things.
+</p>
+
+<p>
+Back to the contest! As young and somewhat novice web programmers, little did we
+know what to expect as we entered the contest. Not entirely without
+effort, we smacked our heads together, right down in the free pizza, chunked
+it down hard with some delicious beer and ended up at somewhere in the
+order of second to last.
+</p>
+
+
+<figure>
+<p><img src="img/lost_in_space.png" alt="lost_in_space.png">
+</p>
+<figcaption><span class="figure-number">Figure 2:</span> Our client for the space themed /dev/null</figcaption>
+</figure>
+
+
+<p>
+Needless to say, time passed and we participated in a few more
+similar contests. The game we are building is in fact a client for
+this particular game. Peter Svensson (<a href="https://twitter.com/psvensson">@psvensson</a>) has made a fabulous
+job of writing the game mechanics and providing it as a web service
+for us to write a client from. We use web technologies in the core and
+hope to deliver an exclusive fullscreen, WebGL experience to all of
+our players. Are you getting excited? No? Then, maybe a bit
+interested? Aha&#x2026; You continue reading because of pity and
+self-recognition? Ah well, just wait until I tell you what the game is
+about&#x2026;
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12">2014&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-12">
+<p>
+<h1>Happy new year 2014!</h1>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13">Presentation of game demo, Dec 13&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-13">
+<p>
+We made a presentation of a game demo we developed during the
+course <sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="#fn.1">1</a></sup>. Here follows the script and some comments of the final
+presentation (NOTE: This might be a tedious read since&#x2026; Well. You
+have been warned).
+</p>
+</div>
+
+
+<div id="outline-container-sec-13-1" class="outline-3">
+<h3 id="sec-13-1">Presentation Script</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+<b>Welcome</b>
+Hi everyone and welcome to this presentation. We’re the group “Fat
+ninja” a.k.a. Kitten with Mittens. We are here to present a charming
+puzzle game with&#x2026;
+</p>
+
+<p>
+<b>Description</b>
+</p>
+
+<p>
+&#x2026;an adorable Kitten. But is it so cute after all?
+Kitten with Mittens is a game where you lead Cat through a series of
+levels by using his moving abilities. The levels are puzzles where you
+need to think and plan your route beforehand if you want to complete
+the level successfully.
+</p>
+
+<p>
+As you probably can tell by our awesome posters, the game is currently
+available on Android and iOS platforms, but today we will be demoing
+on the Windows platform (Microsoft Surface tablet) and a smart
+phone. Without spoiling anything more about the game, we are going to
+present a story to you.
+</p>
+
+<p>
+<b>Story</b>
+</p>
+
+<p>
+In a warm and cozy house, far up in icy
+and cold Sweden, lives Cat the clumsy kitten.
+</p>
+
+<p>
+One early winter morning, Cat is lying in a warm bed under a
+blanket. Sleeping and dreaming of catnip with not a single thought of
+ever going up.
+</p>
+<ul class="org-ul">
+<li>“Aaaah, this will be a lovely day of doing nothing.”
+</li>
+</ul>
+
+<p>
+All of a sudden, Cat feels the need to scratch behind the ear. As Cat
+moves the paw back-and forth on the head, Cat tries to unfold a claw
+for that extra bit of OOMPH in the scratch. Cat feels that all of the
+fingers are completely restrained and Cat can’t unfold them at
+all. What is this?! Cat panics and tumbles over, whelps the bed over
+and lands in an otherwise yummilicious bowl of morning milk.
+</p>
+
+<p>
+Cat slowly lift the eyelids and discovers a pair of mittens on top of
+the paws. As if that wasn’t enough, already having the morning ruined
+by a non-scratched itch and immobilization of paws, Cat also discovers
+a long scarf tied way too hard around the neck. What used to be a warm
+kitty, soft kitty, little ball of fur - is now unhappy kitty, awake
+and wet kitty, no purr, purr, purr!
+</p>
+
+<p>
+Will you help Cat rid the mittens?
+</p>
+
+<p>
+<b>Game play</b>
+<i>Showed a short video of actual gameplay</i>
+</p>
+
+<p>
+So what does the game play look like?
+All-in-all you can move the cat around by swiping left or right, jump by tapping and swing by pressing and holding when near a swinging platform. These abilities can be combined in order to create mind blowing and dazzling puzzles.
+</p>
+
+<p>
+<b>Art</b>
+Original art hand-made by Kajsa. The cat is modeled and animated by Veronica in Blender.
+</p>
+
+<p>
+<b>Project plan</b>
+On time.
+</p>
+
+<p>
+<b>Trailer, Thanks &amp; Questions</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-13-2" class="outline-3">
+<h3 id="sec-13-2">Comments About the Game</h3>
+<div class="outline-text-3" id="text-13-2">
+<p>
+<b>Positive Feedback</b>
+</p>
+
+<p>
+The first thing that struck people was how cute
+and pleasing to the eyes the game was, even though it was not the most
+technically advanced game presented during the seminar. The prototype
+was completely made up from primitives that was at our disposal in
+Unity, a self made model (the cat) from Blender and watercolour made
+paintings that had been scanned in for the textures in the background
+as well as the textures on walls and the ground. They really liked the
+art direction as well and thought that the whole presentation
+(textures, level design and models) looked consistent as a whole.
+</p>
+
+<p>
+The consensus about the game mechanics and level progression itself
+from the people who tried it was that it was addicting, since the
+reward of clearing a stage made you want to play the game for
+longer. They liked the rope mechanic too even though it is hard to
+master.
+</p>
+
+<p>
+Another thing that people really liked was the original oral
+presentation that we made and the posters that we had put up on the
+walls in the seminar room. It definitely raised interest in our
+product, so from a managerial point of view it was a successful game
+announcement. Finally we got some nice comments from one of the
+persons from Swedish Game Awards who thought that we definitely should
+participate in their event. One of his comments were that he did not
+get as frustrated as he could have been when he failed to complete one
+of our hard levels. He said it was because you can never count on a
+kitten to behave as you want it to. We think it is a good comment,
+since it is hard to say the same thing about another game.
+</p>
+
+<p>
+<b>Constructive Criticism</b>
+</p>
+
+<p>
+The prototype levels got very hard a little bit too fast. This is due
+to us trying to cram in the rope functionality in an early stage,
+which is a hard technique to master. Especially if the player is not
+completely familiar with the rest of the control scheme.
+</p>
+
+<p>
+People thought that the game was hard and frustrating at times due to
+too few descriptions of the controls. However, that was something that
+we were already aware of, but due to time constraints we did not have
+enough time to implement as many “tutorial elements” in the prototype
+version of the game as we would have liked.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14">Mobile games, Dec 6&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-14">
+<p>
+When playing a game on a mobile device, you have very little time to
+make the player interested. This is a very similar problem to the one
+where websites have only a few seconds to present the right content to
+the visitor or else the visitor will browse away from the site. These
+problems are hard to solve (their respective decision problems are
+probably way more than NP-complete [Comp. Sci. humor] ).
+</p>
+
+<p>
+I don't believe for a second that there is an ultimate answer to how
+to keep players stuck in the game. One idea is to allow them to leave
+and then force them to come back. If you develop for mobile, it can
+probably be a good thing. To enforce the player out of the game
+wanting to play more. The player will then return later, eager to face
+new challenges for a while. Games which operates in this manner are
+Quizkampen, Wordfeud and Candy Crush Saga. I'd say that it is probably
+a good concept to incorporate in a mobile game.
+</p>
+
+<p>
+If you focus on the specific part of just getting the player hooked, I
+would say that a good idea is probably to try to give the player a
+feeling of greatness. In one of my favorite mobile games,
+Stardash <sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> by OrangePixel, you probably manage to clear two
+levels in under 30 seconds. You feel that it was pretty easy, but not
+too easy so you keep playing. Making the first few levels good are
+essential if you want players to stay in game.
+</p>
+
+<p>
+In order to really strengthen the inferred feeling of greatness, it
+would be good to perhaps infer an achievement system. Perhaps an
+achievement for the first death is a good idea so it actually turns
+into something positive?
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15">The game producer - Game business models, Dec 3&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-15">
+<p>
+Now I'll briefly discuss some business models. Please note that I'm
+probably a bit biased.
+</p>
+</div>
+
+<div id="outline-container-sec-15-1" class="outline-3">
+<h3 id="sec-15-1">Pay-to-play (P2P)</h3>
+<div class="outline-text-3" id="text-15-1">
+<p>
+The "standard" model. You pay for a game once and then it is
+yours. For all eternity&#x2026; Oh, you want an example? Hmm&#x2026; Let's
+see. Oh! Project Zomboid <sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> mentioned in an earlier post is a good example.
+</p>
+
+<ul class="org-ul">
+<li><b>Pros</b>
+<ul class="org-ul">
+<li>You don't have to keep track of all the players
+</li>
+</ul>
+</li>
+
+<li><b>Cons</b>
+<ul class="org-ul">
+<li>The eventual income will spike and then drastically fall.
+</li>
+<li>Typically means there will be sequels if the devs are successful.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-15-2" class="outline-3">
+<h3 id="sec-15-2">Subscription</h3>
+<div class="outline-text-3" id="text-15-2">
+<p>
+Well, the most obvious example I can come up with is World of
+Warcraft <sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>, where you pay a fee each month to continue playing.
+</p>
+
+<ul class="org-ul">
+<li><b>Pros</b>
+<ul class="org-ul">
+<li>Continuous cashflow means an ability to have continuous development
+</li>
+<li>Makes scalability easier
+</li>
+</ul>
+</li>
+
+<li><b>Cons</b>
+<ul class="org-ul">
+<li>Player database needed to keep track of payments etc.
+</li>
+</ul>
+</li>
+
+<li><b>Comments</b>
+<ul class="org-ul">
+<li>I think this model is perfectly suited for the MMO type of games
+which take a lot of time and effort to maintain and develop. You
+already do have a player database with accounts, so this should
+not be that much of a problem.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-15-3" class="outline-3">
+<h3 id="sec-15-3">Free-to-play (F2P)</h3>
+<div class="outline-text-3" id="text-15-3">
+<p>
+A great example is the giant in the MOBA-genre <sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>, DotA 2. In
+this game you can buy skins and new visual styles for the characters
+in the game.
+</p>
+
+<ul class="org-ul">
+<li><b>Pros</b>
+<ul class="org-ul">
+<li>Players get to play, haters get to hate and lovers get to
+love. You don't have to feel bad for trying to trick money out of
+someone&#x2026;
+</li>
+</ul>
+</li>
+
+<li><b>Cons</b>
+<ul class="org-ul">
+<li>&#x2026; or yes you do. But how!? This business model requires
+something else to generate income, such as ads or in-game
+purchases.
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+A thing to keep in mind is that it is not completely impossible to
+switch business model, even though it might hurt some of your
+playerbase.  One example of where a switching between business models
+has been successful is Heroes of Newerth <sup><a id="fnr.6" name="fnr.6" class="footref" href="#fn.6">6</a></sup>. The game is F2P
+since the 20th of July 2012 <sup><a id="fnr.7" name="fnr.7" class="footref" href="#fn.7">7</a></sup> (is used to be P2P).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-16" class="outline-2">
+<h2 id="sec-16">Dataspelsbranschen: the trade organization, Nov 29&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-16">
+<p>
+Today we had a guest lecture from Per Strömbäck of Dataspelsbranchen,
+the trade organization for Swedish game development. He wanted us to
+discuss two specific questions which all in all are quite important
+when it comes.
+</p>
+
+<p>
+<b>How can the game developer interact with the audience?</b>
+</p>
+
+<p>
+There are multiple ways of interacting with your target audience as a
+game dev. The easiest to come up with are probably through public
+forums, a wiki, social media and/or some other kind of web based
+communcation. However, I think the most important interaction comes
+from other settings though.
+</p>
+
+<p>
+Perhaps you perform some usability tests on your game, meaning you
+pick some testers and perform interviews of them. Perhaps you play the
+game together with them and communicate through the game you have
+made? Perhaps your dev studio attends fairs or arranges workshops of
+different kinds (hackathons?), where you need to physically interact
+with players etc.
+</p>
+
+<p>
+Usually when it comes to games, there is always a lot of feelings
+involved. Therefore I think it is really important to be honest with
+what goals you have with the game and what purpose it has. Otherwise
+you might end up having a really let-down playerbase since you
+introduced PvP in starting towns and did not discuss it with your
+player. Sure it is your game since you made it, but don't you have
+some kind of responsibility towards your playerbase?
+</p>
+
+<p>
+<b>Why does not in-game ads work?</b>
+</p>
+
+<p>
+I think In-game ads don't work because the amount of time a player spends in a
+game is minimal. At least when it comes to mobile games. I do think
+in-app purchases are a lot better. At least if they are done in a good way.
+</p>
+
+<p>
+British technology magazine Wired has released an article on in-app
+purchases in Plants-vs-Zombies 2 <sup><a id="fnr.8" name="fnr.8" class="footref" href="#fn.8">8</a></sup>. The article explains
+extremly well how I think in-app purchases shouldn't work. I do not
+think that in-app purchases should give the player any advantages
+compared to when not having done them. I usually end up quitting these
+games immediately since they ultimately favor the player with the
+largest wallet. Which is insane.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-17" class="outline-2">
+<h2 id="sec-17">Short on game physics and animation, Nov 26&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-17">
+<p>
+Some games are really nothing but great combination of physics,
+animation and astonishing scenery. One example I would like to discuss
+is a game called flower <sup><a id="fnr.9" name="fnr.9" class="footref" href="#fn.9">9</a></sup> (note, no capital f). In flower one
+controls a single petal flying in the wind over an enormous field. As
+you fly across the field, if you hit other flowers, some of its petals
+will join you in your flight. In order to complete a level you need to
+collect a certain number of petals and reach the end (although I don't
+think it is specified how many you need).
+</p>
+
+<p>
+The game per se has not the intentions of being difficult or puzzly
+but rather to give the player a joyful experience. The game does not
+contain any dialogs or any specific interfaces. You simply control the
+wind (and thereby the petals) with your chosen controller.
+</p>
+
+<p>
+In flower, I think the developers (Thatgamecompany) have made a great
+effort of using flow dynamics and beautiful scenery in order to make
+the game into what it is. This is a great use of flow physics and I'm
+really happy to see that games like these makes it onto consoles and
+do not just stay in the swamp of indie PC games.
+</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/NAftDQN4SNg" frameborder="0" allowfullscreen></iframe>
+
+<p>
+Lastly, I'd like to say that there are times when you find out things
+which give you an advantage in the game due to physics being used in a
+"clever" way (some might argue glitchy or cheaty). I have currently
+got two good examples of this. The first one is very well known but
+still very funny. In The Elder Scrolls V: Skyrim, you can climb almost
+any mountain when riding a horse (as opposed to when you are not riding).
+I remember someone making a funny picture out of it:
+</p>
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="5xgVBRU"><a href="//imgur.com/5xgVBRU">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+<p>
+My second example is from a 2D platformer called Cave
+Story <sup><a id="fnr.10" name="fnr.10" class="footref" href="#fn.10">10</a></sup>.
+</p>
+
+<p>
+<b>NOTE: Might contain some spoilers</b>
+</p>
+
+<p>
+Cave Story is a free action adventure independently developed by Daisuke Amaya
+(a.k.a. Pixel -&gt; Pixel Studios). Originally released in December 2004
+for PC, an upgraded version (Cave Story+) was released on Steam and it
+was later ported to the Nintendo 3DS by Nicalis. You play a robot
+called Quote (or Mr. Traveler) which you guide through the
+world.
+</p>
+
+<p>
+Depending on the path you take, you may come across a machine
+gun. Leveling up said gun will make it more powerful and thus make
+more damage and a greater recoil. Without prior knowledge, the
+undersigned happened to find out by mistake that firing the machine
+gun downwards allowed for continuous hovering/floating. This made
+certain areas of the game a breeze to play through. Delightful,
+amusing and totally unexpected.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-18" class="outline-2">
+<h2 id="sec-18">Using a game engine or building your own? Nov 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-18">
+<p>
+This post will be filled with spontaneous questions and answers
+related to whether one should use an existing game engine or create
+one from scratch.
+</p>
+
+<p>
+<b>What budget are you on?</b> If I'm really low on a budget I'll probably
+use an engine if it can save me some time, since we all know; Time is
+money. The time saving aspect is also present when it comes to
+maintaining the game and/or improving it. It is important that the
+engine gives you a good workflow so you can easily work with it. A
+good idea might be to implement some simple games/demos/ideas in the
+few engines you are interested of and see which ever suits you the
+best.
+</p>
+
+<p>
+<b>Are you lacking a feature in the engine?</b> You can probably extend the
+engine if it doesn't have all the features you require for a game
+project. Also remember that there are several other engines to choose
+from which might give you more features for free. This is obviously
+something you should consider when you make the actual choice.
+</p>
+
+<p>
+<b>What platforms should we target?</b>
+Different engines allow us to target different platforms. This is
+obviously an important choice to make as well. It is kind of connected
+to the monetization issue. Do more platforms equal more profit?
+</p>
+
+<p>
+<b>So, Anton since you're into web apps. What about them?</b>
+</p>
+
+<p>
+Well, I personally really like the web, but I am not sure it is well
+suited for everyone. John Carmack mentions in a keynote from QuakeCon
+that he does not really believe in using javascript for high
+performant graphics in the browser <sup><a id="fnr.11" name="fnr.11" class="footref" href="#fn.11">11</a></sup>. I am thinking that means
+it would be hard to get a triple-A title running as smooth in the
+browser as it does natively. However a lot of "smaller" games run
+perfectly in the browser with great graphics. I remember specifically
+when Supergiant Games released Bastion <sup><a id="fnr.12" name="fnr.12" class="footref" href="#fn.12">12</a></sup> on the Chrome Web
+Store. Beautiful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-19" class="outline-2">
+<h2 id="sec-19">The Sims - a short presentation, Nov 20&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-19">
+<p>
+We made a short presentation on the Sims in class. Here are the slides and the
+script.
+</p>
+</div>
+
+<div id="outline-container-sec-19-1" class="outline-3">
+<h3 id="sec-19-1">HISTORY - Slide</h3>
+<div class="outline-text-3" id="text-19-1">
+<ul class="org-ul">
+<li>The Sims is the first game in the series. Developed by Maxis and
+published by Electronic Arts, it was released for Microsoft Windows
+in February 2000.
+</li>
+<li>The Sims 2 are released on September 14, 2004. The sequel, developed
+by Maxis, takes place in a full 3D environment with every sim having
+an aspiration system.
+</li>
+<li>The Sims 3 are released on June 2, 2009. Game has open, seamless
+neighbourhood, with improved tools for sim creation, enhanced build
+and buy mode functions, and the introduction of wishes and goals.
+</li>
+<li>The Sims 4 will be available in 2014. It allows creating sims with
+intelligence and emotion. It provides new intuitive creative tools
+to sculpt sims and build unique homes. Game gives control over the
+mind, body, and heart of sims to bring stories to life.
+</li>
+<li>The Sims Online, The Sims Stories, MySims, The Sims Carnival, The
+Sims Medieval, The Sims Social …
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-19-2" class="outline-3">
+<h3 id="sec-19-2">HISTORY - Script/notes</h3>
+<div class="outline-text-3" id="text-19-2">
+<ul class="org-ul">
+<li>Sims 1 - Seven expansion packs and two bonafide deluxe editions with
+exclusive content have been released for this game. By March 22,
+2002, The Sims had sold more than 2 million copies worldwide, making
+it the best-selling P.C. game in history
+</li>
+
+<li>The Sims 2 is set some 25 years after the original game. For
+instance, the Goth family has aged significantly with Bella Goth
+mysteriously vanishing in the 25-year period. Because the entire
+game has progressed from 2D sprites to 3D models, all content in The
+Sims 2 had to be created from the ground up. Electronic Arts has
+released eight expansion packs and nine stuff packs for The
+Sims 2. Over 400 exclusive items have also been released for this
+game via The Sims 2 Store
+</li>
+
+<li>The Sims 3 sold 1.4 million copies in the first week, making it the
+largest release in PC gaming history at the time. The game has sold
+over 10 million copies worldwide since its release. Eleven expansion
+packs and nine stuff packs have been released for the third
+generation of the series. Notably, Maxis was no longer involved in
+the production
+</li>
+
+<li>The Sims 4 is built upon an entirely new technology. The content
+from The Sims 3 will not be transferable to The Sims 4. The Sims 4
+will be available for PC.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-19-3" class="outline-3">
+<h3 id="sec-19-3">EFFECTS OF THE GAME - Slide</h3>
+<div class="outline-text-3" id="text-19-3">
+<ul class="org-ul">
+<li>The Sims is one of first full-commercial strategic life-simulation
+video games that still is most successful artificial life game
+</li>
+<li>Inspired other games
+</li>
+<li>Has real life applications
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-19-4" class="outline-3">
+<h3 id="sec-19-4">EFFECTS OF THE GAME - Script/notes</h3>
+<div class="outline-text-3" id="text-19-4">
+<p>
+Artificial life games and life simulations find their origins in
+artificial life research, including Conway's Game of Life from 1970.
+But one of the first commercially viable artificial life games was
+Little Computer People in 1985, a Commodore 64 game that allowed
+players to type requests to characters living in a virtual house. The
+game is cited as a little-known forerunner of virtual-life simulator
+games to follow. One of the earliest dating sims, Tenshitachi no gogo,
+was released for the 16-bit NEC PC-9801 computer that same year,
+though dating sim elements can be found in Sega's earlier Girl's
+Garden in 1984. In 1986, the early biological simulation game Bird
+Week was released. In the mid-1990s, as artificial intelligence
+programming improved, true AI virtual pets such as Petz and Tamagotchi
+began to appear. Around the same time, Creatures became "the first
+full-blown commercial entertainment application of Artificial Life and
+genetic algorithms".
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-19-5" class="outline-3">
+<h3 id="sec-19-5">BEHAVIOUR OF THE PLAYER - Slide</h3>
+<div class="outline-text-3" id="text-19-5">
+<ul class="org-ul">
+<li>Cheats - Infinite money - Maximum skills
+</li>
+<li>Different objectives
+<ul class="org-ul">
+<li>Dream house
+</li>
+<li>Killing
+</li>
+<li>Woo Hoo
+</li>
+</ul>
+</li>
+<li>Aspects of life (University, Seasons, Pets…)
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-19-6" class="outline-3">
+<h3 id="sec-19-6">BEHAVIOUR OF THE PLAYER - Script/notes</h3>
+<div class="outline-text-3" id="text-19-6">
+<p>
+What’s the most memorable thing about the Sims? We think it depends
+greatly on how the player has behaved when playing. What do we
+remember the most?  The cheats and the ability to play God. There are
+a lot of different cheats, and most of you remember ‘motherlode’ or
+‘rosebud’ to get more money;!;!;!; We all have different objectives
+when playing the Sims such as acting out your dream of becoming an
+architect and designing your dream house, or perhaps playing God and
+killing your Sims off in different ways. There are several ways of
+doing this, like trapping your Sims in a room with fire, removing the
+ladder when they’re in the pool so they drown or simply by letting
+them age. Another way of behaving in game, could of course be to do
+“the right thing” and let their Sims create a family and live their
+life as intended. Also are several different aspects of life which the
+player can focus on, for instance “University, Seasons, Pets… etc.”
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-20" class="outline-2">
+<h2 id="sec-20">Future of procedural generation of content, Nov 19&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-20">
+<p>
+I really think that map generation or procedural content generation is
+something which is becoming more and more common in games. Instead of
+playing linear, story based games we get to experience
+multidimensional games where we create our own unique worlds (or have
+our own worlds created for us). However, generating good maps is a
+really difficult problem which really hasn't been available until more
+recently so I think that there are many improvements to be made here
+in the future.
+</p>
+
+<p>
+I think we will see even more of this in the future. Perhaps a lot
+more free-roaming, sandbox games like Minecraft, Terraria or perhaps
+Project Zomboid <sup><a id="fnr.3.100" name="fnr.3.100" class="footref" href="#fn.3">3</a></sup> (video included since it's not that heard of and
+'only' in beta). I think the procedural generation of content adds
+greatly to the sandbox survival genre of games. These games often add
+a bit of a RPG element to them, making it extra sad when your
+heroine/hero dies.
+</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/qoHm2vxRBKc" frameborder="0" allowfullscreen></iframe>
+
+<p>
+Taking it one step further, I'd love to see what happens when not only
+the maps are generated, but also the creatures within them. I imagine
+something like Spore <sup><a id="fnr.13" name="fnr.13" class="footref" href="#fn.13">13</a></sup> for monsters/creatures in the
+world. Perhaps someday one will be able to generate quests and dialogs
+aswell. It all comes down to breaking it into small enough parts I
+guess.
+</p>
+
+<p>
+Hopefully we will se a lot more AR-/VR integration in games as
+well. Games played on devices such as Oculus Rift, Google Glass and so
+forth, are games I'm already greatly looking forward to, since
+procedural creation might be very applicable to such scenarios. For
+instance generating content based on whatever you are currently
+looking at.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-21" class="outline-2">
+<h2 id="sec-21">Data-driven approach, Nov 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-21">
+<p>
+A data-driven approach is shifted from Object Oriented approaches.
+The data-driven approach seems like a really good fit if you are
+geared towards making a state-of-the art game engine for making really
+high performing games. Bitsquid is certainly outstanding in that sense
+</p>
+
+<p>
+It's always a bit tricky when you're learning a new programming
+paradigm. Usually you learn a new programming language together with
+the paradigm which can help you understand difficult patterns and
+ideas more easily. However when shifting to the data driven paradigm,
+you haven't really got the advantage of changing language as well.
+</p>
+
+<p>
+According to wikipedia <sup><a id="fnr.14" name="fnr.14" class="footref" href="#fn.14">14</a></sup>, there are a few languages which have
+a more data driven approach but I have unfortunately not used any of
+these (except for one line of awk, but that's it). I'm guessing what
+we're after is to learn the concept and then embrace it in whatever
+language we are most confident. Techniques like loop unrolling and
+cache optimizations through padding are worth noting in the back of
+your head.
+</p>
+
+<p>
+I'm still kind of eager not to do this first. Since I'm already pretty
+much into the object oriented paradigm, I'll probably prototype my
+idea with OOP on beforehand, then afterwards evolve it into something
+a bit more suitable to the profiling tools. I feel that the most
+important thing is that the game gets created in the first place and
+then one can make gradual improvements.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-22" class="outline-2">
+<h2 id="sec-22">Software development model, Nov 12&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-22">
+<p>
+I think the model used to develop a game is really depending on what
+type of game you make. I'd like to address the fact that not every
+type of game needs to be high-end performing. As a guideline though,
+whatever type of development model which allows you to be productive
+is useful.
+</p>
+
+<p>
+Do you have a ton of ideas which needs to be tested before you can
+decide upon stuff? Like /u/RukiTanuki suggested on Reddit to the girl
+making a science-based dragon MMO <sup><a id="fnr.15" name="fnr.15" class="footref" href="#fn.15">15</a></sup>; There are several ideas to
+take into account.
+</p>
+
+<p>
+The one i liked the most of his proposals is where he suggests that
+you make some prototypes/mini-games before you make an actual
+game. This allows you to evaluate concepts early and decide how they
+feel/what they add to the game in general.
+</p>
+
+<p>
+I think another important thing is the interaction between the asset
+management and the development team is crucial. Using an internal wiki
+as a design document might be suitable for a small game making
+team. This might extend into a public wiki aswell which can help
+players in the game.
+</p>
+
+<p>
+Me and some friends will probably start working on a game sometime
+soon, and we're currently discussing this a lot. I'll definitely
+recall and reuse the idea about getting a head start and something
+playable as soon as possible.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-23" class="outline-2">
+<h2 id="sec-23">Haven and Hearth, Nov 8&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-23">
+<p>
+Today I played a game by originally made by Seatribe called Haven and
+Hearth <sup><a id="fnr.16" name="fnr.16" class="footref" href="#fn.16">16</a></sup>. It's a MMORPG where death, Permanent death(!), is
+imminent. The scenario takes place in a world quite similar to real
+nature. There are no fictive elements in the game in that sense. It's
+really like a simulation of a subset of the real world. Typically you
+travel around in a forest of some sorts. There are mountains, rivers
+and lakes for you to explore. I starved to death pretty early but on
+my second character I managed to find some apple/hazel/mullberry
+trees which I could forage for edibles.
+</p>
+
+<p>
+Other than permadeath, another unique thing about this game is that
+the world is dynamic. For instance can everything be razed and reused
+much like in the real world. I think this adds a bit of spice to the
+game, as MMORPGS tend to get very repetitive with new characters, as
+you do the same types of quests over and over again.
+</p>
+
+<p>
+In order to make it more enjoyable and so on, Seatribe have added a
+quality system to the game. The quality systems gives value to the
+items much like an in-game currency. All of the items have quality
+values. If you combine items of different quality level, you get an
+item with some weighted average quality.
+</p>
+
+<p>
+Their business model is quite interesting. The game is F2P <sup><a id="fnr.17" name="fnr.17" class="footref" href="#fn.17">17</a></sup> and
+doesn't focus on money making at all, which is quite a relief when
+playing. No ads, no worries. In a sense, it can get very "zen" as you
+stroll through the forest, enjoying the view. A meditation of sorts.
+This is really a good game for whenever you feel like escaping reality.
+</p>
+
+<p>
+I've never played a game like this before. I've only played MMORPG's
+with a static world like Runescape <sup><a id="fnr.18" name="fnr.18" class="footref" href="#fn.18">18</a></sup> . Playing was really fun, I
+managed to find my friend there and we chopped down some trees
+together and built a simple shelter. Perhaps we should've played some
+more, since we didn't get that far in the game.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-24" class="outline-2">
+<h2 id="sec-24">What type of gamer are you? Nov 5&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-24">
+<p>
+My name's Anton Erholt and I've just started my master's programme
+in Computer Science at KTH. I'm 23 years old and live in a suburb of
+Stockholm together with two of my friends.
+</p>
+
+<p>
+I've been playing computer games for about as long as I can
+remember. I remember the Christmas when I got my first console, the
+Nintendo Game Boy <sup><a id="fnr.19" name="fnr.19" class="footref" href="#fn.19">19</a></sup> together with Super Mario Land <sup><a id="fnr.20" name="fnr.20" class="footref" href="#fn.20">20</a></sup>.
+</p>
+
+<p>
+Ever since then, I guess I've been kind of hooked on handheld
+games. Somehow, I really prefer the compact format and (the usually)
+somewhat simple controls. I can recall playing in the backseat of the
+car as a kid almost every vacation trip we ever made.
+</p>
+
+<p>
+Throughout the years, I've owned a few different handheld consoles,
+mostly from the Nintendo series. IIRC, I currently own a Game Boy, a
+Game Boy Advanced (GBA), a PlayStation Pocket (PSP) and well, no PS
+VITA, but a PlayStation Certified smartphone <sup><a id="fnr.21" name="fnr.21" class="footref" href="#fn.21">21</a></sup>. Together with my
+flatmate, we have some other consoles at home as well (NES, SNES, N64,
+PS3, XBOX [original] and a&#x2026; Commodore 64!). As of right now I mainly
+play on my smartphone or my PC if I play something.
+</p>
+
+<p>
+My favorite genre of games usually varies a bit, but over the years I
+seem to return to the single player RPG-genre. Games such as Golden
+Sun <sup><a id="fnr.22" name="fnr.22" class="footref" href="#fn.22">22</a></sup>, The Legend of Zelda: Links Awakening <sup><a id="fnr.23" name="fnr.23" class="footref" href="#fn.23">23</a></sup> and Final
+Fantasy VII <sup><a id="fnr.24" name="fnr.24" class="footref" href="#fn.24">24</a></sup> are a few of my favorites. Another genre which I've
+grown a bit attached to, is the roguelike, dungeon-crawling
+genre. Permadeath, tons of monsters and weird actions. Dungeons of
+Dredmor <sup><a id="fnr.25" name="fnr.25" class="footref" href="#fn.25">25</a></sup> is one of the games I'm currently playing a lot.
+</p>
+
+<p>
+One of my greatest game experiences must have been while playing
+Pokémon Blue <sup><a id="fnr.26" name="fnr.26" class="footref" href="#fn.26">26</a></sup>, getting the 151st Pokémon. I remember being
+extremely happy about having "Caught them all". The feeling was almost
+indescribable after having spent so many hours completing that
+task. Too bad it only took 'til a few months until they released about a
+hundred more Pokémons in a new game.
+</p>
+
+<p>
+One of the worst gaming experiences I've had was probably when I
+played one of the Zenonia <sup><a id="fnr.27" name="fnr.27" class="footref" href="#fn.27">27</a></sup> games on my phone. The game was so focused
+on trying to sell me stuff and incorporating ads that it was almost
+unplayable. I uninstalled it very quickly since it wasn't that
+fun. I'd rather had spent some money on buying the game instead of
+having a f2p business model.
+</p>
+
+<p>
+I've not got that much experience of developing games. My main
+development work has been of web programming nature (part front-end,
+part back-end), so this is a bit of a new field for me.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+<a href="https://www.kth.se/social/course/DH2650">https://www.kth.se/social/course/DH2650</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+<a href="https://play.google.com/store/apps/details?id=com.orangepixel.stardash">https://play.google.com/store/apps/details?id=com.orangepixel.stardash</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+<a href="http://pzwiki.net/wiki/Main_Page">http://pzwiki.net/wiki/Main_Page</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+<a href="http://eu.battle.net/wow/en/game/guide/">http://eu.battle.net/wow/en/game/guide/</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Multiplayer_online_battle_arena">http://en.wikipedia.org/wiki/Multiplayer_online_battle_arena</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="#fnr.6">6</a></sup> <p class="footpara">
+<a href="http://www.rockpapershotgun.com/2012/07/20/dota-lol-all-heroes-of-newerth-heroes-going-free/">http://www.rockpapershotgun.com/2012/07/20/dota-lol-all-heroes-of-newerth-heroes-going-free/</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.7" name="fn.7" class="footnum" href="#fnr.7">7</a></sup> <p class="footpara">
+<a href="http://forums.heroesofnewerth.com/showthread.php?436758-Attention-Neweth!-All-Heroes-Going-Free">http://forums.heroesofnewerth.com/showthread.php?436758-Attention-Neweth!-All-Heroes-Going-Free</a>!
+</p></div>
+
+<div class="footdef"><sup><a id="fn.8" name="fn.8" class="footnum" href="#fnr.8">8</a></sup> <p class="footpara">
+<a href="http://www.wired.co.uk/news/archive/2013-08/15/plants-vs-zombies-2-review">http://www.wired.co.uk/news/archive/2013-08/15/plants-vs-zombies-2-review</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.9" name="fn.9" class="footnum" href="#fnr.9">9</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Flower_(video_game)">http://en.wikipedia.org/wiki/Flower_(video_game)</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.10" name="fn.10" class="footnum" href="#fnr.10">10</a></sup> <p class="footpara">
+<a href="http://cavestory.wikia.com/wiki/Cave_Story_Wiki">http://cavestory.wikia.com/wiki/Cave_Story_Wiki</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.11" name="fn.11" class="footnum" href="#fnr.11">11</a></sup> <p class="footpara">
+John Carmack on WebGL&#x2026; <a href="http://www.youtube.com/watch?v=ozxRRPJzZ78">http://www.youtube.com/watch?v=ozxRRPJzZ78</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.12" name="fn.12" class="footnum" href="#fnr.12">12</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Bastion_(video_game)">http://en.wikipedia.org/wiki/Bastion_(video_game)</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.13" name="fn.13" class="footnum" href="#fnr.13">13</a></sup> <p class="footpara">
+<a href="http://sv.wikipedia.org/wiki/Spore">http://sv.wikipedia.org/wiki/Spore</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.14" name="fn.14" class="footnum" href="#fnr.14">14</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Data-driven_programming">http://en.wikipedia.org/wiki/Data-driven_programming</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.15" name="fn.15" class="footnum" href="#fnr.15">15</a></sup> <p class="footpara">
+<a href="http://www.reddit.com/r/gaming/comments/p1ssv/dear_internet_im_a_26_year_old_lady_whos_been/">http://www.reddit.com/r/gaming/comments/p1ssv/dear_internet_im_a_26_year_old_lady_whos_been/</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.16" name="fn.16" class="footnum" href="#fnr.16">16</a></sup> <p class="footpara">
+<a href="http://havenandhearth.com">http://havenandhearth.com</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.17" name="fn.17" class="footnum" href="#fnr.17">17</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Free-to-play">http://en.wikipedia.org/wiki/Free-to-play</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.18" name="fn.18" class="footnum" href="#fnr.18">18</a></sup> <p class="footpara">
+<a href="https://www.runescape.com/game?html5=1">https://www.runescape.com/game?html5=1</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.19" name="fn.19" class="footnum" href="#fnr.19">19</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Game_boy">http://en.wikipedia.org/wiki/Game_boy</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.20" name="fn.20" class="footnum" href="#fnr.20">20</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Super_Mario_Land">http://en.wikipedia.org/wiki/Super_Mario_Land</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.21" name="fn.21" class="footnum" href="#fnr.21">21</a></sup> <p class="footpara">
+<a href="http://www.sonymobile.com/global-en/products/phones/xperia-play/">http://www.sonymobile.com/global-en/products/phones/xperia-play/</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.22" name="fn.22" class="footnum" href="#fnr.22">22</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Golden_Sun">http://en.wikipedia.org/wiki/Golden_Sun</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.23" name="fn.23" class="footnum" href="#fnr.23">23</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Link's_Awakening">http://en.wikipedia.org/wiki/Link's_Awakening</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.24" name="fn.24" class="footnum" href="#fnr.24">24</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Final_Fantasy_VII">http://en.wikipedia.org/wiki/Final_Fantasy_VII</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.25" name="fn.25" class="footnum" href="#fnr.25">25</a></sup> <p class="footpara">
+<a href="http://dungeonsofdredmor.com/">http://dungeonsofdredmor.com/</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.26" name="fn.26" class="footnum" href="#fnr.26">26</a></sup> <p class="footpara">
+<a href="http://en.wikipedia.org/wiki/Pokemon_Blue">http://en.wikipedia.org/wiki/Pokemon_Blue</a>
+</p></div>
+
+<div class="footdef"><sup><a id="fn.27" name="fn.27" class="footnum" href="#fnr.27">27</a></sup> <p class="footpara">
+<a href="https://play.google.com/store/apps/details?id=com.gamevil.zenonia4.global&hl=sv">https://play.google.com/store/apps/details?id=com.gamevil.zenonia4.global&hl=sv</a>
+</p></div>
+
+
+</div>
+</div></div>
 </body>
+</html>

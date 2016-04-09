@@ -1,29 +1,29 @@
 (function(window, document, undefined) {
 
     "use strict";
-    
-    /**
-       @Constructor
-    */
-    var Class = function() {
-        this.a = null;
-    };
-
-    Class.prototype.method = function(arg) {
-        this.a = arg;
-
-        console.log("Called method!");
-    };
 
 
     var main = function() {
+      var firstPress = true;
+      var disqusToggle = document.querySelector("#disqus-toggle");
+      disqusToggle.onclick = function (event) {
+        var disqusThreadContainer = document.querySelector("#disqus_thread_container");
+        if (firstPress) { // Nothing happened on first click, so coerce it to show.
+          firstPress = false;
+          disqusThreadContainer.style.display = 'block';
+          return;
+        }
 
-        var instance = Class();
+        var previous = disqusThreadContainer.style.display;
+        disqusThreadContainer.style.display = previous === 'none' ? 'block' : 'none';
+      };
 
-        instance.method();
-
+      setTimeout(function() {
+        var disqusToggle = document.querySelector("#disqus-toggle");
+        disqusToggle.style.display = 'block';
+      }, 3000);
     };
-    
-    window.main = main;
+
+    window.onload = main;
 
 })(this, document);

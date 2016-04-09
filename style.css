@@ -1,0 +1,47 @@
+body {
+    font-family: 'Kelly Slab', cursive;
+}
+
+#content {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.logo {
+    font-style: italic;
+    color: #dedede;
+}
+
+.outline-2 {
+    margin-bottom: 70px;
+}
+
+.outline-2 h2 {
+    border-top: 2px dotted grey;
+    padding-top: 10px;
+}
+
+figure {
+    text-align: center;
+    padding: 20px;
+}
+
+#disqus_thread_container {
+    position: fixed;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 400px;
+    padding: 20px;
+    background: #fff;
+    display: none;
+    border: 10px solid black;
+    border-radius: 10px 10px;
+}
+
+#disqus-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
