@@ -26,6 +26,10 @@ figure {
     padding: 20px;
 }
 
+figure p img {
+    max-width: 60%;
+}
+
 #disqus_thread_container {
     position: fixed;
     top: 0;
