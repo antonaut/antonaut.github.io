@@ -44,6 +44,13 @@ figure p img {
 }
 
 #disqus-toggle {
+    background: #fff;
+    display: block;
+    border: 2px solid;
+    border-radius: 4px 4px;
+    padding: 6px;
+    font-family: Kelly Slab;
+    font-weight: bold;
     position: fixed;
     top: 10px;
     left: 10px;
