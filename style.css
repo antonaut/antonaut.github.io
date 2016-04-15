@@ -2,6 +2,10 @@ body {
     font-family: 'Kelly Slab', cursive;
 }
 
+pre.src {
+    position: initial;
+}
+
 #content {
     margin: 0 auto;
     width: 80%;
