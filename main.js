@@ -25,6 +25,12 @@
         }
       }, 3000);
 
+      var clojureCodeBlocks = document.querySelectorAll('pre.src-clojure');
+      for (var i = 0; i < clojureCodeBlocks.length; i++) {
+        var block = clojureCodeBlocks[i];
+        block.classList.add("clojure");
+      }
+
       var codeBlocks = document.querySelectorAll('pre.src');
       for (var i = 0; i < codeBlocks.length; i++) {
         var block = codeBlocks[i];
