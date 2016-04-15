@@ -24,6 +24,12 @@
           disqusToggle.style.display = 'block';
         }
       }, 3000);
+
+      var codeBlocks = document.querySelectorAll('pre.src');
+      for (var i = 0; i < codeBlocks.length; i++) {
+        var block = codeBlocks[i];
+        hljs.highlightBlock(block);
+      }
     };
 
     window.onload = main;

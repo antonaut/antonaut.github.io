@@ -14,6 +14,8 @@
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'>
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" type="text/css" href="style.css" />
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="favicon.png" />
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/tomorrow.min.css">
+#+HTML_HEAD_EXTRA: <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
 #+HTML_HEAD_EXTRA: <div id="disqus_thread_container"><div id="disqus_thread"></div></div>
 #+OPTIONS: html-link-use-abs-url:nil html-postamble:nil
 #+OPTIONS: html-preamble:nil html-scripts:t html-style:t

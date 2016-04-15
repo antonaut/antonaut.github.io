@@ -2,6 +2,11 @@ body {
     font-family: 'Kelly Slab', cursive;
 }
 
+a, a:visited, a:active {
+    color: #f5871f;
+}
+
+
 pre.src {
     position: initial;
 }
@@ -16,11 +21,15 @@ pre.src {
     color: #dedede;
 }
 
+h1, h2 {
+    color: #8959a8;
+}
+
 .outline-2 {
     margin-bottom: 70px;
 }
 
-.outline-2 h2 {
+.outline-2 {
     border-top: 2px dotted grey;
     padding-top: 10px;
 }
