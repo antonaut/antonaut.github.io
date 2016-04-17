@@ -90,11 +90,6 @@ Dear reader, hopefully it will be to your liking.
 
 * Moves where a Queen can't take (8x8 chess board), Apr 17       :code:problem:clash:
 
-Over at [[http://codingame.com][CodinGame]], I have been doing some code clashes recently, to
-learn more about Clojure and realize what functions I don't know of. I
-feel like I learn something new every problem. Even though I can't
-finish most on time, I still try to complete them. I'll put some of
-the (what I find to be) more interesting solutions here.
 
 #+begin_src clojure :exports both
 ;;; Finds okay positions where a single queen can't take the piece (8x8
@@ -247,6 +242,21 @@ Results in:
 26  51  50  49  48  47  46  45  16
 25  24  23  22  21  20  19  18  17
 #+end_src
+
+* Improving my Clojure skills, Apr 15                    :problem-solving:clash:
+
+Over at [[http://codingame.com][CodinGame]] they have something called clashes of code where you
+compete with other developers to solve a certain problem in a given
+amount of time. I know there are quite a few sites where you can
+sharpen your coding skills, but somehow I got stuck at this one. Maybe
+it provides me with just enough challenge for me with my current skills.
+
+I've tried to use the clashes to learn more about Clojure. So far I've
+come to realize that there are a *TON* of functions I don't know of. I
+feel like I learn something new on (almost) every problem. Even though
+I can't finish most of them on time, I still try to complete them. I'll put
+some of my solutions to a few of the more interesting solutions here.
+
 
 * End of my game dev story? Apr 09                             :gamedevstory:
 
