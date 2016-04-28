@@ -243,7 +243,7 @@ Results in:
 25  24  23  22  21  20  19  18  17
 #+end_src
 
-* Improving my Clojure skills, Apr 15                    :problem-solving:clash:
+* Improving my Clojure skills, Apr 15                    :code:problem:clash:
 
 Over at [[http://codingame.com][CodinGame]] they have something called clashes of code where you
 compete with other developers to solve a certain problem in a given
