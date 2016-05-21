@@ -64,6 +64,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 <h2 class="logo">It's all about 42, (defn foobarbaz []) and cheeseburgers.</h1>
 <h3>What is this?</h3>
+<img src="https://github.com/antonaut.png">
 #+end_html
 
 This started out as a blog for written answers to assignments from a
