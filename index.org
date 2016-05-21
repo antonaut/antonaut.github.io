@@ -24,7 +24,9 @@
 #+HTML_DOCTYPE: html5
 
 #+begin_html
-
+<header>
+<h2 class="logo">It's all about 42, (defn foobarbaz []) and cheeseburgers.</h1>
+</header>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -60,11 +62,18 @@ s.setAttribute('data-timestamp', +new Date());
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
 <script src="main.js"></script>
-<button id="disqus-toggle">Toggle comments</button>
 
-<h2 class="logo">It's all about 42, (defn foobarbaz []) and cheeseburgers.</h1>
+<div class="right-menu">
+  <button type="button" id="disqus-toggle">Toggle comments</button>
+  <a target="_blank" href="cv_en.pdf"><button type="button" id="cv-pdf">CV - pdf</button></a>
+</div>
+
+<div class="section-left">
+<img class="avatar" src="img/avatar.jpg">
+</div>
+<div class="section-right">
 <h3>What is this?</h3>
-<img class="avatar" src="https://github.com/antonaut.png">
+
 #+end_html
 
 This started out as a blog for written answers to assignments from a
@@ -88,6 +97,10 @@ newer posts.
 # Note on themes: Hopefully the themes work out fine with the buttons.
 #
 Dear reader, hopefully it will be to your liking.
+
+#+begin_html
+</div>
+#+end_html
 
 * Moves where a Queen can't take (8x8 chess board), Apr 17       :code:problem:clash:
 
