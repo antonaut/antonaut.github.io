@@ -42,6 +42,7 @@ h1, h2 {
     border-radius: 5px 5px;
     position: relative;
     bottom: 10px;
+    z-index: -1;
 }
 
 .section-right  {
@@ -86,4 +87,8 @@ figure p img {
     font-family: Kelly Slab;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+.right-menu #cv-link {
+    text-decoration: none;
 }

@@ -65,7 +65,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 <div class="right-menu">
   <button type="button" id="disqus-toggle">Toggle comments</button>
-  <a target="_blank" href="cv_en.pdf"><button type="button" id="cv-pdf">CV - pdf</button></a>
+  <a target="_blank" id="cv-link" href="cv_en.pdf"><button type="button" id="cv-pdf">CV - pdf</button></a>
 </div>
 
 <div class="section-left">
