@@ -102,6 +102,71 @@ Dear reader, hopefully it will be to your liking.
 </div>
 #+end_html
 
+* Portfolio                                                       :portfolio:
+
+These are some of the projects I have been involved in, one way or
+another. Most of the projects are related to school, but some have
+I worked on during my free time.
+
+** Aerial
+[[http://aerial.lindstrm.se/about][Aerial]] is a project where you control an airplane by moving a
+smartphone around. The goal of the project was to make something which
+somebody paralyzed from the neck and downwards could interact
+with. The smartphone is supposed to be attached to your head and you
+control the plane by tilting your head back and forth or side to side.
+
+I worked mostly on project management and fixing the issues we had, as
+well as some of the mathematical modeling needed.
+
+This project was part of the KTH course AGI-15.
+
+#+CAPTION: Gameplay of Aerial.
+[[./img/aerial.png]]
+
+** Padawan101
+[[http://www.nada.kth.se/~aerholt/padawan101/][Padawan101]] is a light saber simulator made for Oculus DK2, a Microsoft
+Kinect and a smart phone. The project was built with Unity. We
+combined a lot of technologies to get body and light saber tracking
+working correctly. Worked on a lot of stuff during the project. What I
+worked the most on was actually networking, to create even more views
+so that people could join and look at the jedi fighting. I was also
+responsible for the project web page.
+
+#+begin_html
+<iframe src="https://player.vimeo.com/video/148290340" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/148290340">Padawan 101 - project video</a> from <a href="https://vimeo.com/user14547966">Viktor Leandersson</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+#+end_html
+
+The code is available [[https://github.com/stefanseibert/padawan101][here]]. This project was also part of the KTH
+course AGI-15.
+
+#+begin_html
+<!--
+#+end_html
+
+** Put put glorify!
+A multiplayer game to be played on a big screen using smart phones as
+controllers.
+
+** Rendering with ray casting and rasterization
+
+** Commercial projects
+
+noaxlab
+
+** Go projects -> posts?
+fractalz
+game-of-life
+
+** Old projects
+
+
+#+begin_html
+-->
+#+end_html
+
+
+
 * Moves where a Queen can't take (8x8 chess board), Apr 17       :code:problem:clash:
 
 
@@ -271,7 +336,6 @@ feel like I learn something new on (almost) every problem. Even though
 I can't finish most of them on time, I still try to complete them. I'll put
 some of my solutions to a few of the more interesting solutions here.
 
-
 * End of my game dev story? Apr 09                             :gamedevstory:
 
 We worked on this for a while, but it just ran out in the sand when I
@@ -338,7 +402,6 @@ Just like this blog, I'll largely write my thesis in [[https://www.gnu.org/softw
 [[http://orgmode.org/][org-mode]]. I've started to organize some of the references I've found
 in [[https://www.mendeley.com/][Mendeley Desktop]] and in an org-mode file. I also found a nice
 latex-package for doing gantt-charts called /pgfgantt/.
-
 
 * Concerning idea debt and investment, Feb 25           :documentation:ideas:
 

@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>CtrlAltDelete.nu</title>
-<!-- 2016-05-21 Sat 17:19 -->
+<!-- 2016-05-24 Tue 23:16 -->
 <meta  charset="utf-8">
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="Anton Erholt">
@@ -269,8 +269,115 @@ Dear reader, hopefully it will be to your liking.
 </div>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Moves where a Queen can't take (8x8 chess board), Apr 17&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
+<h2 id="sec-1">Portfolio&#xa0;&#xa0;&#xa0;<span class="tag"><span class="portfolio">portfolio</span></span></h2>
 <div class="outline-text-2" id="text-1">
+<p>
+These are some of the projects I have been involved in, one way or
+another. Most of the projects are related to school, but some have
+I worked on during my free time.
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Aerial</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+<a href="http://aerial.lindstrm.se/about">Aerial</a> is a project where you control an airplane by moving a
+smartphone around. The goal of the project was to make something which
+somebody paralyzed from the neck and downwards could interact
+with. The smartphone is supposed to be attached to your head and you
+control the plane by tilting your head back and forth or side to side.
+</p>
+
+<p>
+I worked mostly on project management and fixing the issues we had, as
+well as some of the mathematical modeling needed.
+</p>
+
+<p>
+This project was part of the KTH course AGI-15.
+</p>
+
+
+<figure>
+<p><img src="./img/aerial.png" alt="aerial.png">
+</p>
+<figcaption><span class="figure-number">Figure 1:</span> Gameplay of Aerial.</figcaption>
+</figure>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Padawan101</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+<a href="http://www.nada.kth.se/~aerholt/padawan101/">Padawan101</a> is a light saber simulator made for Oculus DK2, a Microsoft
+Kinect and a smart phone. The project was built with Unity. We
+combined a lot of technologies to get body and light saber tracking
+working correctly. Worked on a lot of stuff during the project. What I
+worked the most on was actually networking, to create even more views
+so that people could join and look at the jedi fighting. I was also
+responsible for the project web page.
+</p>
+
+<iframe src="https://player.vimeo.com/video/148290340" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/148290340">Padawan 101 - project video</a> from <a href="https://vimeo.com/user14547966">Viktor Leandersson</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+<p>
+The code is available <a href="https://github.com/stefanseibert/padawan101">here</a>. This project was also part of the KTH
+course AGI-15.
+</p>
+
+<!--
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">Put put glorify!</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+A multiplayer game to be played on a big screen using smart phones as
+controllers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4">Rendering with ray casting and rasterization</h3>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5">Commercial projects</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+noaxlab
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6">Go projects -&gt; posts?</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+fractalz
+game-of-life
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-7" class="outline-3">
+<h3 id="sec-1-7">Old projects</h3>
+<div class="outline-text-3" id="text-1-7">
+-->
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Moves where a Queen can't take (8x8 chess board), Apr 17&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
+<div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 
 <pre class="src src-clojure">;;; Finds okay positions where a single queen can't take the piece (8x8
@@ -307,13 +414,13 @@ Dear reader, hopefully it will be to your liking.
 ;; Direction functions for taking a step in the next direction.
 
 (def dirs {:topleft   (fn [[x y]] [(dec x) (dec y)])
-           :top       (fn [[x y]] [x (dec y)])
-           :topright  (fn [[x y]] [(inc x) (dec y)])
-           :left      (fn [[x y]] [(dec x) y])
-           :right     (fn [[x y]] [(inc x) y])
-           :downleft  (fn [[x y]] [(dec x) (inc y)])
-           :down      (fn [[x y]] [x (inc y)])
-           :downright (fn [[x y]] [(inc x) (inc y)])})
+	   :top       (fn [[x y]] [x (dec y)])
+	   :topright  (fn [[x y]] [(inc x) (dec y)])
+	   :left      (fn [[x y]] [(dec x) y])
+	   :right     (fn [[x y]] [(inc x) y])
+	   :downleft  (fn [[x y]] [(dec x) (inc y)])
+	   :down      (fn [[x y]] [x (inc y)])
+	   :downright (fn [[x y]] [(inc x) (inc y)])})
 
 (defn outside-board?
   "Stop the lazyness with this when you fall off the board."
@@ -334,22 +441,22 @@ Dear reader, hopefully it will be to your liking.
   [dir pos]
   (lazy-seq
    (cons pos
-         (advanced-positions dir (advance dir pos)))))
+	 (advanced-positions dir (advance dir pos)))))
 
 (defn take-positions
   "Find all the positions where a queen can take a piece."
   [[x y]]
   (for [dir (keys dirs)
-        pos (take-while
-             #(not (outside-board? %))
-             (advanced-positions dir [x y]))]
+	pos (take-while
+	     #(not (outside-board? %))
+	     (advanced-positions dir [x y]))]
     pos))
 
 (defn find-string-on-board
   [board string]
   (for [row   (map-indexed vector board)
-        col   (map-indexed vector (second row))
-        :when (= string (second col))]
+	col   (map-indexed vector (second row))
+	:when (= string (second col))]
     [(first row) (first col)]))
 
 (defn find-queen [board]
@@ -360,13 +467,13 @@ Dear reader, hopefully it will be to your liking.
 
 (defn update-row [row x val]
   (map-indexed (fn [xidx col]
-                 (if (= x xidx) val col)) row))
+		 (if (= x xidx) val col)) row))
 
 (defn update-board [board [x y] val]
   (map-indexed (fn [yidx row]
-                 (if (= y yidx)
-                   (update-row row x val)
-                   row)) board))
+		 (if (= y yidx)
+		   (update-row row x val)
+		   row)) board))
 
 
 ;; (update-board one-Q-board [2 3] "X")
@@ -374,17 +481,17 @@ Dear reader, hopefully it will be to your liking.
 (defn ok-positions
   [board]
   (let [qpos       (first (find-queen board))
-        tpositions (take-positions qpos)]
+	tpositions (take-positions qpos)]
     (reverse
      (map reverse
-          (loop [tpositions tpositions
-                 board      all-p-board]
-            (if (empty? tpositions)
-              (update-board board qpos "Q")
-              (recur (rest tpositions)
-                     (update-board board
-                                   (first tpositions)
-                                   "."))))))))
+	  (loop [tpositions tpositions
+		 board      all-p-board]
+	    (if (empty? tpositions)
+	      (update-board board qpos "Q")
+	      (recur (rest tpositions)
+		     (update-board board
+				   (first tpositions)
+				   "."))))))))
 
 (ok-positions one-Q-board)
 </pre>
@@ -409,9 +516,9 @@ Results in:
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Spiral matrix in Clojure, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Spiral matrix in Clojure, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
+<div class="outline-text-2" id="text-3">
 <p>
 I had a bit of a struggle with this problem at first. I decided to
 generate the path with a few small functions and then sort and print.
@@ -441,14 +548,14 @@ Enjoy this beatiful piece!
   [x (inc y)])
 
 (def dirs {:right right
-           :up    up
-           :down  down
-           :left  left})
+	   :up    up
+	   :down  down
+	   :left  left})
 
 (def rotate {:right :down
-             :down  :left
-             :left  :up
-             :up    :right})
+	     :down  :left
+	     :left  :up
+	     :up    :right})
 
 (defn advance-dir
   [pos
@@ -461,29 +568,29 @@ Enjoy this beatiful piece!
 (defn spiral [W H]
   (let [stop (* W H)]
     (loop [pos            [1 1]
-           next-dir       :right
-           current-number 1
-           visited        #{[(inc W) 1]
-                            [W (inc H)]
-                            [0 H]}
-           matr           #{}]
+	   next-dir       :right
+	   current-number 1
+	   visited        #{[(inc W) 1]
+			    [W (inc H)]
+			    [0 H]}
+	   matr           #{}]
       (if (= stop current-number)
-        (conj matr [pos current-number])
-        (recur ((next-dir dirs) pos)
-               (advance-dir ((next-dir dirs) pos)
-                            next-dir
-                            visited)
-               (inc current-number)
-               (conj visited pos)
-               (conj matr [pos current-number]))))))
+	(conj matr [pos current-number])
+	(recur ((next-dir dirs) pos)
+	       (advance-dir ((next-dir dirs) pos)
+			    next-dir
+			    visited)
+	       (inc current-number)
+	       (conj visited pos)
+	       (conj matr [pos current-number]))))))
 
 (defn cmp-pos [[[x1 y1] _]
-               [[x2 y2] _]]
+	       [[x2 y2] _]]
   (cond (&lt; y1 y2) -1
-        (&gt; y1 y2) 1
-        :else     (cond (&lt; x1 x2) -1
-                        (&gt; x1 x2) 1
-                        :else     0)))
+	(&gt; y1 y2) 1
+	:else     (cond (&lt; x1 x2) -1
+			(&gt; x1 x2) 1
+			:else     0)))
 
 (defn print-row
   [row]
@@ -491,16 +598,16 @@ Enjoy this beatiful piece!
     (if (= 1 (count row))
       (println (output-number (first row)))
       (do
-        (print (output-number (first row)) " ")
-        (recur (rest row))))))
+	(print (output-number (first row)) " ")
+	(recur (rest row))))))
 
 (defn main
   "Width and height of matrix to be printed.
   Looks really bad if either of them &gt; 9."
   [W H]
   (let [xs   (sort cmp-pos (spiral W H))
-        mat  (partition W xs)
-        rows (map #(map second %) mat)]
+	mat  (partition W xs)
+	rows (map #(map second %) mat)]
     (map print-row rows)))
 
 ;;(main 5 3)
@@ -526,9 +633,9 @@ Results in:
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Improving my Clojure skills, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Improving my Clojure skills, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
+<div class="outline-text-2" id="text-4">
 <p>
 Over at <a href="http://codingame.com">CodinGame</a> they have something called clashes of code where you
 compete with other developers to solve a certain problem in a given
@@ -547,10 +654,9 @@ some of my solutions to a few of the more interesting solutions here.
 </div>
 </div>
 
-
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">End of my game dev story? Apr 09&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">End of my game dev story? Apr 09&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-5">
 <p>
 We worked on this for a while, but it just ran out in the sand when I
 went to France for exchange studies. Nevertheless, it was a great
@@ -566,9 +672,9 @@ Hopefully we can publish the code with some small examples.
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">Sphere packing on a sphere? Circle packing papers, Mar 08&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span>&#xa0;<span class="topology">topology</span></span></h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Sphere packing on a sphere? Circle packing papers, Mar 08&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span>&#xa0;<span class="topology">topology</span></span></h2>
+<div class="outline-text-2" id="text-6">
 <p>
 The idea of a tool giving you access to finding relevant papers in a
 certain field of research is pretty interesting. Let's imagine all the
@@ -581,7 +687,7 @@ papers as a <a href="https://en.wikipedia.org/wiki/Planar_graph">planar graph</a
 <figure>
 <p><img src="http://jeffe.cs.illinois.edu/teaching/comptop/2009/Fig/circlepack.png" alt="circlepack.png">
 </p>
-<figcaption><span class="figure-number">Figure 1:</span> Found on a course web page for computational topology, originally from <a href="http://www.math.utk.edu/~kens/BookInfo.html">http://www.math.utk.edu/~kens/BookInfo.html</a>. I should totally read that book.</figcaption>
+<figcaption><span class="figure-number">Figure 2:</span> Found on a course web page for computational topology, originally from <a href="http://www.math.utk.edu/~kens/BookInfo.html">http://www.math.utk.edu/~kens/BookInfo.html</a>. I should totally read that book.</figcaption>
 </figure>
 
 <p>
@@ -597,9 +703,9 @@ would feel about them in reality though.
 </div>
 </div>
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6">Tools for completing a master's thesis, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="thesis">thesis</span>&#xa0;<span class="tools">tools</span>&#xa0;<span class="emacs">emacs</span></span></h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">Tools for completing a master's thesis, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="thesis">thesis</span>&#xa0;<span class="tools">tools</span>&#xa0;<span class="emacs">emacs</span></span></h2>
+<div class="outline-text-2" id="text-7">
 <p>
 A master's thesis is an intense 18 weeks of total focus and devotion
 to a research question. So far, I've only been able to invest about
@@ -662,10 +768,9 @@ latex-package for doing gantt-charts called <i>pgfgantt</i>.
 </div>
 </div>
 
-
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7">Concerning idea debt and investment, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="documentation">documentation</span>&#xa0;<span class="ideas">ideas</span></span></h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">Concerning idea debt and investment, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="documentation">documentation</span>&#xa0;<span class="ideas">ideas</span></span></h2>
+<div class="outline-text-2" id="text-8">
 <p>
 I read <a href="http://jessicaabel.com/2016/01/27/idea-debt/">this</a> article about idea debt. Not sure which affected me the
 most. What she stated about idea investment, or the fact that she too
@@ -677,9 +782,9 @@ properly. This is my blog. My life.
 </div>
 </div>
 
-<div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8">2016&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9">2016&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-9">
 <p>
 <h1>Happy new year 2016!</h1>
 </p>
@@ -691,9 +796,9 @@ blog fruit.
 </div>
 </div>
 
-<div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9">Regarding problems which can be solved by dynamic programming techniques, Jan 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dynamic">dynamic</span>&#xa0;<span class="programming">programming</span>&#xa0;<span class="recursion">recursion</span>&#xa0;<span class="bfs">bfs</span></span></h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10">Regarding problems which can be solved by dynamic programming techniques, Jan 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dynamic">dynamic</span>&#xa0;<span class="programming">programming</span>&#xa0;<span class="recursion">recursion</span>&#xa0;<span class="bfs">bfs</span></span></h2>
+<div class="outline-text-2" id="text-10">
 <p>
 I have recently watched quite a few videos on dynamic
 programming. What is dynamic programming? It's a method for
@@ -842,17 +947,17 @@ match.
 </div>
 </div>
 
-<div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10">2015&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11">2015&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-11">
 <p>
 <h1>Happy new year 2015!</h1>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11">A flawed idea of the halting problem, Mar 16&#xa0;&#xa0;&#xa0;<span class="tag"><span class="programming">programming</span>&#xa0;<span class="computer">computer</span>&#xa0;<span class="science">science</span></span></h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12">A flawed idea of the halting problem, Mar 16&#xa0;&#xa0;&#xa0;<span class="tag"><span class="programming">programming</span>&#xa0;<span class="computer">computer</span>&#xa0;<span class="science">science</span></span></h2>
+<div class="outline-text-2" id="text-12">
 <p>
 The halting problem is fairly interesting even though someone (Alan
 Turing) some time ago (1936) has proved that it can not be solved by a
@@ -879,7 +984,7 @@ would not be of much use), but rather a very large FSM.
 }
 
 int function(a, b)
-        int a,b;
+	int a,b;
 {
   a = 1;
   b = 2;
@@ -1008,9 +1113,9 @@ are supposed to be declared before they're used.</i>
 </div>
 </div>
 
-<div id="outline-container-sec-12" class="outline-2">
-<h2 id="sec-12">HACKATHON!&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13">HACKATHON!&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-13">
 <p>
 A lot has happened since we started developing the game.
 Our initial goal was to do these tasks during the hackathon:
@@ -1037,9 +1142,9 @@ listening to jazz from a jar (using something similar to
 </div>
 </div>
 
-<div id="outline-container-sec-13" class="outline-2">
-<h2 id="sec-13">To use DDD or not (| !) to use DDD&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14">To use DDD or not (| !) to use DDD&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-14">
 <p>
 My initial thoughts on Data Driven Development was that it to some
 extent might have been unneccessary (mainly due to the fact that I
@@ -1068,9 +1173,9 @@ able to show off something soon.
 </div>
 </div>
 
-<div id="outline-container-sec-14" class="outline-2">
-<h2 id="sec-14">The beginning of Anton's Game Dev Story, Jan 7&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15">The beginning of Anton's Game Dev Story, Jan 7&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-15">
 <p>
 About a year ago, me and two classmates (<a href="http://www.nada.kth.se/~johntu">johntu</a> &amp; <a href="http://www.nada.kth.se/~dmol">dmol</a>)
 participated in a programming competition called <a href="http://swdc.se/devnull/">Escape from
@@ -1093,7 +1198,7 @@ order of second to last.
 <figure>
 <p><img src="img/lost_in_space.png" alt="lost_in_space.png">
 </p>
-<figcaption><span class="figure-number">Figure 2:</span> Our client for the space themed /dev/null</figcaption>
+<figcaption><span class="figure-number">Figure 3:</span> Our client for the space themed /dev/null</figcaption>
 </figure>
 
 
@@ -1112,17 +1217,17 @@ about&#x2026;
 </div>
 </div>
 
-<div id="outline-container-sec-15" class="outline-2">
-<h2 id="sec-15">2014&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-sec-16" class="outline-2">
+<h2 id="sec-16">2014&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-16">
 <p>
 <h1>Happy new year 2014!</h1>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-16" class="outline-2">
-<h2 id="sec-16">Presentation of game demo, Dec 13&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-16">
+<div id="outline-container-sec-17" class="outline-2">
+<h2 id="sec-17">Presentation of game demo, Dec 13&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-17">
 <p>
 We made a presentation of a game demo we developed during the
 course <sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="#fn.1">1</a></sup>. Here follows the script and some comments of the final
@@ -1132,9 +1237,9 @@ have been warned).
 </div>
 
 
-<div id="outline-container-sec-16-1" class="outline-3">
-<h3 id="sec-16-1">Presentation Script</h3>
-<div class="outline-text-3" id="text-16-1">
+<div id="outline-container-sec-17-1" class="outline-3">
+<h3 id="sec-17-1">Presentation Script</h3>
+<div class="outline-text-3" id="text-17-1">
 <p>
 <b>Welcome</b>
 Hi everyone and welcome to this presentation. We’re the group “Fat
@@ -1229,9 +1334,9 @@ On time.
 </div>
 </div>
 
-<div id="outline-container-sec-16-2" class="outline-3">
-<h3 id="sec-16-2">Comments About the Game</h3>
-<div class="outline-text-3" id="text-16-2">
+<div id="outline-container-sec-17-2" class="outline-3">
+<h3 id="sec-17-2">Comments About the Game</h3>
+<div class="outline-text-3" id="text-17-2">
 <p>
 <b>Positive Feedback</b>
 </p>
@@ -1291,9 +1396,9 @@ version of the game as we would have liked.
 </div>
 </div>
 </div>
-<div id="outline-container-sec-17" class="outline-2">
-<h2 id="sec-17">Mobile games, Dec 6&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-sec-18" class="outline-2">
+<h2 id="sec-18">Mobile games, Dec 6&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-18">
 <p>
 When playing a game on a mobile device, you have very little time to
 make the player interested. This is a very similar problem to the one
@@ -1333,18 +1438,18 @@ into something positive?
 </div>
 </div>
 
-<div id="outline-container-sec-18" class="outline-2">
-<h2 id="sec-18">The game producer - Game business models, Dec 3&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-18">
+<div id="outline-container-sec-19" class="outline-2">
+<h2 id="sec-19">The game producer - Game business models, Dec 3&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-19">
 <p>
 Now I'll briefly discuss some business models. Please note that I'm
 probably a bit biased.
 </p>
 </div>
 
-<div id="outline-container-sec-18-1" class="outline-3">
-<h3 id="sec-18-1">Pay-to-play (P2P)</h3>
-<div class="outline-text-3" id="text-18-1">
+<div id="outline-container-sec-19-1" class="outline-3">
+<h3 id="sec-19-1">Pay-to-play (P2P)</h3>
+<div class="outline-text-3" id="text-19-1">
 <p>
 The "standard" model. You pay for a game once and then it is
 yours. For all eternity&#x2026; Oh, you want an example? Hmm&#x2026; Let's
@@ -1371,9 +1476,9 @@ see. Oh! Project Zomboid <sup><a id="fnr.3" name="fnr.3" class="footref" href="#
 </div>
 </div>
 
-<div id="outline-container-sec-18-2" class="outline-3">
-<h3 id="sec-18-2">Subscription</h3>
-<div class="outline-text-3" id="text-18-2">
+<div id="outline-container-sec-19-2" class="outline-3">
+<h3 id="sec-19-2">Subscription</h3>
+<div class="outline-text-3" id="text-19-2">
 <p>
 Well, the most obvious example I can come up with is World of
 Warcraft <sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>, where you pay a fee each month to continue playing.
@@ -1409,9 +1514,9 @@ not be that much of a problem.
 </div>
 </div>
 
-<div id="outline-container-sec-18-3" class="outline-3">
-<h3 id="sec-18-3">Free-to-play (F2P)</h3>
-<div class="outline-text-3" id="text-18-3">
+<div id="outline-container-sec-19-3" class="outline-3">
+<h3 id="sec-19-3">Free-to-play (F2P)</h3>
+<div class="outline-text-3" id="text-19-3">
 <p>
 A great example is the giant in the MOBA-genre <sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>, DotA 2. In
 this game you can buy skins and new visual styles for the characters
@@ -1449,9 +1554,9 @@ since the 20th of July 2012 <sup><a id="fnr.7" name="fnr.7" class="footref" href
 </div>
 </div>
 
-<div id="outline-container-sec-19" class="outline-2">
-<h2 id="sec-19">Dataspelsbranschen: the trade organization, Nov 29&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-19">
+<div id="outline-container-sec-20" class="outline-2">
+<h2 id="sec-20">Dataspelsbranschen: the trade organization, Nov 29&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-20">
 <p>
 Today we had a guest lecture from Per Strömbäck of Dataspelsbranchen,
 the trade organization for Swedish game development. He wanted us to
@@ -1512,9 +1617,9 @@ largest wallet. Which is insane.
 </div>
 </div>
 
-<div id="outline-container-sec-20" class="outline-2">
-<h2 id="sec-20">Short on game physics and animation, Nov 26&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-20">
+<div id="outline-container-sec-21" class="outline-2">
+<h2 id="sec-21">Short on game physics and animation, Nov 26&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-21">
 <p>
 Some games are really nothing but great combination of physics,
 animation and astonishing scenery. One example I would like to discuss
@@ -1585,9 +1690,9 @@ amusing and totally unexpected.
 </div>
 </div>
 
-<div id="outline-container-sec-21" class="outline-2">
-<h2 id="sec-21">Using a game engine or building your own? Nov 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-21">
+<div id="outline-container-sec-22" class="outline-2">
+<h2 id="sec-22">Using a game engine or building your own? Nov 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-22">
 <p>
 This post will be filled with spontaneous questions and answers
 related to whether one should use an existing game engine or create
@@ -1638,18 +1743,18 @@ Store. Beautiful.
 </div>
 </div>
 
-<div id="outline-container-sec-22" class="outline-2">
-<h2 id="sec-22">The Sims - a short presentation, Nov 20&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-22">
+<div id="outline-container-sec-23" class="outline-2">
+<h2 id="sec-23">The Sims - a short presentation, Nov 20&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-23">
 <p>
 We made a short presentation on the Sims in class. Here are the slides and the
 script.
 </p>
 </div>
 
-<div id="outline-container-sec-22-1" class="outline-3">
-<h3 id="sec-22-1">HISTORY - Slide</h3>
-<div class="outline-text-3" id="text-22-1">
+<div id="outline-container-sec-23-1" class="outline-3">
+<h3 id="sec-23-1">HISTORY - Slide</h3>
+<div class="outline-text-3" id="text-23-1">
 <ul class="org-ul">
 <li>The Sims is the first game in the series. Developed by Maxis and
 published by Electronic Arts, it was released for Microsoft Windows
@@ -1675,9 +1780,9 @@ Sims Medieval, The Sims Social …
 </div>
 </div>
 
-<div id="outline-container-sec-22-2" class="outline-3">
-<h3 id="sec-22-2">HISTORY - Script/notes</h3>
-<div class="outline-text-3" id="text-22-2">
+<div id="outline-container-sec-23-2" class="outline-3">
+<h3 id="sec-23-2">HISTORY - Script/notes</h3>
+<div class="outline-text-3" id="text-23-2">
 <ul class="org-ul">
 <li>Sims 1 - Seven expansion packs and two bonafide deluxe editions with
 exclusive content have been released for this game. By March 22,
@@ -1711,9 +1816,9 @@ will be available for PC.
 </div>
 </div>
 
-<div id="outline-container-sec-22-3" class="outline-3">
-<h3 id="sec-22-3">EFFECTS OF THE GAME - Slide</h3>
-<div class="outline-text-3" id="text-22-3">
+<div id="outline-container-sec-23-3" class="outline-3">
+<h3 id="sec-23-3">EFFECTS OF THE GAME - Slide</h3>
+<div class="outline-text-3" id="text-23-3">
 <ul class="org-ul">
 <li>The Sims is one of first full-commercial strategic life-simulation
 video games that still is most successful artificial life game
@@ -1726,9 +1831,9 @@ video games that still is most successful artificial life game
 </div>
 </div>
 
-<div id="outline-container-sec-22-4" class="outline-3">
-<h3 id="sec-22-4">EFFECTS OF THE GAME - Script/notes</h3>
-<div class="outline-text-3" id="text-22-4">
+<div id="outline-container-sec-23-4" class="outline-3">
+<h3 id="sec-23-4">EFFECTS OF THE GAME - Script/notes</h3>
+<div class="outline-text-3" id="text-23-4">
 <p>
 Artificial life games and life simulations find their origins in
 artificial life research, including Conway's Game of Life from 1970.
@@ -1749,9 +1854,9 @@ genetic algorithms".
 </div>
 </div>
 
-<div id="outline-container-sec-22-5" class="outline-3">
-<h3 id="sec-22-5">BEHAVIOUR OF THE PLAYER - Slide</h3>
-<div class="outline-text-3" id="text-22-5">
+<div id="outline-container-sec-23-5" class="outline-3">
+<h3 id="sec-23-5">BEHAVIOUR OF THE PLAYER - Slide</h3>
+<div class="outline-text-3" id="text-23-5">
 <ul class="org-ul">
 <li>Cheats - Infinite money - Maximum skills
 </li>
@@ -1771,9 +1876,9 @@ genetic algorithms".
 </div>
 </div>
 
-<div id="outline-container-sec-22-6" class="outline-3">
-<h3 id="sec-22-6">BEHAVIOUR OF THE PLAYER - Script/notes</h3>
-<div class="outline-text-3" id="text-22-6">
+<div id="outline-container-sec-23-6" class="outline-3">
+<h3 id="sec-23-6">BEHAVIOUR OF THE PLAYER - Script/notes</h3>
+<div class="outline-text-3" id="text-23-6">
 <p>
 What’s the most memorable thing about the Sims? We think it depends
 greatly on how the player has behaved when playing. What do we
@@ -1794,9 +1899,9 @@ player can focus on, for instance “University, Seasons, Pets… etc.”
 </div>
 </div>
 
-<div id="outline-container-sec-23" class="outline-2">
-<h2 id="sec-23">Future of procedural generation of content, Nov 19&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-23">
+<div id="outline-container-sec-24" class="outline-2">
+<h2 id="sec-24">Future of procedural generation of content, Nov 19&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-24">
 <p>
 I really think that map generation or procedural content generation is
 something which is becoming more and more common in games. Instead of
@@ -1840,9 +1945,9 @@ looking at.
 </div>
 </div>
 
-<div id="outline-container-sec-24" class="outline-2">
-<h2 id="sec-24">Data-driven approach, Nov 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-24">
+<div id="outline-container-sec-25" class="outline-2">
+<h2 id="sec-25">Data-driven approach, Nov 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-25">
 <p>
 A data-driven approach is shifted from Object Oriented approaches.
 The data-driven approach seems like a really good fit if you are
@@ -1879,9 +1984,9 @@ then one can make gradual improvements.
 </div>
 </div>
 
-<div id="outline-container-sec-25" class="outline-2">
-<h2 id="sec-25">Software development model, Nov 12&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-25">
+<div id="outline-container-sec-26" class="outline-2">
+<h2 id="sec-26">Software development model, Nov 12&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-26">
 <p>
 I think the model used to develop a game is really depending on what
 type of game you make. I'd like to address the fact that not every
@@ -1921,9 +2026,9 @@ playable as soon as possible.
 </div>
 </div>
 
-<div id="outline-container-sec-26" class="outline-2">
-<h2 id="sec-26">Haven and Hearth, Nov 8&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-26">
+<div id="outline-container-sec-27" class="outline-2">
+<h2 id="sec-27">Haven and Hearth, Nov 8&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-27">
 <p>
 Today I played a game by originally made by Seatribe called Haven and
 Hearth <sup><a id="fnr.16" name="fnr.16" class="footref" href="#fn.16">16</a></sup>. It's a MMORPG where death, Permanent death(!), is
@@ -1970,9 +2075,9 @@ more, since we didn't get that far in the game.
 </div>
 </div>
 
-<div id="outline-container-sec-27" class="outline-2">
-<h2 id="sec-27">What type of gamer are you? Nov 5&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-27">
+<div id="outline-container-sec-28" class="outline-2">
+<h2 id="sec-28">What type of gamer are you? Nov 5&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-28">
 <p>
 My name's Anton Erholt and I've just started my master's programme
 in Computer Science at KTH. I'm 23 years old and live in a suburb of

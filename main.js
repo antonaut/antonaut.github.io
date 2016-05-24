@@ -14,6 +14,7 @@
   };
 
     var main = function() {
+      /* Toggle comments */
       var firstPress = true;
       var disqusToggle = document.querySelector("#disqus-toggle");
       disqusToggle.onclick = function (event) {
@@ -35,6 +36,7 @@
         }
       }, 3000);
 
+      /* Nice code blocks */
       var hljsOptions = {languages: ["clojure", "c"]};
       hljs.configure(hljsOptions);
 
