@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>CtrlAltDelete.nu</title>
-<!-- 2016-05-24 Tue 23:16 -->
+<!-- 2016-07-14 tor 13:40 -->
 <meta  charset="utf-8">
 <meta  name="generator" content="Org-mode">
 <meta  name="author" content="Anton Erholt">
@@ -327,23 +327,48 @@ responsible for the project web page.
 The code is available <a href="https://github.com/stefanseibert/padawan101">here</a>. This project was also part of the KTH
 course AGI-15.
 </p>
+</div>
+</div>
 
-<!--
-</div>
-</div>
 
 <div id="outline-container-sec-1-3" class="outline-3">
 <h3 id="sec-1-3">Put put glorify!</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
-A multiplayer game to be played on a big screen using smart phones as
-controllers.
+<a href="https://github.com/mold/bm-putputglorify">Bm-putputglorify</a> is a multiplayer game to be played on a big screen
+using smart phones as controllers. You spawn as a shell, the objective
+is to crash into other shells. Me and some of my friends built it
+as part of a 'pizza &amp; javascript' - hackathon.
 </p>
+
+
+<figure>
+<p><img src="https://raw.githubusercontent.com/mold/bm-putputglorify/master/put-put.png" alt="put-put.png">
+</p>
+<figcaption><span class="figure-number">Figure 2:</span> Gameplay of bm-putputglorify</figcaption>
+</figure>
 </div>
 </div>
 
+
 <div id="outline-container-sec-1-4" class="outline-3">
 <h3 id="sec-1-4">Rendering with ray casting and rasterization</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+I built two renderers using ray tracing and rasterization as part of a
+introduction course to computer graphics.
+</p>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/_Y4V6jAptpA" frameborder="0"
+allowfullscreen></iframe>
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/8R8CTFd2PSc" frameborder="0"
+allowfullscreen></iframe>
+
+<!--
+</div>
 </div>
 
 <div id="outline-container-sec-1-5" class="outline-3">
@@ -414,13 +439,13 @@ game-of-life
 ;; Direction functions for taking a step in the next direction.
 
 (def dirs {:topleft   (fn [[x y]] [(dec x) (dec y)])
-	   :top       (fn [[x y]] [x (dec y)])
-	   :topright  (fn [[x y]] [(inc x) (dec y)])
-	   :left      (fn [[x y]] [(dec x) y])
-	   :right     (fn [[x y]] [(inc x) y])
-	   :downleft  (fn [[x y]] [(dec x) (inc y)])
-	   :down      (fn [[x y]] [x (inc y)])
-	   :downright (fn [[x y]] [(inc x) (inc y)])})
+           :top       (fn [[x y]] [x (dec y)])
+           :topright  (fn [[x y]] [(inc x) (dec y)])
+           :left      (fn [[x y]] [(dec x) y])
+           :right     (fn [[x y]] [(inc x) y])
+           :downleft  (fn [[x y]] [(dec x) (inc y)])
+           :down      (fn [[x y]] [x (inc y)])
+           :downright (fn [[x y]] [(inc x) (inc y)])})
 
 (defn outside-board?
   "Stop the lazyness with this when you fall off the board."
@@ -441,22 +466,22 @@ game-of-life
   [dir pos]
   (lazy-seq
    (cons pos
-	 (advanced-positions dir (advance dir pos)))))
+         (advanced-positions dir (advance dir pos)))))
 
 (defn take-positions
   "Find all the positions where a queen can take a piece."
   [[x y]]
   (for [dir (keys dirs)
-	pos (take-while
-	     #(not (outside-board? %))
-	     (advanced-positions dir [x y]))]
+        pos (take-while
+             #(not (outside-board? %))
+             (advanced-positions dir [x y]))]
     pos))
 
 (defn find-string-on-board
   [board string]
   (for [row   (map-indexed vector board)
-	col   (map-indexed vector (second row))
-	:when (= string (second col))]
+        col   (map-indexed vector (second row))
+        :when (= string (second col))]
     [(first row) (first col)]))
 
 (defn find-queen [board]
@@ -467,13 +492,13 @@ game-of-life
 
 (defn update-row [row x val]
   (map-indexed (fn [xidx col]
-		 (if (= x xidx) val col)) row))
+                 (if (= x xidx) val col)) row))
 
 (defn update-board [board [x y] val]
   (map-indexed (fn [yidx row]
-		 (if (= y yidx)
-		   (update-row row x val)
-		   row)) board))
+                 (if (= y yidx)
+                   (update-row row x val)
+                   row)) board))
 
 
 ;; (update-board one-Q-board [2 3] "X")
@@ -481,17 +506,17 @@ game-of-life
 (defn ok-positions
   [board]
   (let [qpos       (first (find-queen board))
-	tpositions (take-positions qpos)]
+        tpositions (take-positions qpos)]
     (reverse
      (map reverse
-	  (loop [tpositions tpositions
-		 board      all-p-board]
-	    (if (empty? tpositions)
-	      (update-board board qpos "Q")
-	      (recur (rest tpositions)
-		     (update-board board
-				   (first tpositions)
-				   "."))))))))
+          (loop [tpositions tpositions
+                 board      all-p-board]
+            (if (empty? tpositions)
+              (update-board board qpos "Q")
+              (recur (rest tpositions)
+                     (update-board board
+                                   (first tpositions)
+                                   "."))))))))
 
 (ok-positions one-Q-board)
 </pre>
@@ -548,14 +573,14 @@ Enjoy this beatiful piece!
   [x (inc y)])
 
 (def dirs {:right right
-	   :up    up
-	   :down  down
-	   :left  left})
+           :up    up
+           :down  down
+           :left  left})
 
 (def rotate {:right :down
-	     :down  :left
-	     :left  :up
-	     :up    :right})
+             :down  :left
+             :left  :up
+             :up    :right})
 
 (defn advance-dir
   [pos
@@ -568,29 +593,29 @@ Enjoy this beatiful piece!
 (defn spiral [W H]
   (let [stop (* W H)]
     (loop [pos            [1 1]
-	   next-dir       :right
-	   current-number 1
-	   visited        #{[(inc W) 1]
-			    [W (inc H)]
-			    [0 H]}
-	   matr           #{}]
+           next-dir       :right
+           current-number 1
+           visited        #{[(inc W) 1]
+                            [W (inc H)]
+                            [0 H]}
+           matr           #{}]
       (if (= stop current-number)
-	(conj matr [pos current-number])
-	(recur ((next-dir dirs) pos)
-	       (advance-dir ((next-dir dirs) pos)
-			    next-dir
-			    visited)
-	       (inc current-number)
-	       (conj visited pos)
-	       (conj matr [pos current-number]))))))
+        (conj matr [pos current-number])
+        (recur ((next-dir dirs) pos)
+               (advance-dir ((next-dir dirs) pos)
+                            next-dir
+                            visited)
+               (inc current-number)
+               (conj visited pos)
+               (conj matr [pos current-number]))))))
 
 (defn cmp-pos [[[x1 y1] _]
-	       [[x2 y2] _]]
+               [[x2 y2] _]]
   (cond (&lt; y1 y2) -1
-	(&gt; y1 y2) 1
-	:else     (cond (&lt; x1 x2) -1
-			(&gt; x1 x2) 1
-			:else     0)))
+        (&gt; y1 y2) 1
+        :else     (cond (&lt; x1 x2) -1
+                        (&gt; x1 x2) 1
+                        :else     0)))
 
 (defn print-row
   [row]
@@ -598,16 +623,16 @@ Enjoy this beatiful piece!
     (if (= 1 (count row))
       (println (output-number (first row)))
       (do
-	(print (output-number (first row)) " ")
-	(recur (rest row))))))
+        (print (output-number (first row)) " ")
+        (recur (rest row))))))
 
 (defn main
   "Width and height of matrix to be printed.
   Looks really bad if either of them &gt; 9."
   [W H]
   (let [xs   (sort cmp-pos (spiral W H))
-	mat  (partition W xs)
-	rows (map #(map second %) mat)]
+        mat  (partition W xs)
+        rows (map #(map second %) mat)]
     (map print-row rows)))
 
 ;;(main 5 3)
@@ -687,7 +712,7 @@ papers as a <a href="https://en.wikipedia.org/wiki/Planar_graph">planar graph</a
 <figure>
 <p><img src="http://jeffe.cs.illinois.edu/teaching/comptop/2009/Fig/circlepack.png" alt="circlepack.png">
 </p>
-<figcaption><span class="figure-number">Figure 2:</span> Found on a course web page for computational topology, originally from <a href="http://www.math.utk.edu/~kens/BookInfo.html">http://www.math.utk.edu/~kens/BookInfo.html</a>. I should totally read that book.</figcaption>
+<figcaption><span class="figure-number">Figure 3:</span> Found on a course web page for computational topology, originally from <a href="http://www.math.utk.edu/~kens/BookInfo.html">http://www.math.utk.edu/~kens/BookInfo.html</a>. I should totally read that book.</figcaption>
 </figure>
 
 <p>
@@ -984,7 +1009,7 @@ would not be of much use), but rather a very large FSM.
 }
 
 int function(a, b)
-	int a,b;
+        int a,b;
 {
   a = 1;
   b = 2;
@@ -1198,7 +1223,7 @@ order of second to last.
 <figure>
 <p><img src="img/lost_in_space.png" alt="lost_in_space.png">
 </p>
-<figcaption><span class="figure-number">Figure 3:</span> Our client for the space themed /dev/null</figcaption>
+<figcaption><span class="figure-number">Figure 4:</span> Our client for the space themed /dev/null</figcaption>
 </figure>
 
 
