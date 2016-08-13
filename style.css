@@ -1,5 +1,6 @@
 body {
     font-family: 'Kelly Slab', cursive;
+    margin: 0;
 }
 
 a, a:visited, a:active {
@@ -9,11 +10,17 @@ a, a:visited, a:active {
 
 pre.src {
     position: initial;
+    overflow: auto;
+}
+
+iframe {
+    width: 100%;
+    max-width: 720px;
 }
 
 #content {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
 }
 
@@ -91,4 +98,10 @@ figure p img {
 
 .right-menu #cv-link {
     text-decoration: none;
+}
+
+.footpara {
+    display: block !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
