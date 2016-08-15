@@ -1,9 +1,17 @@
+@media (max-width: 320px) {
+#imgur-embed-iframe-pub-5xgVBRU {
+    min-height: 465px;
+    width: 100% !important;
+}
+}
+
 body {
     font-family: 'Kelly Slab', cursive;
     margin: 0;
 }
 
 a, a:visited, a:active {
+    word-wrap: break-word;
     color: #f5871f;
 }
 

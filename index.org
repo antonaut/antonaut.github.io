@@ -438,7 +438,7 @@ properly. This is my blog. My life.
 2015 was not a very bloggy year. Who knows? Maybe 2016 will bear more
 blog fruit.
 
-* Regarding problems which can be solved by dynamic programming techniques, Jan 22 :dynamic:programming:recursion:bfs:
+* Regarding problems which can be solved by dynamic programming techniques, Jan 22 :dynprog:recursion:bfs:
 
   I have recently watched quite a few videos on dynamic
   programming. What is dynamic programming? It's a method for
