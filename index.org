@@ -16,6 +16,7 @@
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="favicon.png" />
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="styles/tomorrow.css">
 #+HTML_HEAD_EXTRA: <script src="highlight.pack.js"></script>
+#+HTML_HEAD_EXTRA: <script src="svg.js"></script>
 #+HTML_HEAD_EXTRA: <div id="disqus_thread_container"><div id="disqus_thread"></div></div>
 #+OPTIONS: html-link-use-abs-url:nil html-postamble:nil
 #+OPTIONS: html-preamble:nil html-scripts:t html-style:t
@@ -23,7 +24,7 @@
 #+HTML_CONTAINER: div
 #+HTML_DOCTYPE: html5
 
-#+begin_html
+#+begin_export html
 <header>
 <h2 class="logo">It's all about 42, (defn foobarbaz []) and cheeseburgers.</h1>
 </header>
@@ -61,6 +62,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
+<div id="drawing"></div>
 <script src="main.js"></script>
 
 <div class="right-menu">
@@ -74,7 +76,7 @@ s.setAttribute('data-timestamp', +new Date());
 <div class="section-right">
 <h3>What is this?</h3>
 
-#+end_html
+#+end_export
 
 This started out as a blog for written answers to assignments from a
 course in Computer Game Design [fn:9] at the Royal Institute of
@@ -83,10 +85,10 @@ sorts. It is a place where I jot down ideas, thoughts and reflections
 about my life and computers.
 
 It is solemnly written by me, Anton Erholt (twitter: [[http://twitter.com/aerholt][@aerholt]], github:
-[[https://github.com/antonaut/][@antonaut]]). I am 26 years old and live in Oslo, Norway. I am
+[[https://github.com/antonaut/][@antonaut]]). I am 27 years old and live in Oslo, Norway. I am
 originally from Sweden, but moved here pretty recently. Currently I am
-writing my master's thesis at [[https://ardoq.com][Ardoq]] about automatic visualization of
-open source projects.
+working as a software engineer at Conax and finishing my master's
+thesis.
 
 This blog is in chronological order, with the oldest post at
 bottom. Yes if you want to read it, you have to scroll. This may seem
@@ -98,9 +100,9 @@ newer posts.
 #
 Dear reader, hopefully it will be to your liking.
 
-#+begin_html
+#+begin_export html
 </div>
-#+end_html
+#+end_export
 
 * Portfolio                                                       :portfolio:
 
@@ -132,10 +134,10 @@ worked the most on was actually networking, to create even more views
 so that people could join and look at the jedi fighting. I was also
 responsible for the project web page.
 
-#+begin_html
+#+begin_export html
 <iframe src="https://player.vimeo.com/video/148290340" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/148290340">Padawan 101 - project video</a> from <a href="https://vimeo.com/user14547966">Viktor Leandersson</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-#+end_html
+#+end_export
 
 The code is available [[https://github.com/stefanseibert/padawan101][here]]. This project was also part of the KTH
 course AGI-15.
@@ -156,7 +158,7 @@ as part of a 'pizza & javascript' - hackathon.
 I built two renderers using ray tracing and rasterization as part of a
 introduction course to computer graphics.
 
-#+begin_html
+#+begin_export html
 <iframe width="420" height="315"
 src="https://www.youtube.com/embed/_Y4V6jAptpA" frameborder="0"
 allowfullscreen></iframe>
@@ -164,11 +166,11 @@ allowfullscreen></iframe>
 <iframe width="420" height="315"
 src="https://www.youtube.com/embed/8R8CTFd2PSc" frameborder="0"
 allowfullscreen></iframe>
-#+end_html
+#+end_export
 
-#+begin_html
+#+begin_export html
 <!--
-#+end_html
+#+end_export
 
 ** Commercial projects
 
@@ -181,9 +183,9 @@ game-of-life
 ** Old projects
 
 
-#+begin_html
+#+begin_export html
 -->
-#+end_html
+#+end_export
 
 
 
@@ -326,7 +328,7 @@ I had a bit of a struggle with this problem at first. I decided to
 generate the path with a few small functions and then sort and print.
 Enjoy this beatiful piece!
 
-#+include: "~/Code/clojure/first/src/first/spiral.clj" src clojure :exports both
+#+include: "~/Code/clojure/first/src/first/spiral.clj" src clojure
 
 Results in:
 
@@ -1043,9 +1045,9 @@ the game into what it is. This is a great use of flow physics and I'm
 really happy to see that games like these makes it onto consoles and
 do not just stay in the swamp of indie PC games.
 
-#+begin_html
+#+begin_export html
 <iframe width="560" height="315" src="//www.youtube.com/embed/NAftDQN4SNg" frameborder="0" allowfullscreen></iframe>
-#+end_html
+#+end_export
 
 Lastly, I'd like to say that there are times when you find out things
 which give you an advantage in the game due to physics being used in a
@@ -1055,9 +1057,9 @@ still very funny. In The Elder Scrolls V: Skyrim, you can climb almost
 any mountain when riding a horse (as opposed to when you are not riding).
 I remember someone making a funny picture out of it:
 
-#+begin_html
+#+begin_export html
 <blockquote class="imgur-embed-pub" lang="en" data-id="5xgVBRU"><a href="//imgur.com/5xgVBRU">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-#+end_html
+#+end_export
 
 My second example is from a 2D platformer called Cave
 Story [fn:21].
@@ -1233,9 +1235,9 @@ greatly to the sandbox survival genre of games. These games often add
 a bit of a RPG element to them, making it extra sad when your
 heroine/hero dies.
 
-#+begin_html
+#+begin_export html
 <iframe width="560" height="315" src="//www.youtube.com/embed/qoHm2vxRBKc" frameborder="0" allowfullscreen></iframe>
-#+end_html
+#+end_export
 
 Taking it one step further, I'd love to see what happens when not only
 the maps are generated, but also the creatures within them. I imagine

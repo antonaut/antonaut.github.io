@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<!-- 2017-05-17 on. 22:59 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CtrlAltDelete.nu</title>
-<!-- 2016-08-15 mån 13:56 -->
-<meta  charset="utf-8">
-<meta  name="generator" content="Org-mode">
-<meta  name="author" content="Anton Erholt">
-<meta  name="description" content="It's all about 42, (defn foobarbaz []) and cheeseburgers."
+<meta name="generator" content="Org mode">
+<meta name="author" content="Anton Erholt">
+<meta name="description" content="It's all about 42, (defn foobarbaz []) and cheeseburgers."
 >
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -46,27 +53,110 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -86,6 +176,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <meta name="google-site-verification" content="r46C_vADEGgAsPCGIHLhwLfjNA13-s80aOWX9mW_mxg" />
@@ -95,13 +186,14 @@
 <link rel="icon" type="image/png" href="favicon.png" />
 <link rel="stylesheet" href="styles/tomorrow.css">
 <script src="highlight.pack.js"></script>
+<script src="svg.js"></script>
 <div id="disqus_thread_container"><div id="disqus_thread"></div></div>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -142,53 +234,34 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
-<script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
         displayAlign: "center",
-        displayIndent: "2em",
+        displayIndent: "0em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
              }
-        }
-    });
-/*]]>*///-->
+});
 </script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">CtrlAltDelete.nu</h1>
 <header>
+<h1 class="title">CtrlAltDelete.nu</h1>
+</header><header>
 <h2 class="logo">It's all about 42, (defn foobarbaz []) and cheeseburgers.</h1>
 </header>
 <script>
@@ -225,6 +298,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
+<div id="drawing"></div>
 <script src="main.js"></script>
 
 <div class="right-menu">
@@ -240,7 +314,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 <p>
 This started out as a blog for written answers to assignments from a
-course in Computer Game Design <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1">1</a></sup> at the Royal Institute of
+course in Computer Game Design <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> at the Royal Institute of
 Technology (KTH) in Sweden. Its purpose is to serve as a diary of
 sorts. It is a place where I jot down ideas, thoughts and reflections
 about my life and computers.
@@ -248,10 +322,10 @@ about my life and computers.
 
 <p>
 It is solemnly written by me, Anton Erholt (twitter: <a href="http://twitter.com/aerholt">@aerholt</a>, github:
-<a href="https://github.com/antonaut/">@antonaut</a>). I am 26 years old and live in Oslo, Norway. I am
+<a href="https://github.com/antonaut/">@antonaut</a>). I am 27 years old and live in Oslo, Norway. I am
 originally from Sweden, but moved here pretty recently. Currently I am
-writing my master's thesis at <a href="https://ardoq.com">Ardoq</a> about automatic visualization of
-open source projects.
+working as a software engineer at Conax and finishing my master's
+thesis.
 </p>
 
 <p>
@@ -268,9 +342,9 @@ Dear reader, hopefully it will be to your liking.
 
 </div>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Portfolio&#xa0;&#xa0;&#xa0;<span class="tag"><span class="portfolio">portfolio</span></span></h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgfd8c591" class="outline-2">
+<h2 id="orgfd8c591">Portfolio&#xa0;&#xa0;&#xa0;<span class="tag"><span class="portfolio">portfolio</span></span></h2>
+<div class="outline-text-2" id="text-orgfd8c591">
 <p>
 These are some of the projects I have been involved in, one way or
 another. Most of the projects are related to school, but some have
@@ -278,9 +352,9 @@ I worked on during my free time.
 </p>
 </div>
 
-<div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Aerial</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org5a2d357" class="outline-3">
+<h3 id="org5a2d357">Aerial</h3>
+<div class="outline-text-3" id="text-org5a2d357">
 <p>
 <a href="http://aerial.lindstrm.se/about">Aerial</a> is a project where you control an airplane by moving a
 smartphone around. The goal of the project was to make something which
@@ -300,16 +374,16 @@ This project was part of the KTH course AGI-15.
 
 
 <figure>
-<p><img src="./img/aerial.png" alt="aerial.png">
-</p>
-<figcaption><span class="figure-number">Figure 1:</span> Gameplay of Aerial.</figcaption>
+<img src="./img/aerial.png" alt="aerial.png">
+
+<figcaption><span class="figure-number">Figure 1: </span>Gameplay of Aerial.</figcaption>
 </figure>
 </div>
 </div>
 
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">Padawan101</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org94f13bc" class="outline-3">
+<h3 id="org94f13bc">Padawan101</h3>
+<div class="outline-text-3" id="text-org94f13bc">
 <p>
 <a href="http://www.nada.kth.se/~aerholt/padawan101/">Padawan101</a> is a light saber simulator made for Oculus DK2, a Microsoft
 Kinect and a smart phone. The project was built with Unity. We
@@ -331,9 +405,9 @@ course AGI-15.
 </div>
 
 
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3">Put put glorify!</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-orgd850121" class="outline-3">
+<h3 id="orgd850121">Put put glorify!</h3>
+<div class="outline-text-3" id="text-orgd850121">
 <p>
 <a href="https://github.com/mold/bm-putputglorify">Bm-putputglorify</a> is a multiplayer game to be played on a big screen
 using smart phones as controllers. You spawn as a shell, the objective
@@ -343,17 +417,17 @@ as part of a 'pizza &amp; javascript' - hackathon.
 
 
 <figure>
-<p><img src="https://raw.githubusercontent.com/mold/bm-putputglorify/master/put-put.png" alt="put-put.png">
-</p>
-<figcaption><span class="figure-number">Figure 2:</span> Gameplay of bm-putputglorify</figcaption>
+<img src="https://raw.githubusercontent.com/mold/bm-putputglorify/master/put-put.png" alt="put-put.png">
+
+<figcaption><span class="figure-number">Figure 2: </span>Gameplay of bm-putputglorify</figcaption>
 </figure>
 </div>
 </div>
 
 
-<div id="outline-container-sec-1-4" class="outline-3">
-<h3 id="sec-1-4">Rendering with ray casting and rasterization</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org0852da4" class="outline-3">
+<h3 id="org0852da4">Rendering with ray casting and rasterization</h3>
+<div class="outline-text-3" id="text-org0852da4">
 <p>
 I built two renderers using ray tracing and rasterization as part of a
 introduction course to computer graphics.
@@ -371,18 +445,18 @@ allowfullscreen></iframe>
 </div>
 </div>
 
-<div id="outline-container-sec-1-5" class="outline-3">
-<h3 id="sec-1-5">Commercial projects</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org9802110" class="outline-3">
+<h3 id="org9802110">Commercial projects</h3>
+<div class="outline-text-3" id="text-org9802110">
 <p>
 noaxlab
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-1-6" class="outline-3">
-<h3 id="sec-1-6">Go projects -&gt; posts?</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-org5753bda" class="outline-3">
+<h3 id="org5753bda">Go projects -&gt; posts?</h3>
+<div class="outline-text-3" id="text-org5753bda">
 <p>
 fractalz
 game-of-life
@@ -390,9 +464,9 @@ game-of-life
 </div>
 </div>
 
-<div id="outline-container-sec-1-7" class="outline-3">
-<h3 id="sec-1-7">Old projects</h3>
-<div class="outline-text-3" id="text-1-7">
+<div id="outline-container-org33db4f4" class="outline-3">
+<h3 id="org33db4f4">Old projects</h3>
+<div class="outline-text-3" id="text-org33db4f4">
 -->
 </div>
 </div>
@@ -400,11 +474,10 @@ game-of-life
 
 
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Moves where a Queen can't take (8x8 chess board), Apr 17&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org0ca558d" class="outline-2">
+<h2 id="org0ca558d">Moves where a Queen can't take (8x8 chess board), Apr 17&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
+<div class="outline-text-2" id="text-org0ca558d">
 <div class="org-src-container">
-
 <pre class="src src-clojure">;;; Finds okay positions where a single queen can't take the piece (8x8
 ;;; board) It sure took a while to write, but now it's sort of understandable
 ;;; and done in a functional style.
@@ -527,7 +600,6 @@ Results in:
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-clojure">(("P" "P" "P" "." "P" "." "P" ".")
  ("P" "P" "P" "P" "." "." "." "P")
  ("." "." "." "." "." "Q" "." ".")
@@ -541,9 +613,9 @@ Results in:
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Spiral matrix in Clojure, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org015280f" class="outline-2">
+<h2 id="org015280f">Spiral matrix in Clojure, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
+<div class="outline-text-2" id="text-org015280f">
 <p>
 I had a bit of a struggle with this problem at first. I decided to
 generate the path with a few small functions and then sort and print.
@@ -551,7 +623,6 @@ Enjoy this beatiful piece!
 </p>
 
 <div class="org-src-container">
-
 <pre class="src src-clojure">;;; Prints numbers in a spiral matrix going ⟳.
 (ns first.spiral)
 
@@ -658,11 +729,11 @@ Results in:
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">Improving my Clojure skills, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org12b8a35" class="outline-2">
+<h2 id="org12b8a35">Improving my Clojure skills, Apr 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="code">code</span>&#xa0;<span class="problem">problem</span>&#xa0;<span class="clash">clash</span></span></h2>
+<div class="outline-text-2" id="text-org12b8a35">
 <p>
-Over at <a href="http://codingame.com">CodinGame</a> they have something called clashes of code where you
+Over at <a href="http://codingame.com/">CodinGame</a> they have something called clashes of code where you
 compete with other developers to solve a certain problem in a given
 amount of time. I know there are quite a few sites where you can
 sharpen your coding skills, but somehow I got stuck at this one. Maybe
@@ -679,9 +750,9 @@ some of my solutions to a few of the more interesting solutions here.
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">End of my game dev story? Apr 09&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org88dc524" class="outline-2">
+<h2 id="org88dc524">End of my game dev story? Apr 09&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-org88dc524">
 <p>
 We worked on this for a while, but it just ran out in the sand when I
 went to France for exchange studies. Nevertheless, it was a great
@@ -697,9 +768,9 @@ Hopefully we can publish the code with some small examples.
 </div>
 </div>
 
-<div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6">Sphere packing on a sphere? Circle packing papers, Mar 08&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span>&#xa0;<span class="topology">topology</span></span></h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org1f217e2" class="outline-2">
+<h2 id="org1f217e2">Sphere packing on a sphere? Circle packing papers, Mar 08&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span>&#xa0;<span class="topology">topology</span></span></h2>
+<div class="outline-text-2" id="text-org1f217e2">
 <p>
 The idea of a tool giving you access to finding relevant papers in a
 certain field of research is pretty interesting. Let's imagine all the
@@ -710,9 +781,9 @@ papers as a <a href="https://en.wikipedia.org/wiki/Planar_graph">planar graph</a
 
 
 <figure>
-<p><img src="http://jeffe.cs.illinois.edu/teaching/comptop/2009/Fig/circlepack.png" alt="circlepack.png">
-</p>
-<figcaption><span class="figure-number">Figure 3:</span> Found on a course web page for computational topology, originally from <a href="http://www.math.utk.edu/~kens/BookInfo.html">http://www.math.utk.edu/~kens/BookInfo.html</a>. I should totally read that book.</figcaption>
+<img src="http://jeffe.cs.illinois.edu/teaching/comptop/2009/Fig/circlepack.png" alt="circlepack.png">
+
+<figcaption><span class="figure-number">Figure 3: </span>Found on a course web page for computational topology, originally from <a href="http://www.math.utk.edu/~kens/BookInfo.html">http://www.math.utk.edu/~kens/BookInfo.html</a>. I should totally read that book.</figcaption>
 </figure>
 
 <p>
@@ -728,9 +799,9 @@ would feel about them in reality though.
 </div>
 </div>
 
-<div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7">Tools for completing a master's thesis, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="thesis">thesis</span>&#xa0;<span class="tools">tools</span>&#xa0;<span class="emacs">emacs</span></span></h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgb6b2bea" class="outline-2">
+<h2 id="orgb6b2bea">Tools for completing a master's thesis, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="thesis">thesis</span>&#xa0;<span class="tools">tools</span>&#xa0;<span class="emacs">emacs</span></span></h2>
+<div class="outline-text-2" id="text-orgb6b2bea">
 <p>
 A master's thesis is an intense 18 weeks of total focus and devotion
 to a research question. So far, I've only been able to invest about
@@ -744,11 +815,9 @@ In order to increase my productivity I've come up with a plan.
 </p>
 
 <ol class="org-ol">
-<li>Devote more time to planning in the morning
-</li>
+<li>Devote more time to planning in the morning</li>
 <li>Use a pomodoro (from <i>Italian:</i> means tomato) timer when working to
-minimize distractions
-</li>
+minimize distractions</li>
 </ol>
 
 <p>
@@ -770,18 +839,12 @@ following things:
 <ul class="org-ul">
 <li>The goals of the thesis, what I hope to achieve
 <ul class="org-ul">
-<li>Why it is important
-</li>
-<li>To whom is it important
-</li>
-</ul>
-</li>
-<li>My own background and why I'm eligible to write it
-</li>
-<li>The research question this thesis will try to explore and answer
-</li>
-<li>A detailed timeplan for when everything should be done
-</li>
+<li>Why it is important</li>
+<li>To whom is it important</li>
+</ul></li>
+<li>My own background and why I'm eligible to write it</li>
+<li>The research question this thesis will try to explore and answer</li>
+<li>A detailed timeplan for when everything should be done</li>
 </ul>
 
 <p>
@@ -793,9 +856,9 @@ latex-package for doing gantt-charts called <i>pgfgantt</i>.
 </div>
 </div>
 
-<div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8">Concerning idea debt and investment, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="documentation">documentation</span>&#xa0;<span class="ideas">ideas</span></span></h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgfcae5db" class="outline-2">
+<h2 id="orgfcae5db">Concerning idea debt and investment, Feb 25&#xa0;&#xa0;&#xa0;<span class="tag"><span class="documentation">documentation</span>&#xa0;<span class="ideas">ideas</span></span></h2>
+<div class="outline-text-2" id="text-orgfcae5db">
 <p>
 I read <a href="http://jessicaabel.com/2016/01/27/idea-debt/">this</a> article about idea debt. Not sure which affected me the
 most. What she stated about idea investment, or the fact that she too
@@ -807,9 +870,9 @@ properly. This is my blog. My life.
 </div>
 </div>
 
-<div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9">2016&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org26a1914" class="outline-2">
+<h2 id="org26a1914">2016&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-org26a1914">
 <p>
 <h1>Happy new year 2016!</h1>
 </p>
@@ -821,9 +884,9 @@ blog fruit.
 </div>
 </div>
 
-<div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10">Regarding problems which can be solved by dynamic programming techniques, Jan 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dynprog">dynprog</span>&#xa0;<span class="recursion">recursion</span>&#xa0;<span class="bfs">bfs</span></span></h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-org34a5ce4" class="outline-2">
+<h2 id="org34a5ce4">Regarding problems which can be solved by dynamic programming techniques, Jan 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dynprog">dynprog</span>&#xa0;<span class="recursion">recursion</span>&#xa0;<span class="bfs">bfs</span></span></h2>
+<div class="outline-text-2" id="text-org34a5ce4">
 <p>
 I have recently watched quite a few videos on dynamic
 programming. What is dynamic programming? It's a method for
@@ -833,13 +896,10 @@ to apply the method, there are some criteria needed to be met.
 
 <ul class="org-ul">
 <li>The problem should have a brute-force solution/exhaustive search
-solution.
-</li>
+solution.</li>
 <li>The problem should be dividable into sub-problems with optimal solutions
-(explained further down)
-</li>
-<li>The problem should have a recursive definition.
-</li>
+(explained further down)</li>
+<li>The problem should have a recursive definition.</li>
 </ul>
 
 <p>
@@ -876,8 +936,7 @@ thought.
 
 <ul class="org-ul">
 <li>"I start with a lot of small simple problems, and I use
-them to construct a bigger solution."
-</li>
+them to construct a bigger solution."</li>
 </ul>
 
 <p>
@@ -889,8 +948,7 @@ the other way around.
 <li>"In order to find a solution to this problem, I need to build it
 up from smaller solutions by dividing the problem into
 sub-problems. When the sub-problems become small enough, the
-solutions will be trivial."
-</li>
+solutions will be trivial."</li>
 </ul>
 
 <p>
@@ -926,19 +984,13 @@ solving them. Conversation with myself follows:
 </p>
 
 <ul class="org-ul">
-<li>A1: Let's pick a subject!
-</li>
-<li>A2: Sports!
-</li>
-<li>A1: Okay, what now&#x2026; Where's the recursion?
-</li>
-<li>A2: I'm thinking a football league&#x2026; NO! Ice-hockey!
-</li>
-<li>A1: Okay, keep going.
-</li>
+<li>A1: Let's pick a subject!</li>
+<li>A2: Sports!</li>
+<li>A1: Okay, what now&#x2026; Where's the recursion?</li>
+<li>A2: I'm thinking a football league&#x2026; NO! Ice-hockey!</li>
+<li>A1: Okay, keep going.</li>
 <li>A2: Well, let's say there are 12 teams like in the <a href="http://www.shl.se/statistics/standings/summary/2014/All">Swedish Hockey
-League</a>. They will all play against each other twice per season.
-</li>
+League</a>. They will all play against each other twice per season.</li>
 </ul>
 
 <p>
@@ -958,12 +1010,10 @@ season. Hmm&#x2026; Interesting!
 </p>
 
 <ul class="org-ul">
-<li>A1: Enough with the combinatorics, go on!
-</li>
+<li>A1: Enough with the combinatorics, go on!</li>
 <li>A2: Okay, let's think of a property of the matches we can use. The
 first one I can think of is the total number of goals made per
-match.
-</li>
+match.</li>
 </ul>
 
 <p>
@@ -972,17 +1022,17 @@ match.
 </div>
 </div>
 
-<div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11">2015&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-orgfff29ee" class="outline-2">
+<h2 id="orgfff29ee">2015&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-orgfff29ee">
 <p>
 <h1>Happy new year 2015!</h1>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-12" class="outline-2">
-<h2 id="sec-12">A flawed idea of the halting problem, Mar 16&#xa0;&#xa0;&#xa0;<span class="tag"><span class="programming">programming</span>&#xa0;<span class="computer">computer</span>&#xa0;<span class="science">science</span></span></h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-org523d10d" class="outline-2">
+<h2 id="org523d10d">A flawed idea of the halting problem, Mar 16&#xa0;&#xa0;&#xa0;<span class="tag"><span class="programming">programming</span>&#xa0;<span class="computer">computer</span>&#xa0;<span class="science">science</span></span></h2>
+<div class="outline-text-2" id="text-org523d10d">
 <p>
 The halting problem is fairly interesting even though someone (Alan
 Turing) some time ago (1936) has proved that it can not be solved by a
@@ -1000,7 +1050,6 @@ would not be of much use), but rather a very large FSM.
 <b>Program A</b>
 </p>
 <div class="org-src-container">
-
 <pre class="src src-c">int main()
 {
   int a;
@@ -1024,16 +1073,11 @@ Consider this Program A. It is written in a very small subset of C
 which only handles:
 </p>
 <ul class="org-ul">
-<li>integer assignment
-</li>
-<li>ternary if statement based only on integer equality comparison
-</li>
-<li>function call
-</li>
-<li>function return
-</li>
-<li>probably something else which I've forgotten
-</li>
+<li>integer assignment</li>
+<li>ternary if statement based only on integer equality comparison</li>
+<li>function call</li>
+<li>function return</li>
+<li>probably something else which I've forgotten</li>
 </ul>
 
 <p>
@@ -1138,21 +1182,18 @@ are supposed to be declared before they're used.</i>
 </div>
 </div>
 
-<div id="outline-container-sec-13" class="outline-2">
-<h2 id="sec-13">HACKATHON!&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-org2bb1e4e" class="outline-2">
+<h2 id="org2bb1e4e">HACKATHON!&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-org2bb1e4e">
 <p>
 A lot has happened since we started developing the game.
 Our initial goal was to do these tasks during the hackathon:
 </p>
 
 <ul class="org-ul">
-<li>WebSockets and API
-</li>
-<li>TouchEvents
-</li>
-<li>GameLoop and GameStates
-</li>
+<li>WebSockets and API</li>
+<li>TouchEvents</li>
+<li>GameLoop and GameStates</li>
 </ul>
 
 <p>
@@ -1162,14 +1203,14 @@ and iOS supported the wss protocol yet, but it'll hopefully be up and
 running soon. During the hackathon I had a great time. We put up a
 stream at Twitch.tv to stream everything while making tacos and
 listening to jazz from a jar (using something similar to
-<a href="http://www.origaudio.com/shop/index.php?dispatch=products.view&product_id=29778">this</a>).
+<a href="http://www.origaudio.com/shop/index.php?dispatch=products.view&amp;product_id=29778">this</a>).
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-14" class="outline-2">
-<h2 id="sec-14">To use DDD or not (| !) to use DDD&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-org931d96d" class="outline-2">
+<h2 id="org931d96d">To use DDD or not (| !) to use DDD&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-org931d96d">
 <p>
 My initial thoughts on Data Driven Development was that it to some
 extent might have been unneccessary (mainly due to the fact that I
@@ -1198,9 +1239,9 @@ able to show off something soon.
 </div>
 </div>
 
-<div id="outline-container-sec-15" class="outline-2">
-<h2 id="sec-15">The beginning of Anton's Game Dev Story, Jan 7&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-org6c7b854" class="outline-2">
+<h2 id="org6c7b854">The beginning of Anton's Game Dev Story, Jan 7&#xa0;&#xa0;&#xa0;<span class="tag"><span class="gamedevstory">gamedevstory</span></span></h2>
+<div class="outline-text-2" id="text-org6c7b854">
 <p>
 About a year ago, me and two classmates (<a href="http://www.nada.kth.se/~johntu">johntu</a> &amp; <a href="http://www.nada.kth.se/~dmol">dmol</a>)
 participated in a programming competition called <a href="http://swdc.se/devnull/">Escape from
@@ -1221,9 +1262,9 @@ order of second to last.
 
 
 <figure>
-<p><img src="img/lost_in_space.png" alt="lost_in_space.png">
-</p>
-<figcaption><span class="figure-number">Figure 4:</span> Our client for the space themed /dev/null</figcaption>
+<img src="img/lost_in_space.png" alt="lost_in_space.png">
+
+<figcaption><span class="figure-number">Figure 4: </span>Our client for the space themed /dev/null</figcaption>
 </figure>
 
 
@@ -1242,29 +1283,29 @@ about&#x2026;
 </div>
 </div>
 
-<div id="outline-container-sec-16" class="outline-2">
-<h2 id="sec-16">2014&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
-<div class="outline-text-2" id="text-16">
+<div id="outline-container-org26606b4" class="outline-2">
+<h2 id="org26606b4">2014&#xa0;&#xa0;&#xa0;<span class="tag"><span class="newyear">newyear</span></span></h2>
+<div class="outline-text-2" id="text-org26606b4">
 <p>
 <h1>Happy new year 2014!</h1>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-17" class="outline-2">
-<h2 id="sec-17">Presentation of game demo, Dec 13&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-orgcd5a80c" class="outline-2">
+<h2 id="orgcd5a80c">Presentation of game demo, Dec 13&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-orgcd5a80c">
 <p>
 We made a presentation of a game demo we developed during the
-course <sup><a id="fnr.1.100" name="fnr.1.100" class="footref" href="#fn.1">1</a></sup>. Here follows the script and some comments of the final
+course <sup><a id="fnr.1.100" class="footref" href="#fn.1">1</a></sup>. Here follows the script and some comments of the final
 presentation (NOTE: This might be a tedious read since&#x2026; Well. You
 have been warned).
 </p>
 </div>
 
 
-<div id="outline-container-sec-17-1" class="outline-3">
-<h3 id="sec-17-1">Presentation Script</h3>
-<div class="outline-text-3" id="text-17-1">
+<div id="outline-container-org6a78901" class="outline-3">
+<h3 id="org6a78901">Presentation Script</h3>
+<div class="outline-text-3" id="text-org6a78901">
 <p>
 <b>Welcome</b>
 Hi everyone and welcome to this presentation. We’re the group “Fat
@@ -1307,8 +1348,7 @@ blanket. Sleeping and dreaming of catnip with not a single thought of
 ever going up.
 </p>
 <ul class="org-ul">
-<li>“Aaaah, this will be a lovely day of doing nothing.”
-</li>
+<li>“Aaaah, this will be a lovely day of doing nothing.”</li>
 </ul>
 
 <p>
@@ -1359,9 +1399,9 @@ On time.
 </div>
 </div>
 
-<div id="outline-container-sec-17-2" class="outline-3">
-<h3 id="sec-17-2">Comments About the Game</h3>
-<div class="outline-text-3" id="text-17-2">
+<div id="outline-container-orgf9ce3dc" class="outline-3">
+<h3 id="orgf9ce3dc">Comments About the Game</h3>
+<div class="outline-text-3" id="text-orgf9ce3dc">
 <p>
 <b>Positive Feedback</b>
 </p>
@@ -1421,9 +1461,9 @@ version of the game as we would have liked.
 </div>
 </div>
 </div>
-<div id="outline-container-sec-18" class="outline-2">
-<h2 id="sec-18">Mobile games, Dec 6&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-18">
+<div id="outline-container-orgfeb7ce3" class="outline-2">
+<h2 id="orgfeb7ce3">Mobile games, Dec 6&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-orgfeb7ce3">
 <p>
 When playing a game on a mobile device, you have very little time to
 make the player interested. This is a very similar problem to the one
@@ -1448,7 +1488,7 @@ a good concept to incorporate in a mobile game.
 If you focus on the specific part of just getting the player hooked, I
 would say that a good idea is probably to try to give the player a
 feeling of greatness. In one of my favorite mobile games,
-Stardash <sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2">2</a></sup> by OrangePixel, you probably manage to clear two
+Stardash <sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> by OrangePixel, you probably manage to clear two
 levels in under 30 seconds. You feel that it was pretty easy, but not
 too easy so you keep playing. Making the first few levels good are
 essential if you want players to stay in game.
@@ -1463,87 +1503,75 @@ into something positive?
 </div>
 </div>
 
-<div id="outline-container-sec-19" class="outline-2">
-<h2 id="sec-19">The game producer - Game business models, Dec 3&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-19">
+<div id="outline-container-orgcbb3447" class="outline-2">
+<h2 id="orgcbb3447">The game producer - Game business models, Dec 3&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-orgcbb3447">
 <p>
 Now I'll briefly discuss some business models. Please note that I'm
 probably a bit biased.
 </p>
 </div>
 
-<div id="outline-container-sec-19-1" class="outline-3">
-<h3 id="sec-19-1">Pay-to-play (P2P)</h3>
-<div class="outline-text-3" id="text-19-1">
+<div id="outline-container-orgce9b683" class="outline-3">
+<h3 id="orgce9b683">Pay-to-play (P2P)</h3>
+<div class="outline-text-3" id="text-orgce9b683">
 <p>
 The "standard" model. You pay for a game once and then it is
 yours. For all eternity&#x2026; Oh, you want an example? Hmm&#x2026; Let's
-see. Oh! Project Zomboid <sup><a id="fnr.3" name="fnr.3" class="footref" href="#fn.3">3</a></sup> mentioned in an earlier post is a good example.
+see. Oh! Project Zomboid <sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> mentioned in an earlier post is a good example.
 </p>
 
 <ul class="org-ul">
 <li><b>Pros</b>
 <ul class="org-ul">
-<li>You don't have to keep track of all the players
-</li>
-</ul>
-</li>
+<li>You don't have to keep track of all the players</li>
+</ul></li>
 
 <li><b>Cons</b>
 <ul class="org-ul">
-<li>The eventual income will spike and then drastically fall.
-</li>
-<li>Typically means there will be sequels if the devs are successful.
-</li>
-</ul>
-</li>
+<li>The eventual income will spike and then drastically fall.</li>
+<li>Typically means there will be sequels if the devs are successful.</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-19-2" class="outline-3">
-<h3 id="sec-19-2">Subscription</h3>
-<div class="outline-text-3" id="text-19-2">
+<div id="outline-container-orgb322217" class="outline-3">
+<h3 id="orgb322217">Subscription</h3>
+<div class="outline-text-3" id="text-orgb322217">
 <p>
 Well, the most obvious example I can come up with is World of
-Warcraft <sup><a id="fnr.4" name="fnr.4" class="footref" href="#fn.4">4</a></sup>, where you pay a fee each month to continue playing.
+Warcraft <sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup>, where you pay a fee each month to continue playing.
 </p>
 
 <ul class="org-ul">
 <li><b>Pros</b>
 <ul class="org-ul">
-<li>Continuous cashflow means an ability to have continuous development
-</li>
-<li>Makes scalability easier
-</li>
-</ul>
-</li>
+<li>Continuous cashflow means an ability to have continuous development</li>
+<li>Makes scalability easier</li>
+</ul></li>
 
 <li><b>Cons</b>
 <ul class="org-ul">
-<li>Player database needed to keep track of payments etc.
-</li>
-</ul>
-</li>
+<li>Player database needed to keep track of payments etc.</li>
+</ul></li>
 
 <li><b>Comments</b>
 <ul class="org-ul">
 <li>I think this model is perfectly suited for the MMO type of games
 which take a lot of time and effort to maintain and develop. You
 already do have a player database with accounts, so this should
-not be that much of a problem.
-</li>
-</ul>
-</li>
+not be that much of a problem.</li>
+</ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-19-3" class="outline-3">
-<h3 id="sec-19-3">Free-to-play (F2P)</h3>
-<div class="outline-text-3" id="text-19-3">
+<div id="outline-container-org5d25460" class="outline-3">
+<h3 id="org5d25460">Free-to-play (F2P)</h3>
+<div class="outline-text-3" id="text-org5d25460">
 <p>
-A great example is the giant in the MOBA-genre <sup><a id="fnr.5" name="fnr.5" class="footref" href="#fn.5">5</a></sup>, DotA 2. In
+A great example is the giant in the MOBA-genre <sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup>, DotA 2. In
 this game you can buy skins and new visual styles for the characters
 in the game.
 </p>
@@ -1553,35 +1581,31 @@ in the game.
 <ul class="org-ul">
 <li>Players get to play, haters get to hate and lovers get to
 love. You don't have to feel bad for trying to trick money out of
-someone&#x2026;
-</li>
-</ul>
-</li>
+someone&#x2026;</li>
+</ul></li>
 
 <li><b>Cons</b>
 <ul class="org-ul">
 <li>&#x2026; or yes you do. But how!? This business model requires
 something else to generate income, such as ads or in-game
-purchases.
-</li>
-</ul>
-</li>
+purchases.</li>
+</ul></li>
 </ul>
 
 <p>
 A thing to keep in mind is that it is not completely impossible to
 switch business model, even though it might hurt some of your
 playerbase.  One example of where a switching between business models
-has been successful is Heroes of Newerth <sup><a id="fnr.6" name="fnr.6" class="footref" href="#fn.6">6</a></sup>. The game is F2P
-since the 20th of July 2012 <sup><a id="fnr.7" name="fnr.7" class="footref" href="#fn.7">7</a></sup> (is used to be P2P).
+has been successful is Heroes of Newerth <sup><a id="fnr.6" class="footref" href="#fn.6">6</a></sup>. The game is F2P
+since the 20th of July 2012 <sup><a id="fnr.7" class="footref" href="#fn.7">7</a></sup> (is used to be P2P).
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-20" class="outline-2">
-<h2 id="sec-20">Dataspelsbranschen: the trade organization, Nov 29&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-20">
+<div id="outline-container-orgd9ebb80" class="outline-2">
+<h2 id="orgd9ebb80">Dataspelsbranschen: the trade organization, Nov 29&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-orgd9ebb80">
 <p>
 Today we had a guest lecture from Per Strömbäck of Dataspelsbranchen,
 the trade organization for Swedish game development. He wanted us to
@@ -1632,7 +1656,7 @@ in-app purchases are a lot better. At least if they are done in a good way.
 
 <p>
 British technology magazine Wired has released an article on in-app
-purchases in Plants-vs-Zombies 2 <sup><a id="fnr.8" name="fnr.8" class="footref" href="#fn.8">8</a></sup>. The article explains
+purchases in Plants-vs-Zombies 2 <sup><a id="fnr.8" class="footref" href="#fn.8">8</a></sup>. The article explains
 extremly well how I think in-app purchases shouldn't work. I do not
 think that in-app purchases should give the player any advantages
 compared to when not having done them. I usually end up quitting these
@@ -1642,13 +1666,13 @@ largest wallet. Which is insane.
 </div>
 </div>
 
-<div id="outline-container-sec-21" class="outline-2">
-<h2 id="sec-21">Short on game physics and animation, Nov 26&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-21">
+<div id="outline-container-org24f8347" class="outline-2">
+<h2 id="org24f8347">Short on game physics and animation, Nov 26&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-org24f8347">
 <p>
 Some games are really nothing but great combination of physics,
 animation and astonishing scenery. One example I would like to discuss
-is a game called flower <sup><a id="fnr.9" name="fnr.9" class="footref" href="#fn.9">9</a></sup> (note, no capital f). In flower one
+is a game called flower <sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup> (note, no capital f). In flower one
 controls a single petal flying in the wind over an enormous field. As
 you fly across the field, if you hit other flowers, some of its petals
 will join you in your flight. In order to complete a level you need to
@@ -1687,7 +1711,7 @@ I remember someone making a funny picture out of it:
 
 <p>
 My second example is from a 2D platformer called Cave
-Story <sup><a id="fnr.10" name="fnr.10" class="footref" href="#fn.10">10</a></sup>.
+Story <sup><a id="fnr.10" class="footref" href="#fn.10">10</a></sup>.
 </p>
 
 <p>
@@ -1715,9 +1739,9 @@ amusing and totally unexpected.
 </div>
 </div>
 
-<div id="outline-container-sec-22" class="outline-2">
-<h2 id="sec-22">Using a game engine or building your own? Nov 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-22">
+<div id="outline-container-org897fe02" class="outline-2">
+<h2 id="org897fe02">Using a game engine or building your own? Nov 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-org897fe02">
 <p>
 This post will be filled with spontaneous questions and answers
 related to whether one should use an existing game engine or create
@@ -1758,62 +1782,56 @@ to the monetization issue. Do more platforms equal more profit?
 Well, I personally really like the web, but I am not sure it is well
 suited for everyone. John Carmack mentions in a keynote from QuakeCon
 that he does not really believe in using javascript for high
-performant graphics in the browser <sup><a id="fnr.11" name="fnr.11" class="footref" href="#fn.11">11</a></sup>. I am thinking that means
+performant graphics in the browser <sup><a id="fnr.11" class="footref" href="#fn.11">11</a></sup>. I am thinking that means
 it would be hard to get a triple-A title running as smooth in the
 browser as it does natively. However a lot of "smaller" games run
 perfectly in the browser with great graphics. I remember specifically
-when Supergiant Games released Bastion <sup><a id="fnr.12" name="fnr.12" class="footref" href="#fn.12">12</a></sup> on the Chrome Web
+when Supergiant Games released Bastion <sup><a id="fnr.12" class="footref" href="#fn.12">12</a></sup> on the Chrome Web
 Store. Beautiful.
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-23" class="outline-2">
-<h2 id="sec-23">The Sims - a short presentation, Nov 20&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-23">
+<div id="outline-container-orgc84bea4" class="outline-2">
+<h2 id="orgc84bea4">The Sims - a short presentation, Nov 20&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-orgc84bea4">
 <p>
 We made a short presentation on the Sims in class. Here are the slides and the
 script.
 </p>
 </div>
 
-<div id="outline-container-sec-23-1" class="outline-3">
-<h3 id="sec-23-1">HISTORY - Slide</h3>
-<div class="outline-text-3" id="text-23-1">
+<div id="outline-container-orgb82cc23" class="outline-3">
+<h3 id="orgb82cc23">HISTORY - Slide</h3>
+<div class="outline-text-3" id="text-orgb82cc23">
 <ul class="org-ul">
 <li>The Sims is the first game in the series. Developed by Maxis and
 published by Electronic Arts, it was released for Microsoft Windows
-in February 2000.
-</li>
+in February 2000.</li>
 <li>The Sims 2 are released on September 14, 2004. The sequel, developed
 by Maxis, takes place in a full 3D environment with every sim having
-an aspiration system.
-</li>
+an aspiration system.</li>
 <li>The Sims 3 are released on June 2, 2009. Game has open, seamless
 neighbourhood, with improved tools for sim creation, enhanced build
-and buy mode functions, and the introduction of wishes and goals.
-</li>
+and buy mode functions, and the introduction of wishes and goals.</li>
 <li>The Sims 4 will be available in 2014. It allows creating sims with
 intelligence and emotion. It provides new intuitive creative tools
 to sculpt sims and build unique homes. Game gives control over the
-mind, body, and heart of sims to bring stories to life.
-</li>
+mind, body, and heart of sims to bring stories to life.</li>
 <li>The Sims Online, The Sims Stories, MySims, The Sims Carnival, The
-Sims Medieval, The Sims Social …
-</li>
+Sims Medieval, The Sims Social …</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-23-2" class="outline-3">
-<h3 id="sec-23-2">HISTORY - Script/notes</h3>
-<div class="outline-text-3" id="text-23-2">
+<div id="outline-container-org53ca09a" class="outline-3">
+<h3 id="org53ca09a">HISTORY - Script/notes</h3>
+<div class="outline-text-3" id="text-org53ca09a">
 <ul class="org-ul">
 <li>Sims 1 - Seven expansion packs and two bonafide deluxe editions with
 exclusive content have been released for this game. By March 22,
 2002, The Sims had sold more than 2 million copies worldwide, making
-it the best-selling P.C. game in history
-</li>
+it the best-selling P.C. game in history</li>
 
 <li>The Sims 2 is set some 25 years after the original game. For
 instance, the Goth family has aged significantly with Bella Goth
@@ -1822,43 +1840,37 @@ game has progressed from 2D sprites to 3D models, all content in The
 Sims 2 had to be created from the ground up. Electronic Arts has
 released eight expansion packs and nine stuff packs for The
 Sims 2. Over 400 exclusive items have also been released for this
-game via The Sims 2 Store
-</li>
+game via The Sims 2 Store</li>
 
 <li>The Sims 3 sold 1.4 million copies in the first week, making it the
 largest release in PC gaming history at the time. The game has sold
 over 10 million copies worldwide since its release. Eleven expansion
 packs and nine stuff packs have been released for the third
 generation of the series. Notably, Maxis was no longer involved in
-the production
-</li>
+the production</li>
 
 <li>The Sims 4 is built upon an entirely new technology. The content
 from The Sims 3 will not be transferable to The Sims 4. The Sims 4
-will be available for PC.
-</li>
+will be available for PC.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-23-3" class="outline-3">
-<h3 id="sec-23-3">EFFECTS OF THE GAME - Slide</h3>
-<div class="outline-text-3" id="text-23-3">
+<div id="outline-container-org65c3fa6" class="outline-3">
+<h3 id="org65c3fa6">EFFECTS OF THE GAME - Slide</h3>
+<div class="outline-text-3" id="text-org65c3fa6">
 <ul class="org-ul">
 <li>The Sims is one of first full-commercial strategic life-simulation
-video games that still is most successful artificial life game
-</li>
-<li>Inspired other games
-</li>
-<li>Has real life applications
-</li>
+video games that still is most successful artificial life game</li>
+<li>Inspired other games</li>
+<li>Has real life applications</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-23-4" class="outline-3">
-<h3 id="sec-23-4">EFFECTS OF THE GAME - Script/notes</h3>
-<div class="outline-text-3" id="text-23-4">
+<div id="outline-container-orgd2e588e" class="outline-3">
+<h3 id="orgd2e588e">EFFECTS OF THE GAME - Script/notes</h3>
+<div class="outline-text-3" id="text-orgd2e588e">
 <p>
 Artificial life games and life simulations find their origins in
 artificial life research, including Conway's Game of Life from 1970.
@@ -1879,31 +1891,25 @@ genetic algorithms".
 </div>
 </div>
 
-<div id="outline-container-sec-23-5" class="outline-3">
-<h3 id="sec-23-5">BEHAVIOUR OF THE PLAYER - Slide</h3>
-<div class="outline-text-3" id="text-23-5">
+<div id="outline-container-org12597f3" class="outline-3">
+<h3 id="org12597f3">BEHAVIOUR OF THE PLAYER - Slide</h3>
+<div class="outline-text-3" id="text-org12597f3">
 <ul class="org-ul">
-<li>Cheats - Infinite money - Maximum skills
-</li>
+<li>Cheats - Infinite money - Maximum skills</li>
 <li>Different objectives
 <ul class="org-ul">
-<li>Dream house
-</li>
-<li>Killing
-</li>
-<li>Woo Hoo
-</li>
-</ul>
-</li>
-<li>Aspects of life (University, Seasons, Pets…)
-</li>
+<li>Dream house</li>
+<li>Killing</li>
+<li>Woo Hoo</li>
+</ul></li>
+<li>Aspects of life (University, Seasons, Pets…)</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-23-6" class="outline-3">
-<h3 id="sec-23-6">BEHAVIOUR OF THE PLAYER - Script/notes</h3>
-<div class="outline-text-3" id="text-23-6">
+<div id="outline-container-org7de179c" class="outline-3">
+<h3 id="org7de179c">BEHAVIOUR OF THE PLAYER - Script/notes</h3>
+<div class="outline-text-3" id="text-org7de179c">
 <p>
 What’s the most memorable thing about the Sims? We think it depends
 greatly on how the player has behaved when playing. What do we
@@ -1924,9 +1930,9 @@ player can focus on, for instance “University, Seasons, Pets… etc.”
 </div>
 </div>
 
-<div id="outline-container-sec-24" class="outline-2">
-<h2 id="sec-24">Future of procedural generation of content, Nov 19&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-24">
+<div id="outline-container-org94afde6" class="outline-2">
+<h2 id="org94afde6">Future of procedural generation of content, Nov 19&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-org94afde6">
 <p>
 I really think that map generation or procedural content generation is
 something which is becoming more and more common in games. Instead of
@@ -1941,7 +1947,7 @@ in the future.
 <p>
 I think we will see even more of this in the future. Perhaps a lot
 more free-roaming, sandbox games like Minecraft, Terraria or perhaps
-Project Zomboid <sup><a id="fnr.3.100" name="fnr.3.100" class="footref" href="#fn.3">3</a></sup> (video included since it's not that heard of and
+Project Zomboid <sup><a id="fnr.3.100" class="footref" href="#fn.3">3</a></sup> (video included since it's not that heard of and
 'only' in beta). I think the procedural generation of content adds
 greatly to the sandbox survival genre of games. These games often add
 a bit of a RPG element to them, making it extra sad when your
@@ -1953,7 +1959,7 @@ heroine/hero dies.
 <p>
 Taking it one step further, I'd love to see what happens when not only
 the maps are generated, but also the creatures within them. I imagine
-something like Spore <sup><a id="fnr.13" name="fnr.13" class="footref" href="#fn.13">13</a></sup> for monsters/creatures in the
+something like Spore <sup><a id="fnr.13" class="footref" href="#fn.13">13</a></sup> for monsters/creatures in the
 world. Perhaps someday one will be able to generate quests and dialogs
 aswell. It all comes down to breaking it into small enough parts I
 guess.
@@ -1970,9 +1976,9 @@ looking at.
 </div>
 </div>
 
-<div id="outline-container-sec-25" class="outline-2">
-<h2 id="sec-25">Data-driven approach, Nov 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-25">
+<div id="outline-container-org3c1956e" class="outline-2">
+<h2 id="org3c1956e">Data-driven approach, Nov 15&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-org3c1956e">
 <p>
 A data-driven approach is shifted from Object Oriented approaches.
 The data-driven approach seems like a really good fit if you are
@@ -1989,7 +1995,7 @@ you haven't really got the advantage of changing language as well.
 </p>
 
 <p>
-According to wikipedia <sup><a id="fnr.14" name="fnr.14" class="footref" href="#fn.14">14</a></sup>, there are a few languages which have
+According to wikipedia <sup><a id="fnr.14" class="footref" href="#fn.14">14</a></sup>, there are a few languages which have
 a more data driven approach but I have unfortunately not used any of
 these (except for one line of awk, but that's it). I'm guessing what
 we're after is to learn the concept and then embrace it in whatever
@@ -2009,9 +2015,9 @@ then one can make gradual improvements.
 </div>
 </div>
 
-<div id="outline-container-sec-26" class="outline-2">
-<h2 id="sec-26">Software development model, Nov 12&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-26">
+<div id="outline-container-org102f9b1" class="outline-2">
+<h2 id="org102f9b1">Software development model, Nov 12&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-org102f9b1">
 <p>
 I think the model used to develop a game is really depending on what
 type of game you make. I'd like to address the fact that not every
@@ -2023,7 +2029,7 @@ is useful.
 <p>
 Do you have a ton of ideas which needs to be tested before you can
 decide upon stuff? Like /u/RukiTanuki suggested on Reddit to the girl
-making a science-based dragon MMO <sup><a id="fnr.15" name="fnr.15" class="footref" href="#fn.15">15</a></sup>; There are several ideas to
+making a science-based dragon MMO <sup><a id="fnr.15" class="footref" href="#fn.15">15</a></sup>; There are several ideas to
 take into account.
 </p>
 
@@ -2051,12 +2057,12 @@ playable as soon as possible.
 </div>
 </div>
 
-<div id="outline-container-sec-27" class="outline-2">
-<h2 id="sec-27">Haven and Hearth, Nov 8&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-27">
+<div id="outline-container-org7586672" class="outline-2">
+<h2 id="org7586672">Haven and Hearth, Nov 8&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-org7586672">
 <p>
 Today I played a game by originally made by Seatribe called Haven and
-Hearth <sup><a id="fnr.16" name="fnr.16" class="footref" href="#fn.16">16</a></sup>. It's a MMORPG where death, Permanent death(!), is
+Hearth <sup><a id="fnr.16" class="footref" href="#fn.16">16</a></sup>. It's a MMORPG where death, Permanent death(!), is
 imminent. The scenario takes place in a world quite similar to real
 nature. There are no fictive elements in the game in that sense. It's
 really like a simulation of a subset of the real world. Typically you
@@ -2083,7 +2089,7 @@ item with some weighted average quality.
 </p>
 
 <p>
-Their business model is quite interesting. The game is F2P <sup><a id="fnr.17" name="fnr.17" class="footref" href="#fn.17">17</a></sup> and
+Their business model is quite interesting. The game is F2P <sup><a id="fnr.17" class="footref" href="#fn.17">17</a></sup> and
 doesn't focus on money making at all, which is quite a relief when
 playing. No ads, no worries. In a sense, it can get very "zen" as you
 stroll through the forest, enjoying the view. A meditation of sorts.
@@ -2092,7 +2098,7 @@ This is really a good game for whenever you feel like escaping reality.
 
 <p>
 I've never played a game like this before. I've only played MMORPG's
-with a static world like Runescape <sup><a id="fnr.18" name="fnr.18" class="footref" href="#fn.18">18</a></sup> . Playing was really fun, I
+with a static world like Runescape <sup><a id="fnr.18" class="footref" href="#fn.18">18</a></sup> . Playing was really fun, I
 managed to find my friend there and we chopped down some trees
 together and built a simple shelter. Perhaps we should've played some
 more, since we didn't get that far in the game.
@@ -2100,9 +2106,9 @@ more, since we didn't get that far in the game.
 </div>
 </div>
 
-<div id="outline-container-sec-28" class="outline-2">
-<h2 id="sec-28">What type of gamer are you? Nov 5&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
-<div class="outline-text-2" id="text-28">
+<div id="outline-container-org1697371" class="outline-2">
+<h2 id="org1697371">What type of gamer are you? Nov 5&#xa0;&#xa0;&#xa0;<span class="tag"><span class="game">game</span>&#xa0;<span class="design">design</span></span></h2>
+<div class="outline-text-2" id="text-org1697371">
 <p>
 My name's Anton Erholt and I've just started my master's programme
 in Computer Science at KTH. I'm 23 years old and live in a suburb of
@@ -2112,7 +2118,7 @@ Stockholm together with two of my friends.
 <p>
 I've been playing computer games for about as long as I can
 remember. I remember the Christmas when I got my first console, the
-Nintendo Game Boy <sup><a id="fnr.19" name="fnr.19" class="footref" href="#fn.19">19</a></sup> together with Super Mario Land <sup><a id="fnr.20" name="fnr.20" class="footref" href="#fn.20">20</a></sup>.
+Nintendo Game Boy <sup><a id="fnr.19" class="footref" href="#fn.19">19</a></sup> together with Super Mario Land <sup><a id="fnr.20" class="footref" href="#fn.20">20</a></sup>.
 </p>
 
 <p>
@@ -2126,7 +2132,7 @@ car as a kid almost every vacation trip we ever made.
 Throughout the years, I've owned a few different handheld consoles,
 mostly from the Nintendo series. IIRC, I currently own a Game Boy, a
 Game Boy Advanced (GBA), a PlayStation Pocket (PSP) and well, no PS
-VITA, but a PlayStation Certified smartphone <sup><a id="fnr.21" name="fnr.21" class="footref" href="#fn.21">21</a></sup>. Together with my
+VITA, but a PlayStation Certified smartphone <sup><a id="fnr.21" class="footref" href="#fn.21">21</a></sup>. Together with my
 flatmate, we have some other consoles at home as well (NES, SNES, N64,
 PS3, XBOX [original] and a&#x2026; Commodore 64!). As of right now I mainly
 play on my smartphone or my PC if I play something.
@@ -2135,16 +2141,16 @@ play on my smartphone or my PC if I play something.
 <p>
 My favorite genre of games usually varies a bit, but over the years I
 seem to return to the single player RPG-genre. Games such as Golden
-Sun <sup><a id="fnr.22" name="fnr.22" class="footref" href="#fn.22">22</a></sup>, The Legend of Zelda: Links Awakening <sup><a id="fnr.23" name="fnr.23" class="footref" href="#fn.23">23</a></sup> and Final
-Fantasy VII <sup><a id="fnr.24" name="fnr.24" class="footref" href="#fn.24">24</a></sup> are a few of my favorites. Another genre which I've
+Sun <sup><a id="fnr.22" class="footref" href="#fn.22">22</a></sup>, The Legend of Zelda: Links Awakening <sup><a id="fnr.23" class="footref" href="#fn.23">23</a></sup> and Final
+Fantasy VII <sup><a id="fnr.24" class="footref" href="#fn.24">24</a></sup> are a few of my favorites. Another genre which I've
 grown a bit attached to, is the roguelike, dungeon-crawling
 genre. Permadeath, tons of monsters and weird actions. Dungeons of
-Dredmor <sup><a id="fnr.25" name="fnr.25" class="footref" href="#fn.25">25</a></sup> is one of the games I'm currently playing a lot.
+Dredmor <sup><a id="fnr.25" class="footref" href="#fn.25">25</a></sup> is one of the games I'm currently playing a lot.
 </p>
 
 <p>
 One of my greatest game experiences must have been while playing
-Pokémon Blue <sup><a id="fnr.26" name="fnr.26" class="footref" href="#fn.26">26</a></sup>, getting the 151st Pokémon. I remember being
+Pokémon Blue <sup><a id="fnr.26" class="footref" href="#fn.26">26</a></sup>, getting the 151st Pokémon. I remember being
 extremely happy about having "Caught them all". The feeling was almost
 indescribable after having spent so many hours completing that
 task. Too bad it only took 'til a few months until they released about a
@@ -2153,7 +2159,7 @@ hundred more Pokémons in a new game.
 
 <p>
 One of the worst gaming experiences I've had was probably when I
-played one of the Zenonia <sup><a id="fnr.27" name="fnr.27" class="footref" href="#fn.27">27</a></sup> games on my phone. The game was so focused
+played one of the Zenonia <sup><a id="fnr.27" class="footref" href="#fn.27">27</a></sup> games on my phone. The game was so focused
 on trying to sell me stuff and incorporating ads that it was almost
 unplayable. I uninstalled it very quickly since it wasn't that
 fun. I'd rather had spent some money on buying the game instead of
@@ -2171,113 +2177,113 @@ part back-end), so this is a bit of a new field for me.
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
 
-<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://www.kth.se/social/course/DH2650">https://www.kth.se/social/course/DH2650</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://play.google.com/store/apps/details?id=com.orangepixel.stardash">https://play.google.com/store/apps/details?id=com.orangepixel.stardash</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://pzwiki.net/wiki/Main_Page">http://pzwiki.net/wiki/Main_Page</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.4" name="fn.4" class="footnum" href="#fnr.4">4</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://eu.battle.net/wow/en/game/guide/">http://eu.battle.net/wow/en/game/guide/</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.5" name="fn.5" class="footnum" href="#fnr.5">5</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Multiplayer_online_battle_arena">http://en.wikipedia.org/wiki/Multiplayer_online_battle_arena</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.6" name="fn.6" class="footnum" href="#fnr.6">6</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6">6</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://www.rockpapershotgun.com/2012/07/20/dota-lol-all-heroes-of-newerth-heroes-going-free/">http://www.rockpapershotgun.com/2012/07/20/dota-lol-all-heroes-of-newerth-heroes-going-free/</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.7" name="fn.7" class="footnum" href="#fnr.7">7</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.7" class="footnum" href="#fnr.7">7</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://forums.heroesofnewerth.com/showthread.php?436758-Attention-Neweth!-All-Heroes-Going-Free">http://forums.heroesofnewerth.com/showthread.php?436758-Attention-Neweth!-All-Heroes-Going-Free</a>!
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.8" name="fn.8" class="footnum" href="#fnr.8">8</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.8" class="footnum" href="#fnr.8">8</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://www.wired.co.uk/news/archive/2013-08/15/plants-vs-zombies-2-review">http://www.wired.co.uk/news/archive/2013-08/15/plants-vs-zombies-2-review</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.9" name="fn.9" class="footnum" href="#fnr.9">9</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.9" class="footnum" href="#fnr.9">9</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Flower_(video_game)">http://en.wikipedia.org/wiki/Flower_(video_game)</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.10" name="fn.10" class="footnum" href="#fnr.10">10</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.10" class="footnum" href="#fnr.10">10</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://cavestory.wikia.com/wiki/Cave_Story_Wiki">http://cavestory.wikia.com/wiki/Cave_Story_Wiki</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.11" name="fn.11" class="footnum" href="#fnr.11">11</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.11" class="footnum" href="#fnr.11">11</a></sup> <div class="footpara"><p class="footpara">
 John Carmack on WebGL&#x2026; <a href="http://www.youtube.com/watch?v=ozxRRPJzZ78">http://www.youtube.com/watch?v=ozxRRPJzZ78</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.12" name="fn.12" class="footnum" href="#fnr.12">12</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.12" class="footnum" href="#fnr.12">12</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Bastion_(video_game)">http://en.wikipedia.org/wiki/Bastion_(video_game)</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.13" name="fn.13" class="footnum" href="#fnr.13">13</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.13" class="footnum" href="#fnr.13">13</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://sv.wikipedia.org/wiki/Spore">http://sv.wikipedia.org/wiki/Spore</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.14" name="fn.14" class="footnum" href="#fnr.14">14</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.14" class="footnum" href="#fnr.14">14</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Data-driven_programming">http://en.wikipedia.org/wiki/Data-driven_programming</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.15" name="fn.15" class="footnum" href="#fnr.15">15</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.15" class="footnum" href="#fnr.15">15</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://www.reddit.com/r/gaming/comments/p1ssv/dear_internet_im_a_26_year_old_lady_whos_been/">http://www.reddit.com/r/gaming/comments/p1ssv/dear_internet_im_a_26_year_old_lady_whos_been/</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.16" name="fn.16" class="footnum" href="#fnr.16">16</a></sup> <p class="footpara">
-<a href="http://havenandhearth.com">http://havenandhearth.com</a>
-</p></div>
+<div class="footdef"><sup><a id="fn.16" class="footnum" href="#fnr.16">16</a></sup> <div class="footpara"><p class="footpara">
+<a href="http://havenandhearth.com/">http://havenandhearth.com/</a>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.17" name="fn.17" class="footnum" href="#fnr.17">17</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.17" class="footnum" href="#fnr.17">17</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Free-to-play">http://en.wikipedia.org/wiki/Free-to-play</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.18" name="fn.18" class="footnum" href="#fnr.18">18</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.18" class="footnum" href="#fnr.18">18</a></sup> <div class="footpara"><p class="footpara">
 <a href="https://www.runescape.com/game?html5=1">https://www.runescape.com/game?html5=1</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.19" name="fn.19" class="footnum" href="#fnr.19">19</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.19" class="footnum" href="#fnr.19">19</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Game_boy">http://en.wikipedia.org/wiki/Game_boy</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.20" name="fn.20" class="footnum" href="#fnr.20">20</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.20" class="footnum" href="#fnr.20">20</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Super_Mario_Land">http://en.wikipedia.org/wiki/Super_Mario_Land</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.21" name="fn.21" class="footnum" href="#fnr.21">21</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.21" class="footnum" href="#fnr.21">21</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://www.sonymobile.com/global-en/products/phones/xperia-play/">http://www.sonymobile.com/global-en/products/phones/xperia-play/</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.22" name="fn.22" class="footnum" href="#fnr.22">22</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.22" class="footnum" href="#fnr.22">22</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Golden_Sun">http://en.wikipedia.org/wiki/Golden_Sun</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.23" name="fn.23" class="footnum" href="#fnr.23">23</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.23" class="footnum" href="#fnr.23">23</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Link's_Awakening">http://en.wikipedia.org/wiki/Link's_Awakening</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.24" name="fn.24" class="footnum" href="#fnr.24">24</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.24" class="footnum" href="#fnr.24">24</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Final_Fantasy_VII">http://en.wikipedia.org/wiki/Final_Fantasy_VII</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.25" name="fn.25" class="footnum" href="#fnr.25">25</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.25" class="footnum" href="#fnr.25">25</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://dungeonsofdredmor.com/">http://dungeonsofdredmor.com/</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.26" name="fn.26" class="footnum" href="#fnr.26">26</a></sup> <p class="footpara">
+<div class="footdef"><sup><a id="fn.26" class="footnum" href="#fnr.26">26</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://en.wikipedia.org/wiki/Pokemon_Blue">http://en.wikipedia.org/wiki/Pokemon_Blue</a>
-</p></div>
+</p></div></div>
 
-<div class="footdef"><sup><a id="fn.27" name="fn.27" class="footnum" href="#fnr.27">27</a></sup> <p class="footpara">
-<a href="https://play.google.com/store/apps/details?id=com.gamevil.zenonia4.global&hl=sv">https://play.google.com/store/apps/details?id=com.gamevil.zenonia4.global&hl=sv</a>
-</p></div>
+<div class="footdef"><sup><a id="fn.27" class="footnum" href="#fnr.27">27</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://play.google.com/store/apps/details?id=com.gamevil.zenonia4.global&amp;hl=sv">https://play.google.com/store/apps/details?id=com.gamevil.zenonia4.global&amp;hl=sv</a>
+</p></div></div>
 
 
 </div>
