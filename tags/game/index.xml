@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/game/</link>
+    <description>Recent content in Game on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Dec 2013 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Presentation of game demo</title>
+      <link>http://ctrlaltdelete.nu/blog/presentation-of-game-demo/</link>
+      <pubDate>Fri, 13 Dec 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/presentation-of-game-demo/</guid>
+      <description>We made a presentation of a game demo we developed during the course&amp;nbsp;1. Here follows the script and some comments of the final presentation (NOTE: This might be a tedious read since&amp;#x2026; Well. You have been warned).
+Presentation Script Welcome Hi everyone and welcome to this presentation. We’re the group “Fat ninja” a.k.a. Kitten with Mittens. We are here to present a charming puzzle game with&amp;#x2026;
+Description
+&amp;#x2026;an adorable Kitten.</description>
+    </item>
+    
+    <item>
+      <title>Mobile games</title>
+      <link>http://ctrlaltdelete.nu/blog/mobile-games/</link>
+      <pubDate>Fri, 06 Dec 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/mobile-games/</guid>
+      <description>When playing a game on a mobile device, you have very little time to make the player interested. This is a very similar problem to the one where websites have only a few seconds to present the right content to the visitor or else the visitor will browse away from the site. These problems are hard to solve (their respective decision problems are probably way more than NP-complete [Comp. Sci. humor] ).</description>
+    </item>
+    
+    <item>
+      <title>The game producer - Game business models</title>
+      <link>http://ctrlaltdelete.nu/blog/the-game-producer---game-business-models/</link>
+      <pubDate>Tue, 03 Dec 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/the-game-producer---game-business-models/</guid>
+      <description>Now I&amp;rsquo;ll briefly discuss some business models. Please note that I&amp;rsquo;m probably a bit biased.
+Pay-to-play (P2P) The &amp;ldquo;standard&amp;rdquo; model. You pay for a game once and then it is yours. For all eternity&amp;#x2026; Oh, you want an example? Hmm&amp;#x2026; Let&amp;rsquo;s see. Oh! Project Zomboid&amp;nbsp;1 mentioned in an earlier post is a good example.
+ Pros
+ You don&amp;rsquo;t have to keep track of all the players  Cons</description>
+    </item>
+    
+    <item>
+      <title>Dataspelsbranschen: the trade organization</title>
+      <link>http://ctrlaltdelete.nu/blog/dataspelsbranschen-the-trade-organization/</link>
+      <pubDate>Fri, 29 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/dataspelsbranschen-the-trade-organization/</guid>
+      <description>Today we had a guest lecture from Per Strömbäck of Dataspelsbranchen, the trade organization for Swedish game development. He wanted us to discuss two specific questions which all in all are quite important when it comes.
+How can the game developer interact with the audience?
+There are multiple ways of interacting with your target audience as a game dev. The easiest to come up with are probably through public forums, a wiki, social media and/or some other kind of web based communcation.</description>
+    </item>
+    
+    <item>
+      <title>Short on game physics and animation</title>
+      <link>http://ctrlaltdelete.nu/blog/short-on-game-physics-and-animation/</link>
+      <pubDate>Tue, 26 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/short-on-game-physics-and-animation/</guid>
+      <description>Some games are really nothing but great combination of physics, animation and astonishing scenery. One example I would like to discuss is a game called flower (note, no capital f)&amp;nbsp;1. In flower one controls a single petal flying in the wind over an enormous field. As you fly across the field, if you hit other flowers, some of its petals will join you in your flight. In order to complete a level you need to collect a certain number of petals and reach the end (although I don&amp;rsquo;t think it is specified how many you need).</description>
+    </item>
+    
+    <item>
+      <title>Using a game engine or building your own?</title>
+      <link>http://ctrlaltdelete.nu/blog/using-a-game-engine-or-building-your-own/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/using-a-game-engine-or-building-your-own/</guid>
+      <description>This post will be filled with spontaneous questions and answers related to whether one should use an existing game engine or create one from scratch.
+What budget are you on? If I&amp;rsquo;m really low on a budget I&amp;rsquo;ll probably use an engine if it can save me some time we all know; Time is money. The time saving aspect is also present when it comes to maintaining the game and/or improving it.</description>
+    </item>
+    
+    <item>
+      <title>The Sims - a short presentation</title>
+      <link>http://ctrlaltdelete.nu/blog/the-sims---a-short-presentation/</link>
+      <pubDate>Wed, 20 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/the-sims---a-short-presentation/</guid>
+      <description>We made a short presentation on the Sims in class. Here are the slides and the script.
+HISTORY - Slide  The Sims is the first game in the series. Developed by Maxis and published by Electronic Arts, it was released for Microsoft Windows in February 2000. The Sims 2 are released on September 14, 2004. The sequel, developed by Maxis, takes place in a full 3D environment with every sim having an aspiration system.</description>
+    </item>
+    
+    <item>
+      <title>Future of procedural generation of content</title>
+      <link>http://ctrlaltdelete.nu/blog/future-of-procedural-generation-of-content/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/future-of-procedural-generation-of-content/</guid>
+      <description>I really think that map generation or procedural content generation is something which is becoming more and more common in games. Instead of playing linear, story based games we get to experience multidimensional games where we create our own unique worlds (or have our own worlds created for us). However, generating good maps is a really difficult problem which really hasn&amp;rsquo;t been available until more recently so I think that there are many improvements to be made here in the future.</description>
+    </item>
+    
+    <item>
+      <title>Data-driven approach</title>
+      <link>http://ctrlaltdelete.nu/blog/data-driven-approach/</link>
+      <pubDate>Fri, 15 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/data-driven-approach/</guid>
+      <description>A data-driven approach is shifted from Object Oriented approaches. The data-driven approach seems like a really good fit if you are geared towards making a state-of-the art game engine for making really high performing games. Bitsquid is certainly outstanding in that sense
+It&amp;rsquo;s always a bit tricky when you&amp;rsquo;re learning a new programming paradigm. Usually you learn a new programming language together with the paradigm which can help you understand difficult patterns and ideas more easily.</description>
+    </item>
+    
+    <item>
+      <title>Software development model</title>
+      <link>http://ctrlaltdelete.nu/blog/software-development-model/</link>
+      <pubDate>Tue, 12 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/software-development-model/</guid>
+      <description>I think the model used to develop a game is really depending on what type of game you make. I&amp;rsquo;d like to address the fact that not every type of game needs to be high-end performing. As a guideline though, whatever type of development model which allows you to be productive is useful.
+Do you have a ton of ideas which needs to be tested before you can decide upon stuff?</description>
+    </item>
+    
+    <item>
+      <title>Haven and Hearth</title>
+      <link>http://ctrlaltdelete.nu/blog/haven-and-hearth/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/haven-and-hearth/</guid>
+      <description>Today I played a game by originally made by Seatribe called Haven and Hearth&amp;nbsp;1. It&amp;rsquo;s a MMORPG where death, Permanent death(!), is imminent. The scenario takes place in a world quite similar to real nature. There are no fictive elements in the game in that sense. It&amp;rsquo;s really like a simulation of a subset of the real world. Typically you travel around in a forest of some sorts. There are mountains, rivers and lakes for you to explore.</description>
+    </item>
+    
+    <item>
+      <title>What type of gamer are you?</title>
+      <link>http://ctrlaltdelete.nu/blog/what-type-of-gamer-are-you/</link>
+      <pubDate>Tue, 05 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/what-type-of-gamer-are-you/</guid>
+      <description>My name&amp;rsquo;s Anton Erholt and I&amp;rsquo;ve just started my master&amp;rsquo;s programme in Computer Science at KTH. I&amp;rsquo;m 23 years old and live in a suburb of Stockholm together with two of my friends.
+I&amp;rsquo;ve been playing computer games for about as long as I can remember. I remember the Christmas when I got my first console, the Nintendo Game Boy&amp;nbsp;1 together with Super Mario Land&amp;nbsp;2.
+Ever since then, I guess I&amp;rsquo;ve been kind of hooked on handheld games.</description>
+    </item>
+    
+  </channel>
+</rss>

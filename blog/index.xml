@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/blog/</link>
+    <description>Recent content in Blog on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Apr 2016 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moves where a Queen can&#39;t take (8x8 chess board)</title>
+      <link>http://ctrlaltdelete.nu/blog/moves-where-a-queen-cant-take-8x8-chess-board/</link>
+      <pubDate>Sun, 17 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/moves-where-a-queen-cant-take-8x8-chess-board/</guid>
+      <description>This piece finds okay positions where a single queen can&amp;rsquo;t take the piece (on a 8x8 chess board). It took a little while to write, but I think it reads pretty well and is done in a functional style. I was TOO SLOW to finish this in a single clash! (1h 10min)
+Learned about generation with lazy-seq and map-indexed together with list comprehension (for).
+;; Simulates input. (def one-Q-board [[&amp;quot;.&amp;quot; &amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Spiral matrix in Clojure</title>
+      <link>http://ctrlaltdelete.nu/blog/spiral-matrix-in-clojure/</link>
+      <pubDate>Fri, 15 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/spiral-matrix-in-clojure/</guid>
+      <description>I had a bit of a struggle with this problem at first. I decided to generate the path with a few small functions and then sort and print. Enjoy this beatiful piece!
+;;; Prints numbers in a spiral matrix going ⟳. (ns first.spiral) (defn output-number [n] (if (&amp;lt; n 10) (str &amp;quot;0&amp;quot; n) (str n))) (defn right [[x y]] [(inc x) y]) (defn left [[x y]] [(dec x) y]) (defn up [[x y]] [x (dec y)]) (defn down [[x y]] [x (inc y)]) (def dirs {:right right :up up :down down :left left}) (def rotate {:right :down :down :left :left :up :up :right}) (defn advance-dir [pos current-dir visited] (if (contains?</description>
+    </item>
+    
+    <item>
+      <title>Improving my Clojure skills</title>
+      <link>http://ctrlaltdelete.nu/blog/improving-my-clojure-skills/</link>
+      <pubDate>Fri, 15 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/improving-my-clojure-skills/</guid>
+      <description>Over at CodinGame they have something called clashes of code where you compete with other developers to solve a certain problem in a given amount of time. I know there are quite a few sites where you can sharpen your coding skills, but somehow I got stuck at this one. Maybe it provides me with just enough challenge for me with my current skills.
+I&amp;rsquo;ve tried to use the clashes to learn more about Clojure.</description>
+    </item>
+    
+    <item>
+      <title>End of my game dev story?</title>
+      <link>http://ctrlaltdelete.nu/blog/end-of-my-game-dev-story/</link>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/end-of-my-game-dev-story/</guid>
+      <description>We worked on this for a while, but it just ran out in the sand when I went to France for exchange studies. Nevertheless, it was a great learning experience for me. I think I mostly learned a bunch of javascript. We built the client side of a somewhat advanced game. The coolest part was a small window system built mostly by my friends in WebGL.
+Hopefully we can publish the code with some small examples.</description>
+    </item>
+    
+    <item>
+      <title>Sphere packing on a sphere? Circle packing papers</title>
+      <link>http://ctrlaltdelete.nu/blog/sphere-packing-on-a-sphere-circle-packing-papers/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/sphere-packing-on-a-sphere-circle-packing-papers/</guid>
+      <description>The idea of a tool giving you access to finding relevant papers in a certain field of research is pretty interesting. Let&amp;rsquo;s imagine all the papers as a planar graph depicted on a sphere. The edges (arrows/links) of the graphs are keywords or subjects. A certain &amp;lsquo;theme&amp;rsquo; (a set of papers) would then be a &amp;lsquo;continent&amp;rsquo; on the sphere.
+   Figure 1: Found on a course web page for computational topology, originally from &amp;lt;http://www.</description>
+    </item>
+    
+    <item>
+      <title>Tools for completing a master&#39;s thesis</title>
+      <link>http://ctrlaltdelete.nu/blog/tools-for-completing-a-masters-thesis/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/tools-for-completing-a-masters-thesis/</guid>
+      <description>A master&amp;rsquo;s thesis is an intense 18 weeks of total focus and devotion to a research question. So far, I&amp;rsquo;ve only been able to invest about one weeks worth of studies during a four week period. My personal life is taking its toll on my work at the moment. I don&amp;rsquo;t feel like it&amp;rsquo;s that frustrating, but I&amp;rsquo;d really like to get more stuff done.
+In order to increase my productivity I&amp;rsquo;ve come up with a plan.</description>
+    </item>
+    
+    <item>
+      <title>Concerning idea debt and investment</title>
+      <link>http://ctrlaltdelete.nu/blog/concerning-idea-debt-and-investment/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/concerning-idea-debt-and-investment/</guid>
+      <description>I read this article about idea debt. Not sure which affected me the most. What she stated about idea investment, or the fact that she too doesn&amp;rsquo;t know how to use the french subjunctive correctly. Nonetheless, I&amp;rsquo;m truly inspired to put my old ideas to the side and work with what I&amp;rsquo;ve got at the moment. I want to start documenting stuff properly. This is my blog. My life.</description>
+    </item>
+    
+    <item>
+      <title>2016</title>
+      <link>http://ctrlaltdelete.nu/blog/2016/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/2016/</guid>
+      <description>Happy new year 2016! 2015 was not a very bloggy year. Who knows? Maybe 2016 will bear more blog fruit.</description>
+    </item>
+    
+    <item>
+      <title>Regarding problems which can be solved by dynamic programming techniques</title>
+      <link>http://ctrlaltdelete.nu/blog/regarding-problems-which-can-be-solved-by-dynamic-programming-techniques/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/regarding-problems-which-can-be-solved-by-dynamic-programming-techniques/</guid>
+      <description>I have recently watched quite a few videos on dynamic programming. What is dynamic programming? It&amp;rsquo;s a method for constructing efficient solutions to some specific problems. In order to apply the method, there are some criteria needed to be met.
+ The problem should have a brute-force solution/exhaustive search solution. The problem should be dividable into sub-problems with optimal solutions (explained further down) The problem should have a recursive definition.  NOTE: I&amp;rsquo;m not doing this in a formal manner, I simply think out loud in order to understand the subject better.</description>
+    </item>
+    
+    <item>
+      <title>2015</title>
+      <link>http://ctrlaltdelete.nu/blog/2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/2015/</guid>
+      <description>Happy new year 2015! </description>
+    </item>
+    
+    <item>
+      <title>A flawed idea of the halting problem</title>
+      <link>http://ctrlaltdelete.nu/blog/a-flawed-idea-of-the-halting-problem/</link>
+      <pubDate>Sun, 16 Mar 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/a-flawed-idea-of-the-halting-problem/</guid>
+      <description>The halting problem is fairly interesting even though someone (Alan Turing) some time ago (1936) has proved that it can not be solved by a general algorithm. It is undecidable. Despite the fact, today when I woke up I had an idea.
+Let us use a FSM to describe the program. Think of it as a FSM with A LOT OF STATES. Almost as if it is an Infinite State Machine (which would not be of much use), but rather a very large FSM.</description>
+    </item>
+    
+    <item>
+      <title>HACKATHON!</title>
+      <link>http://ctrlaltdelete.nu/blog/hackathon/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/hackathon/</guid>
+      <description>A lot has happened since we started developing the game. Our initial goal was to do these tasks during the hackathon:
+ WebSockets and API TouchEvents GameLoop and GameStates  Afterwards, we now have a somewhat working APICallSystem with Secure WebSockets. Unfortunately havn&amp;rsquo;t our exportation framework for Android and iOS supported the wss protocol yet, but it&amp;rsquo;ll hopefully be up and running soon. During the hackathon I had a great time.</description>
+    </item>
+    
+    <item>
+      <title>To use DDD or not (| !) to use DDD</title>
+      <link>http://ctrlaltdelete.nu/blog/to-use-ddd-or-not---to-use-ddd/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/to-use-ddd-or-not---to-use-ddd/</guid>
+      <description>My initial thoughts on Data Driven Development was that it to some extent might have been unneccessary (mainly due to the fact that I didn&amp;rsquo;t understand it fully). I thought that when making a smaller game, you probably wouldn&amp;rsquo;t benefit from using a DDD code style at all. However, after reading this post on why one should use an entity-component-system composition of a game/gameengine, I have changed my mind.
+Our initial approach to writing the game was with OOP (Object-Oriented Principles) which gave us a massive Character class, which as of right now only seems unneccessary.</description>
+    </item>
+    
+    <item>
+      <title>The beginning of Anton&#39;s Game Dev Story</title>
+      <link>http://ctrlaltdelete.nu/blog/the-beginning-of-antons-game-dev-story/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/the-beginning-of-antons-game-dev-story/</guid>
+      <description>About a year ago, me and two classmates (johntu &amp;amp; dmol) participated in a programming competition called Escape from /dev/null. The competition is based around having to program something that assembles a client to a web-based API revolving different things. The API gets further uncovered as you get further into the competition. It&amp;rsquo;s a game in a game. Very meta and Oh-So-Lovely&amp;trade; if you are into these kinds of things.</description>
+    </item>
+    
+    <item>
+      <title>2014</title>
+      <link>http://ctrlaltdelete.nu/blog/2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/2014/</guid>
+      <description>Happy new year 2014! </description>
+    </item>
+    
+    <item>
+      <title>Presentation of game demo</title>
+      <link>http://ctrlaltdelete.nu/blog/presentation-of-game-demo/</link>
+      <pubDate>Fri, 13 Dec 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/presentation-of-game-demo/</guid>
+      <description>We made a presentation of a game demo we developed during the course&amp;nbsp;1. Here follows the script and some comments of the final presentation (NOTE: This might be a tedious read since&amp;#x2026; Well. You have been warned).
+Presentation Script Welcome Hi everyone and welcome to this presentation. We’re the group “Fat ninja” a.k.a. Kitten with Mittens. We are here to present a charming puzzle game with&amp;#x2026;
+Description
+&amp;#x2026;an adorable Kitten.</description>
+    </item>
+    
+    <item>
+      <title>Mobile games</title>
+      <link>http://ctrlaltdelete.nu/blog/mobile-games/</link>
+      <pubDate>Fri, 06 Dec 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/mobile-games/</guid>
+      <description>When playing a game on a mobile device, you have very little time to make the player interested. This is a very similar problem to the one where websites have only a few seconds to present the right content to the visitor or else the visitor will browse away from the site. These problems are hard to solve (their respective decision problems are probably way more than NP-complete [Comp. Sci. humor] ).</description>
+    </item>
+    
+    <item>
+      <title>The game producer - Game business models</title>
+      <link>http://ctrlaltdelete.nu/blog/the-game-producer---game-business-models/</link>
+      <pubDate>Tue, 03 Dec 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/the-game-producer---game-business-models/</guid>
+      <description>Now I&amp;rsquo;ll briefly discuss some business models. Please note that I&amp;rsquo;m probably a bit biased.
+Pay-to-play (P2P) The &amp;ldquo;standard&amp;rdquo; model. You pay for a game once and then it is yours. For all eternity&amp;#x2026; Oh, you want an example? Hmm&amp;#x2026; Let&amp;rsquo;s see. Oh! Project Zomboid&amp;nbsp;1 mentioned in an earlier post is a good example.
+ Pros
+ You don&amp;rsquo;t have to keep track of all the players  Cons</description>
+    </item>
+    
+    <item>
+      <title>Dataspelsbranschen: the trade organization</title>
+      <link>http://ctrlaltdelete.nu/blog/dataspelsbranschen-the-trade-organization/</link>
+      <pubDate>Fri, 29 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/dataspelsbranschen-the-trade-organization/</guid>
+      <description>Today we had a guest lecture from Per Strömbäck of Dataspelsbranchen, the trade organization for Swedish game development. He wanted us to discuss two specific questions which all in all are quite important when it comes.
+How can the game developer interact with the audience?
+There are multiple ways of interacting with your target audience as a game dev. The easiest to come up with are probably through public forums, a wiki, social media and/or some other kind of web based communcation.</description>
+    </item>
+    
+    <item>
+      <title>Short on game physics and animation</title>
+      <link>http://ctrlaltdelete.nu/blog/short-on-game-physics-and-animation/</link>
+      <pubDate>Tue, 26 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/short-on-game-physics-and-animation/</guid>
+      <description>Some games are really nothing but great combination of physics, animation and astonishing scenery. One example I would like to discuss is a game called flower (note, no capital f)&amp;nbsp;1. In flower one controls a single petal flying in the wind over an enormous field. As you fly across the field, if you hit other flowers, some of its petals will join you in your flight. In order to complete a level you need to collect a certain number of petals and reach the end (although I don&amp;rsquo;t think it is specified how many you need).</description>
+    </item>
+    
+    <item>
+      <title>Using a game engine or building your own?</title>
+      <link>http://ctrlaltdelete.nu/blog/using-a-game-engine-or-building-your-own/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/using-a-game-engine-or-building-your-own/</guid>
+      <description>This post will be filled with spontaneous questions and answers related to whether one should use an existing game engine or create one from scratch.
+What budget are you on? If I&amp;rsquo;m really low on a budget I&amp;rsquo;ll probably use an engine if it can save me some time we all know; Time is money. The time saving aspect is also present when it comes to maintaining the game and/or improving it.</description>
+    </item>
+    
+    <item>
+      <title>The Sims - a short presentation</title>
+      <link>http://ctrlaltdelete.nu/blog/the-sims---a-short-presentation/</link>
+      <pubDate>Wed, 20 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/the-sims---a-short-presentation/</guid>
+      <description>We made a short presentation on the Sims in class. Here are the slides and the script.
+HISTORY - Slide  The Sims is the first game in the series. Developed by Maxis and published by Electronic Arts, it was released for Microsoft Windows in February 2000. The Sims 2 are released on September 14, 2004. The sequel, developed by Maxis, takes place in a full 3D environment with every sim having an aspiration system.</description>
+    </item>
+    
+    <item>
+      <title>Future of procedural generation of content</title>
+      <link>http://ctrlaltdelete.nu/blog/future-of-procedural-generation-of-content/</link>
+      <pubDate>Tue, 19 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/future-of-procedural-generation-of-content/</guid>
+      <description>I really think that map generation or procedural content generation is something which is becoming more and more common in games. Instead of playing linear, story based games we get to experience multidimensional games where we create our own unique worlds (or have our own worlds created for us). However, generating good maps is a really difficult problem which really hasn&amp;rsquo;t been available until more recently so I think that there are many improvements to be made here in the future.</description>
+    </item>
+    
+    <item>
+      <title>Data-driven approach</title>
+      <link>http://ctrlaltdelete.nu/blog/data-driven-approach/</link>
+      <pubDate>Fri, 15 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/data-driven-approach/</guid>
+      <description>A data-driven approach is shifted from Object Oriented approaches. The data-driven approach seems like a really good fit if you are geared towards making a state-of-the art game engine for making really high performing games. Bitsquid is certainly outstanding in that sense
+It&amp;rsquo;s always a bit tricky when you&amp;rsquo;re learning a new programming paradigm. Usually you learn a new programming language together with the paradigm which can help you understand difficult patterns and ideas more easily.</description>
+    </item>
+    
+    <item>
+      <title>Software development model</title>
+      <link>http://ctrlaltdelete.nu/blog/software-development-model/</link>
+      <pubDate>Tue, 12 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/software-development-model/</guid>
+      <description>I think the model used to develop a game is really depending on what type of game you make. I&amp;rsquo;d like to address the fact that not every type of game needs to be high-end performing. As a guideline though, whatever type of development model which allows you to be productive is useful.
+Do you have a ton of ideas which needs to be tested before you can decide upon stuff?</description>
+    </item>
+    
+    <item>
+      <title>Haven and Hearth</title>
+      <link>http://ctrlaltdelete.nu/blog/haven-and-hearth/</link>
+      <pubDate>Fri, 08 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/haven-and-hearth/</guid>
+      <description>Today I played a game by originally made by Seatribe called Haven and Hearth&amp;nbsp;1. It&amp;rsquo;s a MMORPG where death, Permanent death(!), is imminent. The scenario takes place in a world quite similar to real nature. There are no fictive elements in the game in that sense. It&amp;rsquo;s really like a simulation of a subset of the real world. Typically you travel around in a forest of some sorts. There are mountains, rivers and lakes for you to explore.</description>
+    </item>
+    
+    <item>
+      <title>What type of gamer are you?</title>
+      <link>http://ctrlaltdelete.nu/blog/what-type-of-gamer-are-you/</link>
+      <pubDate>Tue, 05 Nov 2013 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/what-type-of-gamer-are-you/</guid>
+      <description>My name&amp;rsquo;s Anton Erholt and I&amp;rsquo;ve just started my master&amp;rsquo;s programme in Computer Science at KTH. I&amp;rsquo;m 23 years old and live in a suburb of Stockholm together with two of my friends.
+I&amp;rsquo;ve been playing computer games for about as long as I can remember. I remember the Christmas when I got my first console, the Nintendo Game Boy&amp;nbsp;1 together with Super Mario Land&amp;nbsp;2.
+Ever since then, I guess I&amp;rsquo;ve been kind of hooked on handheld games.</description>
+    </item>
+    
+  </channel>
+</rss>

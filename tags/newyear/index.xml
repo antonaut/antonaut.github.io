@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newyear on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/newyear/</link>
+    <description>Recent content in Newyear on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/newyear/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2016</title>
+      <link>http://ctrlaltdelete.nu/blog/2016/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/2016/</guid>
+      <description>Happy new year 2016! 2015 was not a very bloggy year. Who knows? Maybe 2016 will bear more blog fruit.</description>
+    </item>
+    
+    <item>
+      <title>2015</title>
+      <link>http://ctrlaltdelete.nu/blog/2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/2015/</guid>
+      <description>Happy new year 2015! </description>
+    </item>
+    
+    <item>
+      <title>2014</title>
+      <link>http://ctrlaltdelete.nu/blog/2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/2014/</guid>
+      <description>Happy new year 2014! </description>
+    </item>
+    
+  </channel>
+</rss>

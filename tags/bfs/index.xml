@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bfs on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/bfs/</link>
+    <description>Recent content in Bfs on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Jan 2015 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/bfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Regarding problems which can be solved by dynamic programming techniques</title>
+      <link>http://ctrlaltdelete.nu/blog/regarding-problems-which-can-be-solved-by-dynamic-programming-techniques/</link>
+      <pubDate>Thu, 22 Jan 2015 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/regarding-problems-which-can-be-solved-by-dynamic-programming-techniques/</guid>
+      <description>I have recently watched quite a few videos on dynamic programming. What is dynamic programming? It&amp;rsquo;s a method for constructing efficient solutions to some specific problems. In order to apply the method, there are some criteria needed to be met.
+ The problem should have a brute-force solution/exhaustive search solution. The problem should be dividable into sub-problems with optimal solutions (explained further down) The problem should have a recursive definition.  NOTE: I&amp;rsquo;m not doing this in a formal manner, I simply think out loud in order to understand the subject better.</description>
+    </item>
+    
+  </channel>
+</rss>

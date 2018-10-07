@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/math/</link>
+    <description>Recent content in Math on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Mar 2016 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sphere packing on a sphere? Circle packing papers</title>
+      <link>http://ctrlaltdelete.nu/blog/sphere-packing-on-a-sphere-circle-packing-papers/</link>
+      <pubDate>Tue, 08 Mar 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/sphere-packing-on-a-sphere-circle-packing-papers/</guid>
+      <description>The idea of a tool giving you access to finding relevant papers in a certain field of research is pretty interesting. Let&amp;rsquo;s imagine all the papers as a planar graph depicted on a sphere. The edges (arrows/links) of the graphs are keywords or subjects. A certain &amp;lsquo;theme&amp;rsquo; (a set of papers) would then be a &amp;lsquo;continent&amp;rsquo; on the sphere.
+   Figure 1: Found on a course web page for computational topology, originally from &amp;lt;http://www.</description>
+    </item>
+    
+  </channel>
+</rss>

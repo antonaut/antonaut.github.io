@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/code/</link>
+    <description>Recent content in Code on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Apr 2016 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moves where a Queen can&#39;t take (8x8 chess board)</title>
+      <link>http://ctrlaltdelete.nu/blog/moves-where-a-queen-cant-take-8x8-chess-board/</link>
+      <pubDate>Sun, 17 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/moves-where-a-queen-cant-take-8x8-chess-board/</guid>
+      <description>This piece finds okay positions where a single queen can&amp;rsquo;t take the piece (on a 8x8 chess board). It took a little while to write, but I think it reads pretty well and is done in a functional style. I was TOO SLOW to finish this in a single clash! (1h 10min)
+Learned about generation with lazy-seq and map-indexed together with list comprehension (for).
+;; Simulates input. (def one-Q-board [[&amp;quot;.&amp;quot; &amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Improving my Clojure skills</title>
+      <link>http://ctrlaltdelete.nu/blog/improving-my-clojure-skills/</link>
+      <pubDate>Fri, 15 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/improving-my-clojure-skills/</guid>
+      <description>Over at CodinGame they have something called clashes of code where you compete with other developers to solve a certain problem in a given amount of time. I know there are quite a few sites where you can sharpen your coding skills, but somehow I got stuck at this one. Maybe it provides me with just enough challenge for me with my current skills.
+I&amp;rsquo;ve tried to use the clashes to learn more about Clojure.</description>
+    </item>
+    
+    <item>
+      <title>Spiral matrix in Clojure</title>
+      <link>http://ctrlaltdelete.nu/blog/spiral-matrix-in-clojure/</link>
+      <pubDate>Fri, 15 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/spiral-matrix-in-clojure/</guid>
+      <description>I had a bit of a struggle with this problem at first. I decided to generate the path with a few small functions and then sort and print. Enjoy this beatiful piece!
+;;; Prints numbers in a spiral matrix going ⟳. (ns first.spiral) (defn output-number [n] (if (&amp;lt; n 10) (str &amp;quot;0&amp;quot; n) (str n))) (defn right [[x y]] [(inc x) y]) (defn left [[x y]] [(dec x) y]) (defn up [[x y]] [x (dec y)]) (defn down [[x y]] [x (inc y)]) (def dirs {:right right :up up :down down :left left}) (def rotate {:right :down :down :left :left :up :up :right}) (defn advance-dir [pos current-dir visited] (if (contains?</description>
+    </item>
+    
+  </channel>
+</rss>

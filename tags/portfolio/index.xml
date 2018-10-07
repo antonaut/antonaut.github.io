@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolio on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/portfolio/</link>
+    <description>Recent content in Portfolio on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Oct 2018 11:25:28 +0200</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Portfolio</title>
+      <link>http://ctrlaltdelete.nu/portfolio/</link>
+      <pubDate>Sun, 07 Oct 2018 11:25:28 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/portfolio/</guid>
+      <description>These are some of the projects I have been involved in, one way or another. Most of the projects are related to school, but some have I worked on during my free time.
+School projects Aerial Aerial is a project where you control an airplane by moving a smartphone around. The goal of the project was to make something which somebody paralyzed from the neck and downwards could interact with.</description>
+    </item>
+    
+  </channel>
+</rss>

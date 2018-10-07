@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gamedevstory on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/gamedevstory/</link>
+    <description>Recent content in Gamedevstory on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Apr 2016 00:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/gamedevstory/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>End of my game dev story?</title>
+      <link>http://ctrlaltdelete.nu/blog/end-of-my-game-dev-story/</link>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/end-of-my-game-dev-story/</guid>
+      <description>We worked on this for a while, but it just ran out in the sand when I went to France for exchange studies. Nevertheless, it was a great learning experience for me. I think I mostly learned a bunch of javascript. We built the client side of a somewhat advanced game. The coolest part was a small window system built mostly by my friends in WebGL.
+Hopefully we can publish the code with some small examples.</description>
+    </item>
+    
+    <item>
+      <title>HACKATHON!</title>
+      <link>http://ctrlaltdelete.nu/blog/hackathon/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/hackathon/</guid>
+      <description>A lot has happened since we started developing the game. Our initial goal was to do these tasks during the hackathon:
+ WebSockets and API TouchEvents GameLoop and GameStates  Afterwards, we now have a somewhat working APICallSystem with Secure WebSockets. Unfortunately havn&amp;rsquo;t our exportation framework for Android and iOS supported the wss protocol yet, but it&amp;rsquo;ll hopefully be up and running soon. During the hackathon I had a great time.</description>
+    </item>
+    
+    <item>
+      <title>The beginning of Anton&#39;s Game Dev Story</title>
+      <link>http://ctrlaltdelete.nu/blog/the-beginning-of-antons-game-dev-story/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/the-beginning-of-antons-game-dev-story/</guid>
+      <description>About a year ago, me and two classmates (johntu &amp;amp; dmol) participated in a programming competition called Escape from /dev/null. The competition is based around having to program something that assembles a client to a web-based API revolving different things. The API gets further uncovered as you get further into the competition. It&amp;rsquo;s a game in a game. Very meta and Oh-So-Lovely&amp;trade; if you are into these kinds of things.</description>
+    </item>
+    
+    <item>
+      <title>To use DDD or not (| !) to use DDD</title>
+      <link>http://ctrlaltdelete.nu/blog/to-use-ddd-or-not---to-use-ddd/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/to-use-ddd-or-not---to-use-ddd/</guid>
+      <description>My initial thoughts on Data Driven Development was that it to some extent might have been unneccessary (mainly due to the fact that I didn&amp;rsquo;t understand it fully). I thought that when making a smaller game, you probably wouldn&amp;rsquo;t benefit from using a DDD code style at all. However, after reading this post on why one should use an entity-component-system composition of a game/gameengine, I have changed my mind.
+Our initial approach to writing the game was with OOP (Object-Oriented Principles) which gave us a massive Character class, which as of right now only seems unneccessary.</description>
+    </item>
+    
+  </channel>
+</rss>

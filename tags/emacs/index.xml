@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emacs on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/emacs/</link>
+    <description>Recent content in Emacs on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Feb 2016 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tools for completing a master&#39;s thesis</title>
+      <link>http://ctrlaltdelete.nu/blog/tools-for-completing-a-masters-thesis/</link>
+      <pubDate>Thu, 25 Feb 2016 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/tools-for-completing-a-masters-thesis/</guid>
+      <description>A master&amp;rsquo;s thesis is an intense 18 weeks of total focus and devotion to a research question. So far, I&amp;rsquo;ve only been able to invest about one weeks worth of studies during a four week period. My personal life is taking its toll on my work at the moment. I don&amp;rsquo;t feel like it&amp;rsquo;s that frustrating, but I&amp;rsquo;d really like to get more stuff done.
+In order to increase my productivity I&amp;rsquo;ve come up with a plan.</description>
+    </item>
+    
+  </channel>
+</rss>

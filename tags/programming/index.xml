@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on CtrlAltDelete.nu</title>
+    <link>http://ctrlaltdelete.nu/tags/programming/</link>
+    <description>Recent content in Programming on CtrlAltDelete.nu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Mar 2014 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://ctrlaltdelete.nu/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A flawed idea of the halting problem</title>
+      <link>http://ctrlaltdelete.nu/blog/a-flawed-idea-of-the-halting-problem/</link>
+      <pubDate>Sun, 16 Mar 2014 00:00:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/a-flawed-idea-of-the-halting-problem/</guid>
+      <description>The halting problem is fairly interesting even though someone (Alan Turing) some time ago (1936) has proved that it can not be solved by a general algorithm. It is undecidable. Despite the fact, today when I woke up I had an idea.
+Let us use a FSM to describe the program. Think of it as a FSM with A LOT OF STATES. Almost as if it is an Infinite State Machine (which would not be of much use), but rather a very large FSM.</description>
+    </item>
+    
+  </channel>
+</rss>
