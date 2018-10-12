@@ -23,7 +23,7 @@
     <item>
       <title>About</title>
       <link>http://ctrlaltdelete.nu/about/</link>
-      <pubDate>Sun, 07 Oct 2018 11:23:53 +0200</pubDate>
+      <pubDate>Fri, 12 Oct 2018 23:11:29 +0200</pubDate>
       
       <guid>http://ctrlaltdelete.nu/about/</guid>
       <description>This started out as a blog for written answers to assignments from a course in Computer Game Design&amp;nbsp;1 at the Royal Institute of Technology (KTH) in Sweden. Its purpose is to serve as a diary of sorts. It is a place where I jot down ideas, thoughts and reflections about my life and computers.
@@ -38,6 +38,17 @@ It is solemnly written by me, Anton Erholt. I am 28 years old and live in Stockh
       <guid>http://ctrlaltdelete.nu/portfolio/</guid>
       <description>These are some of the projects I have been involved in, one way or another. Most of the projects are related to school, but some have I worked on during my free time.
 School projects Aerial Aerial is a project where you control an airplane by moving a smartphone around. The goal of the project was to make something which somebody paralyzed from the neck and downwards could interact with.</description>
+    </item>
+    
+    <item>
+      <title>How to set up SSH with key-based authentication</title>
+      <link>http://ctrlaltdelete.nu/blog/how-to-set-up-ssh-with-key-based-authentication/</link>
+      <pubDate>Fri, 12 Oct 2018 22:48:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/how-to-set-up-ssh-with-key-based-authentication/</guid>
+      <description>SSH is a service used to connect remotely from one machine to another. It is used on pretty much all operating systems except Windows.
+In this example, I use two machines. The workstation is the machine we are connecting from and the server is the machine we are connecting to.
+First off, make sure SSH (ssh, ssh-keygen) is installed. Since I use Arch Linux it&amp;rsquo;s already there by default. A quick search yields this site with instructions for Ubuntu.</description>
     </item>
     
     <item>

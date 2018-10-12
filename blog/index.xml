@@ -6,10 +6,21 @@
     <description>Recent content in Blog on CtrlAltDelete.nu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Apr 2016 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Oct 2018 22:48:00 +0200</lastBuildDate>
     
 	<atom:link href="http://ctrlaltdelete.nu/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to set up SSH with key-based authentication</title>
+      <link>http://ctrlaltdelete.nu/blog/how-to-set-up-ssh-with-key-based-authentication/</link>
+      <pubDate>Fri, 12 Oct 2018 22:48:00 +0200</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/how-to-set-up-ssh-with-key-based-authentication/</guid>
+      <description>SSH is a service used to connect remotely from one machine to another. It is used on pretty much all operating systems except Windows.
+In this example, I use two machines. The workstation is the machine we are connecting from and the server is the machine we are connecting to.
+First off, make sure SSH (ssh, ssh-keygen) is installed. Since I use Arch Linux it&amp;rsquo;s already there by default. A quick search yields this site with instructions for Ubuntu.</description>
+    </item>
     
     <item>
       <title>Moves where a Queen can&#39;t take (8x8 chess board)</title>
