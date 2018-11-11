@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>http://ctrlaltdelete.nu/blog/set-up-clojure-with-emacs-on-arch-linux/</loc>
+    <lastmod>2018-11-11T07:54:07+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ctrlaltdelete.nu/blog/how-to-set-up-ssh-with-key-based-authentication/</loc>
     <lastmod>2018-10-12T23:37:51+02:00</lastmod>
   </url>
@@ -165,25 +170,31 @@
   
   <url>
     <loc>http://ctrlaltdelete.nu/blog/</loc>
-    <lastmod>2018-10-12T23:37:51+02:00</lastmod>
+    <lastmod>2018-11-11T07:54:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://ctrlaltdelete.nu/categories/blog/</loc>
-    <lastmod>2018-10-12T23:37:51+02:00</lastmod>
+    <lastmod>2018-11-11T07:54:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://ctrlaltdelete.nu/categories/</loc>
-    <lastmod>2018-10-12T23:37:51+02:00</lastmod>
+    <lastmod>2018-11-11T07:54:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://ctrlaltdelete.nu/tags/clash/</loc>
     <lastmod>2018-10-07T11:23:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ctrlaltdelete.nu/tags/clojure/</loc>
+    <lastmod>2018-11-11T07:54:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -231,7 +242,7 @@
   
   <url>
     <loc>http://ctrlaltdelete.nu/tags/emacs/</loc>
-    <lastmod>2018-10-07T11:23:49+02:00</lastmod>
+    <lastmod>2018-11-11T07:54:07+01:00</lastmod>
     <priority>0</priority>
   </url>
   

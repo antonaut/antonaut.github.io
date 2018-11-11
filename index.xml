@@ -41,6 +41,17 @@ School projects Aerial Aerial is a project where you control an airplane by movi
     </item>
     
     <item>
+      <title>Set up Clojure with Emacs on Arch Linux</title>
+      <link>http://ctrlaltdelete.nu/blog/set-up-clojure-with-emacs-on-arch-linux/</link>
+      <pubDate>Sun, 11 Nov 2018 06:35:00 +0100</pubDate>
+      
+      <guid>http://ctrlaltdelete.nu/blog/set-up-clojure-with-emacs-on-arch-linux/</guid>
+      <description>Since I use Arch Linux I decided to use the distro package management to help out with the install. When starting out, I already had emacs installed (If I had not, a pacman -S emacs would have done the job).
+The last time I used Clojure, I used lein for doing project management. I guess I&amp;rsquo;ll start from there this time too.
+I installed an AUR helper yay which allows me to install non-official Arch packages similar to how pacman does it.</description>
+    </item>
+    
+    <item>
       <title>How to set up SSH with key-based authentication</title>
       <link>http://ctrlaltdelete.nu/blog/how-to-set-up-ssh-with-key-based-authentication/</link>
       <pubDate>Fri, 12 Oct 2018 22:48:00 +0200</pubDate>
